@@ -27,3 +27,7 @@ DOC-01-01 incluye 22 capítulos, 37 referencias oficiales, comparación de plata
 El usuario realiza las operaciones remotas. No ejecutar `git push` ni `git pull`, ni escribir en el repositorio remoto. Repositorio Git local inicializado. El remoto origin está configurado como https://github.com/wallas2022/Kubernet-Open-shift-Seminario.git. No se han creado commits ni ejecutado push, pull o fetch.
 
 
+
+## Diseño del laboratorio
+
+DOC-02-01 está guardado en documentacion/fase-02, con propuesta para una laptop y alternativas de cuatro o cinco equipos. Es un diseño propuesto; inventario, instalación y pruebas están pendientes. El diagrama editable está en diagramas/laboratorio-cinco-equipos.mmd. La revisión visual de paginación del nuevo Word está pendiente por falta de renderizador accesible.

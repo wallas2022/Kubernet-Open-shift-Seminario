@@ -1,0 +1,14 @@
+flowchart TB
+  H1[Host H1] --> C1[Control plane 1]
+  H1 --> W1[Worker 1]
+  H2[Host H2] --> C2[Control plane 2]
+  H2 --> W2[Worker 2]
+  H3[Host H3] --> C3[Control plane 3]
+  H3 --> W3[Worker 3]
+  T[Equipo T1 carga] --> E[Entrada de aplicacion]
+  E --> W1
+  E --> W2
+  E --> W3
+  W1 --> D[Equipo D1 PostgreSQL]
+  W2 --> D
+  W3 --> D
