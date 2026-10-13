@@ -1,0 +1,58 @@
+[
+  {
+    "name": "mixed-1",
+    "exit_code": 0,
+    "wall_seconds": 32.054,
+    "capacity": 1000,
+    "available": 925,
+    "confirmed_reservations": 75,
+    "confirmed_units": 75,
+    "outbox": 75,
+    "deliveries": 75,
+    "pending": 0,
+    "integrity_passed": true,
+    "summary_file": "mixed-1.json"
+  },
+  {
+    "name": "mixed-2",
+    "exit_code": 0,
+    "wall_seconds": 30.151,
+    "capacity": 1000,
+    "available": 925,
+    "confirmed_reservations": 75,
+    "confirmed_units": 75,
+    "outbox": 75,
+    "deliveries": 75,
+    "pending": 0,
+    "integrity_passed": true,
+    "summary_file": "mixed-2.json"
+  },
+  {
+    "name": "mixed-3",
+    "exit_code": 0,
+    "wall_seconds": 30.158,
+    "capacity": 1000,
+    "available": 925,
+    "confirmed_reservations": 75,
+    "confirmed_units": 75,
+    "outbox": 75,
+    "deliveries": 75,
+    "pending": 0,
+    "integrity_passed": true,
+    "summary_file": "mixed-3.json"
+  },
+  {
+    "name": "read-pilot",
+    "exit_code": 0,
+    "wall_seconds": 40.182,
+    "capacity": 1000,
+    "available": 1000,
+    "confirmed_reservations": 0,
+    "confirmed_units": 0,
+    "outbox": 0,
+    "deliveries": 0,
+    "pending": 0,
+    "integrity_passed": true,
+    "summary_file": "read-pilot.json"
+  }
+]

@@ -1,0 +1,28 @@
+# Credenciales y configuracion local
+.env
+.env.*
+!.env.example
+**/kubeconfig*
+**/pull-secret*
+**/credentials*
+*.key
+*.pem
+*.pfx
+# Datos activos y discos virtuales
+runtime/
+.runtime/
+*.vhd
+*.vhdx
+*.vmdk
+*.qcow2
+*.iso
+# Salidas temporales de herramientas
+node_modules/
+__pycache__/
+*.pyc
+*.tmp
+~$*.docx
+
+.venv/
+.pytest_cache/
+*.egg-info/

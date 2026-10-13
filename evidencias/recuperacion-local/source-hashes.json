@@ -1,0 +1,10 @@
+{
+  "fase08\\pruebas\\resiliencia\\recovery.py": "8c6cc25d32bcf2588f7aa6679189424c0ba33f69ffcddb202d56efa3b593f17a",
+  "fase04\\aplicacion\\reservas\\api.py": "d9cfb25342265d9df7e47f10bacf83417c315f7c9a9f4984e62f4dc4b6bc9ca2",
+  "fase04\\aplicacion\\reservas\\config.py": "af759db99fbb724e9709b0efd017168836e7b9946840669e2d28f761cd7106a5",
+  "fase04\\aplicacion\\reservas\\manage.py": "57364f5c04af1d48a898c357ea767180fe1331a3e133e1a58cb0d4b696ab4cad",
+  "fase04\\aplicacion\\reservas\\store.py": "3350dabc7479601203170d16736e1c5a77f619f111f36b62600f4481b35dd3aa",
+  "fase04\\aplicacion\\reservas\\worker.py": "1ff20ccce715d48bbdc998a950fafc848ad678efe2588d7c361cd7e6a950bb98",
+  "fase04\\aplicacion\\reservas\\__init__.py": "9141d0ac416022198f06ef785a26db37f6ed754051ddffe174a5c1b90e8440f8",
+  "fase04\\aplicacion\\reservas\\schema.sql": "7f85c26ec15d102485702358d7e9d59094dad521701668aef3bc5f8229364a83"
+}

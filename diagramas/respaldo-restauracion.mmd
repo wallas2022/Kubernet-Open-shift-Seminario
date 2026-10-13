@@ -1,0 +1,9 @@
+flowchart TD
+  A[Origen con diez reservas] --> B[Respaldo custom]
+  A --> C[Reserva posterior solo en origen]
+  B --> D[Restauracion en base nueva]
+  D --> E[Igualdad de filas y de inventario]
+  E --> F[Reintento idempotente]
+  F --> G[Procesar seis eventos pendientes]
+  G --> H[Crear nueva reserva]
+  H --> I[Guardar evidencia y retirar bases temporales]

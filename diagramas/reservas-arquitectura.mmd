@@ -1,0 +1,8 @@
+flowchart TB
+  C[Cliente o generador k6] --> A[API FastAPI]
+  A --> P[Pool psycopg]
+  P --> D[(PostgreSQL)]
+  D --> O[Tabla outbox]
+  W[Procesador separado] --> O
+  W --> N[Tabla de notificaciones simuladas]
+  A --> M[Metricas por ruta y estado]

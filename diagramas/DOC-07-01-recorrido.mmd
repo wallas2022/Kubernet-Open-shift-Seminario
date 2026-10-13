@@ -1,0 +1,9 @@
+flowchart TD
+  A[Preparar documentos y entorno] --> B{API de laboratorio disponible}
+  B -->|Si| C[Demostracion practica]
+  B -->|No| D[Interpretacion de evidencia guardada]
+  C --> E[Registrar resultados observados]
+  D --> F[Registrar resultados interpretados]
+  E --> G[Ejercicios y evaluacion]
+  F --> G
+  G --> H[Retroalimentacion y pendientes verificables]

@@ -1,0 +1,12 @@
+{
+  "scope": "Uvicorn HTTP localhost + PostgreSQL 18.3 real; no Docker or Kubernetes",
+  "catalog": 200,
+  "first_reservation": 201,
+  "idempotent_replay": 200,
+  "same_response": true,
+  "payload_conflict": 409,
+  "available": 999,
+  "outbox_processed": 1,
+  "repeat_outbox_processed": 0,
+  "metrics": 200
+}

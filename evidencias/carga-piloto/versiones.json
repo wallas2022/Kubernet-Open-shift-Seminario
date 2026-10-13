@@ -1,0 +1,20 @@
+{
+  "k6": "2.3.0",
+  "python": "3.12.14",
+  "postgresql": "18.3",
+  "fastapi": "0.143.0",
+  "uvicorn": "0.54.0",
+  "api_processes": 1,
+  "api_pool_max": 10,
+  "worker_processes": 1,
+  "postgresql_shared_buffers": "32MB",
+  "postgresql_max_connections": 100,
+  "warmup": "20 lecturas previas fuera de cada ventana medida",
+  "source_sha256": {
+    "fase04\\aplicacion\\reservas\\api.py": "d9cfb25342265d9df7e47f10bacf83417c315f7c9a9f4984e62f4dc4b6bc9ca2",
+    "fase04\\aplicacion\\reservas\\store.py": "3350dabc7479601203170d16736e1c5a77f619f111f36b62600f4481b35dd3aa",
+    "fase04\\pruebas\\carga\\reservas.js": "a6463b0b48996c16ce3b1e0c8da39c919c1314c62560e15b738341253a914d5e",
+    "fase05\\pruebas\\estres\\piloto-lectura.js": "0e42b30e974c8b3c81190b465c745d715121bb1923537e53cdb460a2f5de3bcf",
+    "fase04\\aplicacion\\requirements.lock.txt": "9610e807921f70bf3ae8e479adb0f16e5daf6840f71952a1875f9508e6aa3dea"
+  }
+}

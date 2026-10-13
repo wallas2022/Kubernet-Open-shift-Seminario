@@ -1,0 +1,5 @@
+flowchart LR
+  C[Clientes] --> A[API de reservas]
+  A --> P[(PostgreSQL)]
+  P --> W[Procesador outbox]
+  W --> P

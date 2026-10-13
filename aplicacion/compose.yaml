@@ -1,0 +1,47 @@
+name: seminario-reservas
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: seminario
+      POSTGRES_DB: reservas
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configurar contraseña local}
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U seminario -d reservas"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  migrate:
+    build: .
+    environment: &app_environment
+      DATABASE_URL: "postgresql://seminario:${POSTGRES_PASSWORD}@db:5432/reservas"
+      CLIENT_KEYS_JSON: ${CLIENT_KEYS_JSON:?Configurar claves de clientes}
+      POOL_MAX: "10"
+    command: ["python", "-m", "reservas.manage", "init"]
+    depends_on:
+      db:
+        condition: service_healthy
+  api:
+    build: .
+    environment: *app_environment
+    ports:
+      - "127.0.0.1:8082:8080"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health/ready',timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  worker:
+    build: .
+    environment: *app_environment
+    command: ["python", "-m", "reservas.worker"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+volumes:
+  pgdata:

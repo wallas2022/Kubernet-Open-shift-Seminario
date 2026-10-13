@@ -1,0 +1,7 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "logical_processors_visible": 16,
+  "memory_gib": null,
+  "memory_note": "CIM no accesible; no se registra memoria instalada como dato medido.",
+  "scope": "Procesos nativos en anfitrion compartido; sin cuotas de contenedor."
+}

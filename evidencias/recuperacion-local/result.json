@@ -1,0 +1,80 @@
+{
+  "status": "pass",
+  "scope": "PostgreSQL local nativo; dos bases temporales; Store directo, sin HTTP ni Kubernetes",
+  "pg_dump": "pg_dump (PostgreSQL) 18.3",
+  "pg_restore": "pg_restore (PostgreSQL) 18.3",
+  "backup_sha256": "756cd3b9d02ec554a0207ec9437e1d856175d34837d58f600f351fd06ab98140",
+  "backup_bytes": 10011,
+  "dump_seconds": 1.9634,
+  "restore_command_seconds": 1.3447,
+  "before_backup": {
+    "sha256_rows": "530ac22f246ef32441ac650a309329c651b8a75c76e971bbe4364e4336cae05d",
+    "counts": {
+      "events": 1,
+      "reservations": 10,
+      "outbox": 10,
+      "notification_deliveries": 4
+    },
+    "capacity": 100,
+    "available": 45,
+    "confirmed_quantity": 55,
+    "pending_outbox": 6
+  },
+  "source_after_backup_write": {
+    "sha256_rows": "7459ade5b301df8f3e5643ec1175bebcdd459d067f7ca8983ab16d847f79b8c0",
+    "counts": {
+      "events": 1,
+      "reservations": 11,
+      "outbox": 11,
+      "notification_deliveries": 4
+    },
+    "capacity": 100,
+    "available": 42,
+    "confirmed_quantity": 58,
+    "pending_outbox": 7
+  },
+  "restored": {
+    "sha256_rows": "530ac22f246ef32441ac650a309329c651b8a75c76e971bbe4364e4336cae05d",
+    "counts": {
+      "events": 1,
+      "reservations": 10,
+      "outbox": 10,
+      "notification_deliveries": 4
+    },
+    "capacity": 100,
+    "available": 45,
+    "confirmed_quantity": 55,
+    "pending_outbox": 6
+  },
+  "idempotent_replay_preserved": true,
+  "outbox_processed_after_restore": 6,
+  "outbox_second_pass": 0,
+  "after_worker": {
+    "sha256_rows": "3380b4e15213d8a0c827bd5ddd84ada20f85752465997ac68b31aa9aa4c5b401",
+    "counts": {
+      "events": 1,
+      "reservations": 10,
+      "outbox": 10,
+      "notification_deliveries": 10
+    },
+    "capacity": 100,
+    "available": 45,
+    "confirmed_quantity": 55,
+    "pending_outbox": 0
+  },
+  "after_new_reservation": {
+    "sha256_rows": "401f2f0d44776e6a68a623916ecbeb7f272493be387428f370026e1c6d34ad30",
+    "counts": {
+      "events": 1,
+      "reservations": 11,
+      "outbox": 11,
+      "notification_deliveries": 10
+    },
+    "capacity": 100,
+    "available": 43,
+    "confirmed_quantity": 57,
+    "pending_outbox": 1
+  },
+  "post_backup_write_absent_in_target": true,
+  "temporary_databases_removed": true
+}
