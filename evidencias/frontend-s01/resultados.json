@@ -1,0 +1,87 @@
+﻿{
+    "sprint":  "S01",
+    "requisito":  "RN03",
+    "estado":  "Verificado localmente; pendiente de aprobacion para commit y push",
+    "node":  "22.23.2",
+    "npm":  "10.9.8",
+    "pruebas":  {
+                    "fallos":  0,
+                    "aprobadas":  5
+                },
+    "compilacion":  "tsc --noEmit y vite build completados",
+    "verificacionSecretos":  12,
+    "vulnerabilidadesNpmAudit":  0,
+    "exclusionesGit":  {
+                           "ejemploVersionable":  true,
+                           "ignoradas":  [
+                                             "frontend/.env",
+                                             "frontend/.env.local",
+                                             "frontend/.env.production",
+                                             "frontend/node_modules/prueba",
+                                             "frontend/dist/index.html",
+                                             "frontend/.verification/secrets.json"
+                                         ]
+                       },
+    "archivos":  [
+                     {
+                         "archivo":  "frontend\\src\\main.tsx",
+                         "sha256":  "1228580B670CD4C924546D2B514C360AD952D2C1361B042BAB643CB3D0B33FF5"
+                     },
+                     {
+                         "archivo":  "frontend\\src\\styles.css",
+                         "sha256":  "E2EFFF871A4F4B5E50C42582F679613A96DFCB19E14956CA7D8F4D102DBE1112"
+                     },
+                     {
+                         "archivo":  "frontend\\src\\api\\contracts.ts",
+                         "sha256":  "CC7B8C7B74275C17CBDF0328A6EB980624C44981A839352DC7F430ADAC7BDE03"
+                     },
+                     {
+                         "archivo":  "frontend\\src\\api\\paths.ts",
+                         "sha256":  "8A59D7DDC33FB412E15B966A34A7C6D0A35BD2E5EDA73706978D607A264EA09D"
+                     },
+                     {
+                         "archivo":  "frontend\\src\\app\\App.tsx",
+                         "sha256":  "FD633A2032F75FC724665B8E52FC02DA084B48DE4B4527E19C34C07DEEE748B2"
+                     },
+                     {
+                         "archivo":  "frontend\\src\\components\\Step.tsx",
+                         "sha256":  "C5296E65D72DE94F7BF8833CA0F568BEDFD2F63CB3C50ED97D6A47E7B3D96C1F"
+                     },
+                     {
+                         "archivo":  "frontend\\src\\pages\\WelcomePage.tsx",
+                         "sha256":  "97D9775AC8F719BE171073D7E2A0A94368447EC73AC6A8B0176FB8B1B806CA12"
+                     },
+                     {
+                         "archivo":  "frontend\\config\\security.mjs",
+                         "sha256":  "5DF1F49B3CC62E7DE1D3BBBC44CB69AE9192A7043B3647F696F15D65A494D68A"
+                     },
+                     {
+                         "archivo":  "frontend\\scripts\\verify-browser.mjs",
+                         "sha256":  "8F072188B382CB0CC3DAA272080DACAC6FD1AB52247359222C58B9C1D3F6D9A0"
+                     },
+                     {
+                         "archivo":  "frontend\\scripts\\verify-secrets.mjs",
+                         "sha256":  "D0D13549B96AC1FC4EBBF6E3B4CA97C715A7FC96F371C02553F52E3BE2410282"
+                     },
+                     {
+                         "archivo":  "frontend\\tests\\security.test.mjs",
+                         "sha256":  "D029CF935C3E50F51DEDE26DAE5078A7D9011B780C408ADF33328CBA57F3B598"
+                     },
+                     {
+                         "archivo":  "frontend\\package.json",
+                         "sha256":  "64FB4586A0FCE4382A188DEBE7481F79623B494AF207DA24423DAB117C23B741"
+                     },
+                     {
+                         "archivo":  "frontend\\package-lock.json",
+                         "sha256":  "E2D6186F1C7516143E4827966DD4EFA01260221C054E4B7F3CAA3B0017168B5F"
+                     },
+                     {
+                         "archivo":  "frontend\\vite.config.ts",
+                         "sha256":  "942E5015A4B932565332DEB280917876772063FCD0A6DE0EEF0BB1E9EED89DFC"
+                     },
+                     {
+                         "archivo":  "frontend\\tsconfig.json",
+                         "sha256":  "DAABA3E25292C2B0320859E3FB3305EC3069E214919C9B92A3EBB02B159EA538"
+                     }
+                 ]
+}

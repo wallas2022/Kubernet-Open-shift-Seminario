@@ -3,11 +3,19 @@ from docx import Document
 from docx.shared import Pt, Cm, Inches, RGBColor
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-import re
+import re, argparse
+
+parser=argparse.ArgumentParser()
+parser.add_argument('--source',default='fuentes/DOC-10-06-plan-sprints-codificacion.md')
+parser.add_argument('--output',default='word/DOC-10-06-plan-sprints-codificacion.docx')
+parser.add_argument('--subtitle',default='Planificación de 19 sprints y aprobación de publicación')
+parser.add_argument('--expected-sprints',type=int,default=19)
+parser.add_argument('--figure')
+args=parser.parse_args()
 
 base=Path('/work/documentacion/fase-10')
-source=base/'fuentes/DOC-10-06-plan-sprints-codificacion.md'
-out=base/'word/DOC-10-06-plan-sprints-codificacion.docx'
+source=base/args.source
+out=base/args.output
 doc=Document()
 s=doc.sections[0]
 s.page_width=Cm(21.59);s.page_height=Cm(27.94)
@@ -31,8 +39,8 @@ def clean(text):return re.sub(r'`([^`]+)`',r'\1',text)
 def addtable(lines):
     rows=[[clean(c.strip()) for c in l.strip('|').split('|')] for l in lines]
     rows=[r for r in rows if not all(re.fullmatch(r'[-: ]+',c or ' ') for c in r)]
-    t=doc.add_table(rows=0,cols=4);t.autofit=False
-    widths=[.7,.9,4.2,.89]
+    t=doc.add_table(rows=0,cols=len(rows[0]));t.autofit=False
+    widths=[.7,.9,4.2,.89] if len(rows[0])==4 else [1.6,2.6,2.49]
     for col,w in zip(t.columns,widths):col.width=Inches(w)
     for idx,row in enumerate(rows):
         cells=t.add_row().cells
@@ -53,7 +61,7 @@ def addtable(lines):
 
 lines=source.read_text(encoding='utf-8').splitlines()
 doc.add_paragraph(lines[0][2:],'Title')
-doc.add_paragraph('Planificación de 19 sprints y aprobación de publicación')
+doc.add_paragraph(args.subtitle)
 doc.add_paragraph('Índice','Heading 1')
 p=doc.add_paragraph();f=OxmlElement('w:fldSimple');f.set(qn('w:instr'),'TOC \\o "1-2" \\h \\z \\u')
 r=OxmlElement('w:r');t=OxmlElement('w:t');t.text='Actualizar el índice en Word con F9.';r.append(t);f.append(r);p._p.append(f)
@@ -62,6 +70,11 @@ i=1
 while i<len(lines):
     line=lines[i].strip()
     if not line:i+=1;continue
+    if line.startswith('```'):
+        i+=1
+        while i<len(lines) and not lines[i].strip().startswith('```'):i+=1
+        i+=1
+        continue
     if line.startswith('|'):
         data=[]
         while i<len(lines) and lines[i].strip().startswith('|'):data.append(lines[i].strip());i+=1
@@ -70,9 +83,16 @@ while i<len(lines):
     elif line.startswith('### '):doc.add_paragraph(line[4:],'Heading 2')
     else:doc.add_paragraph(clean(line))
     i+=1
+if args.figure:
+    doc.add_page_break()
+    doc.add_paragraph('Frontera de integración de S01','Heading 1')
+    doc.add_picture(args.figure,width=Inches(6.69))
+    doc.add_paragraph('Fuente editable: diagramas/fase-10/sprints/S01-base-frontend.mmd. La pantalla inicial no solicita credenciales ni realiza operaciones de negocio.')
 upd=OxmlElement('w:updateFields');upd.set(qn('w:val'),'true');doc.settings.element.append(upd)
-footer=s.footer.paragraphs[0];footer.alignment=2;footer.add_run('DOC 10 06 | ')
+footer=s.footer.paragraphs[0];footer.alignment=2;footer.add_run(('S01 RN03' if args.expected_sprints==0 else 'DOC 10 06')+' | ')
 field=OxmlElement('w:fldSimple');field.set(qn('w:instr'),'PAGE');footer._p.append(field)
+out.parent.mkdir(parents=True,exist_ok=True)
 doc.save(out)
-assert len(re.findall(r'^### S\d\d ',source.read_text(encoding='utf-8'),re.M))==19
+if args.expected_sprints:
+    assert len(re.findall(r'^### S\d\d ',source.read_text(encoding='utf-8'),re.M))==args.expected_sprints
 print(out)

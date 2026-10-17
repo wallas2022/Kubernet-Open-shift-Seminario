@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: propuesta disponible para revisión, sin aprobación de fase ni implementación del frontend.
+Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación publicada; S01 implementado, verificado y aprobado por el usuario para commit y push. Las operaciones de negocio siguen pendientes de los sprints posteriores.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -33,6 +33,10 @@ El Word consolidado DOC-10-00 reúne las cinco etapas y sus diagramas. Los origi
 | D10-08 | [Datos existentes](../../diagramas/fase-10/D10-08-datos.mmd) | Diseño técnico |
 | D10-09 | [Despliegue](../../diagramas/fase-10/D10-09-despliegue.mmd) | Diseño técnico |
 | D10-10 | [Etapas de entrega](../../diagramas/fase-10/D10-10-etapas.mmd) | Validación |
+
+## Entrega de S01
+
+El usuario autorizó el inicio de S01 y, tras revisar la entrega, autorizó su commit y push a origin/master el 17 de octubre de 2026. El [informe de entrega](sprints/S01/fuentes/DOC-S01-01-entrega.md) conserva la versión presentada para aprobación, con cambios, pruebas ejecutadas y limitaciones. El [registro de aprobación](sprints/S01/README.md) documenta la autorización posterior. La guía técnica está en [frontend/README.md](../../frontend/README.md). S02 permanece pendiente de autorización.
 
 ## Decisiones principales
 

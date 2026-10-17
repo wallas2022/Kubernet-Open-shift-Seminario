@@ -1,0 +1,10 @@
+flowchart TB
+  B[Navegador] --> P[Pantalla inicial React]
+  P --> C[Componentes y estilos locales]
+  T[Prueba con clave sintética en header] --> V[Proxy Vite de desarrollo]
+  V -->|Eliminar prefijo api| R[Receptor temporal de pruebas]
+  E[Entorno del servidor] --> G[Validar configuración sin imprimir valores]
+  G --> V
+  G -->|Rechazar VITE y destino con credenciales| X[Error genérico]
+  V -->|Bloquear query y archivos env| X
+  N[La pantalla S01 no solicita reservas ni credenciales]

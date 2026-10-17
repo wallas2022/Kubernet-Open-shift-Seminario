@@ -3,8 +3,8 @@ const path = require('path');
 const {chromium} = require('/tmp/doc10-node/node_modules/playwright');
 
 async function main() {
-  const dir = '/work/diagramas/fase-10';
-  const out = '/work/documentacion/fase-10/revision/figuras';
+  const dir = process.env.DIAGRAM_SOURCE_DIR ?? '/work/diagramas/fase-10';
+  const out = process.env.DIAGRAM_OUTPUT_DIR ?? '/work/documentacion/fase-10/revision/figuras';
   fs.mkdirSync(out, {recursive:true});
   const browser = await chromium.launch({headless:true, args:['--no-sandbox']});
   const page = await browser.newPage({viewport:{width:1800,height:1600}, deviceScaleFactor:1.5});
@@ -45,7 +45,7 @@ async function main() {
     await page.locator('#figure svg').screenshot({path:path.join(out,name.replace('.mmd','.png'))});
     results.push({diagram:name,parse:'pass',render:'pass'});
   }
-  fs.writeFileSync('/work/documentacion/fase-10/revision/diagramas.json',JSON.stringify(results,null,2));
+  fs.writeFileSync(process.env.DIAGRAM_REPORT_PATH ?? '/work/documentacion/fase-10/revision/diagramas.json',JSON.stringify(results,null,2));
   console.log('Diagramas analizados y renderizados:',results.length);
   await browser.close(); server.close();
 }

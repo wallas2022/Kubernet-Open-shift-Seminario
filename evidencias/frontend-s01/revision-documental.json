@@ -1,0 +1,8 @@
+﻿{
+    "sprint":  "S01",
+    "paginasRevisadas":  5,
+    "diagramaMermaid":  "Analizado y renderizado",
+    "wordSHA256":  "7D09FF4E8DA74217EFE28756BE916766B1BFF969F672FFFD1486A8A304D6B9F5",
+    "fuenteSHA256":  "A0AA1EEFD4D67C47CA90DBB2D419513029FA46101AF1F8FBFB0F4A3F83517356",
+    "estado":  "En revision; commit y push pendientes de aprobacion"
+}

@@ -1,0 +1,12 @@
+{
+  "sprint": "S01",
+  "status": "pass",
+  "browser": "145.0.7632.6",
+  "node": "v24.13.0",
+  "desktop": "1280x900",
+  "mobile": "360x800",
+  "runtimeErrors": 0,
+  "httpErrors": 0,
+  "horizontalOverflow": false,
+  "scope": "Vista inicial sin login ni reservas; no acredita RN02 completo"
+}
