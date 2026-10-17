@@ -1,0 +1,12 @@
+﻿{
+    "screenshotsReviewed":  [
+                                "pantalla-catalogo-real.png",
+                                "pantalla-movil.png",
+                                "pantalla-desactualizada.png"
+                            ],
+    "pages":  5,
+    "sprint":  "S05",
+    "sourceSha256":  "D2211E12120F8B1D4A4E6428E75A9440F45C8A3D6A2BA2E81F8A1A7176B31A6E",
+    "wordSha256":  "C803BDF5EF4E51F264C16CDF8DB4D810C8EA0C6059A59FDA80D58B722D93B955",
+    "visuallyReviewed":  true
+}

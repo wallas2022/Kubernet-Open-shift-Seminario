@@ -1,0 +1,41 @@
+﻿{
+    "realHttpStatuses":  [
+                             200,
+                             200,
+                             200
+                         ],
+    "secretChecks":  12,
+    "commands":  [
+                     "npm test",
+                     "npm run build",
+                     "npm run verify:secrets",
+                     "node scripts/verify-catalog.mjs",
+                     "node scripts/verify-catalog.mjs --real"
+                 ],
+    "sprint":  "S05",
+    "controlledBrowserChecks":  28,
+    "realApiRequests":  3,
+    "npm":  "10.9.8",
+    "publication":  "local review only",
+    "build":  "passed",
+    "tests":  {
+                  "passed":  19,
+                  "failed":  0
+              },
+    "previousSprint":  {
+                           "commit":  "877e544",
+                           "push":  "successful",
+                           "id":  "S04"
+                       },
+    "node":  "22.23.2",
+    "reservationsCreated":  0,
+    "sourceHashes":  {
+                         "frontend/src/pages/WelcomePage.tsx":  "A0E87013BB4DAE8BBABBE1F628E020AD74221D181D1391795FFAD01A6BF2C869",
+                         "frontend/scripts/verify-catalog.mjs":  "C837E3A7B9D652D218DA30AAAC0A92A81D080F92D995C9423BC2950EA0B95323",
+                         "frontend/src/catalog/useCatalog.ts":  "ABC3FF32B22DB4948AEF5F9EB37E9FAB40FFEECBF9ED7ACA3CA12A26FC8DD589",
+                         "frontend/src/catalog/CatalogPage.tsx":  "98D1A3BA87988E83AA8FADB25AAA610F64F78F91E6F864CC9587CF5406CAD15A",
+                         "frontend/src/styles.css":  "F57ECF6CE1E76747B6CE63E497CE371D79EF7271429E7776B13796CFA9E33DE1"
+                     },
+    "realBrowserChecks":  7,
+    "date":  "2026-10-17T17:10:25.0396381-06:00"
+}

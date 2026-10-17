@@ -1,6 +1,6 @@
 # Frontend de reservas del seminario
 
-S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext para RN04. S03 implementa el cliente HTTP de RN07. S04 sustituye el panel temporal por acceso conectado a GET /catalogo: activa la sesión únicamente tras validar la respuesta. El catálogo visible y las reservas siguen pendientes de S05 en adelante.
+S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext para RN04 y S03 el cliente HTTP de RN07. S04 valida el acceso mediante GET /catalogo. S05 muestra el catálogo autenticado con tarjetas reales, estados de carga, vacío y error, y actualización manual. La consulta individual y las reservas siguen pendientes de S06 en adelante.
 
 ## Arranque local
 
@@ -42,7 +42,7 @@ La revisión automatizada de navegador usa Playwright y necesita Chromium instal
 
 S02 usa un almacén por instancia de SessionProvider, sin almacenamiento persistente. `useSession()` ofrece hasCredential, setCredential, readCredential y clearCredential. S04 añade isAuthenticated y confirmCredential: la presencia temporal de una clave no equivale a acceso validado. El campo enmascarado se vacía después del envío; pagehide o desmontar el proveedor elimina la referencia del almacén. Una recarga crea un almacén vacío. No se garantiza borrado físico de strings por el recolector de memoria, ni se controla un gestor de contraseñas o extensión ajena a la aplicación. El panel temporal de S02 queda como fuente histórica sin mostrarse en la aplicación. No se implementa todavía el registro de reserva pendiente, ni la salida con advertencia de S13.
 
-Las comprobaciones verify-browser.mjs y verify-session.mjs corresponden respectivamente a las pantallas históricas de S01 y S02. S04 utiliza verify-access.mjs para la pantalla actual. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. S01 a S03 están publicados; S04 requiere aprobación antes de commit y push.
+Las comprobaciones verify-browser.mjs, verify-session.mjs y verify-access.mjs corresponden a las pantallas históricas de S01, S02 y S04. S05 utiliza verify-catalog.mjs para la navegación actual. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. S01 a S04 están publicados; S05 requiere aprobación antes de commit y push.
 
 ## Cliente HTTP de S03
 
@@ -58,7 +58,15 @@ Retry-After para 429/503 solo aporta segundos de orientación; no programa otro 
 
 Abrir http://127.0.0.1:5180 e ingresar una clave proporcionada por el instructor. Entrar ejecuta un GET /api/catalogo por el proxy local. Un 200 con events válido, vacío o con eventos, activa la sesión. Un 401 muestra clave no válida; un error de red, timeout, 5xx, HTML o respuesta incompatible muestra fallo técnico. Los fallos limpian la credencial. No se solicita la clave mediante URL ni se precarga desde configuración. No se envían POST.
 
-El campo se vacía antes de la espera y el formulario queda deshabilitado mientras se valida. Un bloqueo inmediato evita también dos eventos submit en el mismo ciclo. pagehide aborta la espera e impide que una respuesta tardía reactive el acceso. Tras validar se muestra una confirmación sin catálogo ficticio; Volver al acceso elimina la credencial. La salida con advertencia sobre reservas pendientes sigue en S13.
+El campo se vacía antes de la espera y el formulario queda deshabilitado mientras se valida. Un bloqueo inmediato evita también dos eventos submit en el mismo ciclo. pagehide aborta la espera e impide que una respuesta tardía reactive el acceso. Desde S05, tras validar se navega al catálogo, que vuelve a consultar los datos; Volver al acceso elimina la credencial. La salida con advertencia sobre reservas pendientes sigue en S13.
+
+## Catálogo de S05
+
+CatalogPage solo se muestra con sesión validada. useCatalog consulta GET /api/catalogo, mantiene datos y fecha de la última lectura solo en memoria y permite una lectura a la vez. Se renderizan nombre, UUID, capacidad y available recibidos y validados por el cliente. No se inventan cupos ni se insertan nombres como HTML. No hay polling ni solicitudes POST.
+
+Un fallo inicial ofrece Reintentar sin mostrar datos ni confundirlo con events vacío. Un fallo de actualización conserva exactamente la lectura anterior con aviso de Información desactualizada y su hora original, incluso si estaba vacía. Una lectura correcta reemplaza la anterior y retira el aviso. Un 401 elimina la sesión; salir de la vista aborta la espera e impide aplicar resultados tardíos. El catálogo no se conserva entre sesiones ni tras recarga. La selección de evento pertenece a S06.
+
+`node scripts/verify-catalog.mjs` revisa carga, datos, vacío, errores, lectura desactualizada, actualización, cambios de sesión y dos anchos de pantalla. S05_BROWSER_URL y S05_EVIDENCE_DIR configuran URL y evidencia. `--real` recibe credential por stdin, valida tarjetas contra la API local y actualiza con un GET adicional, sin crear reservas. Las capturas con fixtures y la captura de API real están identificadas en evidencias/frontend-s05. Las capturas no acreditan la revisión integral de accesibilidad o adaptación de S16/S17.
 
 `node scripts/verify-access.mjs` ejecuta casos controlados, incluidos el timeout predeterminado de 15 segundos, doble envío y recarga. S04_BROWSER_URL y S04_EVIDENCE_DIR configuran URL y evidencia. `--real` recibe por stdin un JSON con la propiedad credential y comprueba únicamente GET /catalogo con clave válida e inválida. Usar entrada desde memoria o un gestor seguro, sin escribir la clave en comandos ni archivos; no pasar valores por argumentos o variables VITE_. Las evidencias solo guardan resultados y códigos HTTP, sin la credencial.
 

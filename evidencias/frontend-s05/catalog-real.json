@@ -1,0 +1,46 @@
+{
+  "sprint": "S05",
+  "date": "2026-10-17T22:58:55.758Z",
+  "mode": "real-local-api",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 7,
+  "results": [
+    {
+      "name": "unauthenticated-no-catalog",
+      "passed": true
+    },
+    {
+      "name": "event-count-matches-response",
+      "passed": true
+    },
+    {
+      "name": "event-1-fields",
+      "passed": true
+    },
+    {
+      "name": "catalog-heading-focus",
+      "passed": true
+    },
+    {
+      "name": "real-refresh-single-get",
+      "passed": true
+    },
+    {
+      "name": "header-storage-url-log-and-runtime-safety",
+      "passed": true
+    },
+    {
+      "name": "reload-requires-access",
+      "passed": true
+    }
+  ],
+  "requests": 3,
+  "statuses": [
+    200,
+    200,
+    200
+  ],
+  "credentialsRecorded": false,
+  "reservationsCreated": 0
+}

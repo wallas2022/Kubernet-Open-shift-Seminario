@@ -1,0 +1,16 @@
+flowchart TD
+  A[Acceso validado en S04] --> B[Entrar al catálogo y leer API]
+  B --> C{Respuesta de GET catalogo}
+  C -->|200 válido con eventos| D[Tarjetas con campos reales y hora de lectura]
+  C -->|200 válido vacío| E[Catálogo vacío]
+  C -->|Fallo técnico sin lectura previa| F[Error sin inventar datos]
+  C -->|401| G[Limpiar sesión y volver al acceso]
+  D --> H[Actualizar por acción explícita]
+  E --> H
+  F --> H
+  H --> I{Resultado de actualización}
+  I -->|200 válido| J[Reemplazar datos y retirar aviso]
+  I -->|Fallo con datos previos| K[Conservar última lectura con aviso de desactualización]
+  I -->|401| G
+  J --> H
+  K --> H

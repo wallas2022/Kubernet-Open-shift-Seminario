@@ -1,7 +1,11 @@
 import { Step } from '../components/Step';
 import { LaboratoryAccess } from '../session/LaboratoryAccess';
+import { useSession } from '../session/SessionContext';
+import { CatalogPage } from '../catalog/CatalogPage';
 
 export function WelcomePage() {
+  const { isAuthenticated } = useSession();
+  if (isAuthenticated) return <CatalogPage />;
   return <div className="page">
     <a className="skip-link" href="#contenido">Ir al contenido</a>
     <header className="header">
@@ -17,7 +21,7 @@ export function WelcomePage() {
         <h1 id="titulo">Un lugar para<br /><span>tu próximo evento.</span></h1>
         <p className="lead">Consulta los cupos de un evento y conserva la confirmación de tu reserva en un mismo lugar.</p>
         <p className="notice"><span className="notice-icon" aria-hidden="true">i</span>
-          <span><strong>Una demo para aprender.</strong><br />Ya puedes validar tu acceso al laboratorio. El catálogo y las reservas se habilitarán en las próximas entregas.</span>
+          <span><strong>Una demo para aprender.</strong><br />Valida tu acceso y consulta el catálogo del laboratorio. Las reservas se habilitarán en las próximas entregas.</span>
         </p>
       </section>
       <LaboratoryAccess />
@@ -31,6 +35,6 @@ export function WelcomePage() {
         <div className="journey-note"><span aria-hidden="true">↗</span><p>Los cupos se confirmarán al procesar cada reserva.</p></div>
       </section>
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Acceso al laboratorio · S04</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Acceso y catálogo · S05</span></footer>
   </div>;
 }

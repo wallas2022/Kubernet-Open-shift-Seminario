@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S03 publicados; S04 autorizado para trabajo local y preparado para revisión. El catálogo visible y las reservas siguen pendientes de los sprints posteriores.
+Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S04 publicados; S05 autorizado para trabajo local y preparado para revisión. La selección de eventos y las reservas siguen pendientes de los sprints posteriores.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -48,7 +48,11 @@ El usuario autorizó iniciar S03 mediante «autorizao S03» y aprobó publicarlo
 
 ## Entrega de S04
 
-El usuario autorizó el trabajo local de S04 junto con la publicación de S03. El [informe Markdown](sprints/S04/fuentes/DOC-S04-01-entrega.md) y su [Word](sprints/S04/word/DOC-S04-01-entrega.docx) documentan RF01, acceso con clave enmascarada, errores y pruebas. El [diagrama editable](../../diagramas/fase-10/sprints/S04-acceso-laboratorio.mmd) describe la validación. La prueba real recibió 401 con clave inválida y 200 con clave válida, sin crear reservas. S04 requiere aprobación antes de commit y push; S05 no está autorizado.
+El usuario autorizó el trabajo local de S04 y aprobó su publicación mediante «autorizo s04». Commit y push completados en 877e544. El [informe Markdown](sprints/S04/fuentes/DOC-S04-01-entrega.md) y su [Word](sprints/S04/word/DOC-S04-01-entrega.docx) conservan la entrega revisada. El [diagrama editable](../../diagramas/fase-10/sprints/S04-acceso-laboratorio.mmd) describe la validación. La prueba real recibió 401 y 200, sin crear reservas.
+
+## Entrega de S05
+
+El usuario autorizó el siguiente sprint después de publicar S04. El [informe Markdown](sprints/S05/fuentes/DOC-S05-01-entrega.md) y su [Word](sprints/S05/word/DOC-S05-01-entrega.docx) documentan el catálogo autenticado de RF02, sus estados y actualización. El [diagrama editable](../../diagramas/fase-10/sprints/S05-catalogo-eventos.mmd) distingue error inicial y lectura desactualizada. Se verificaron fixtures controlados y datos reales de la API local sin crear reservas. S05 requiere aprobación antes de commit y push; S06 no está autorizado.
 
 ## Decisiones principales
 
