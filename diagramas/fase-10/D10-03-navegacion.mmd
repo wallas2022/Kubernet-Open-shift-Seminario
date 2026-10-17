@@ -1,0 +1,9 @@
+flowchart TB
+  A[P01 Acceso] -->|Catálogo 200| C[P02 Catálogo]
+  C -->|Elegir evento| R[P03 Reserva]
+  C --> Q[P05 Consulta por UUID]
+  Q -->|200 autorizado| X[P04 Resultado]
+  R -->|201 o 200| X
+  R -->|Respuesta incierta| U[P06 Recuperación]
+  U -->|Misma operación confirmada| X
+  A -->|Misma clave y pendiente guardado| U

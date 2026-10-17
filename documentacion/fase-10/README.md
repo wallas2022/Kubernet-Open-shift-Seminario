@@ -1,0 +1,47 @@
+# Fase 10 Análisis y diseño del frontend de reservas
+
+Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: propuesta disponible para revisión, sin aprobación de fase ni implementación del frontend.
+
+Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
+
+## Recorrido de lectura
+
+| Etapa | Fuente editable | Contenido |
+| --- | --- | --- |
+| 01 | [DOC-10-01](fuentes/DOC-10-01-analisis-requisitos.md) | Problema, alcance, actores, requisitos y reglas |
+| 02 | [DOC-10-02](fuentes/DOC-10-02-casos-uso.md) | Casos de uso, precondiciones, alternativas y aceptación |
+| 03 | [DOC-10-03](fuentes/DOC-10-03-diseno-experiencia.md) | Pantallas, navegación, estados y accesibilidad |
+| 04 | [DOC-10-04](fuentes/DOC-10-04-diseno-tecnico.md) | Arquitectura, contratos, datos, seguridad y despliegue |
+| 05 | [DOC-10-05](fuentes/DOC-10-05-validacion-entrega.md) | Trazabilidad, pruebas propuestas, riesgos y etapas de construcción |
+| 06 | [DOC-10-06](fuentes/DOC-10-06-plan-sprints-codificacion.md) | 19 sprints, uno por requisito, con tareas, aceptación y aprobación previa de commit y push |
+
+DOC-10-06 tiene un Word independiente. El usuario aprobó la planificación y autorizó commit y push del paquete documental a origin/master el 17 de octubre de 2026. Esa aprobación no inicia automáticamente S01. Cada entrega posterior requerirá su autorización de publicación. El Word DOC-10-00 conserva las cinco etapas de análisis y diseño originales; las versiones entregadas para revisión mantienen su estado histórico y esta nota registra la aprobación posterior.
+
+El Word consolidado DOC-10-00 reúne las cinco etapas y sus diagramas. Los originales Mermaid están en `diagramas/fase-10/`; cada figura incluye interpretación y límites en su etapa correspondiente. El registro de revisión distingue las comprobaciones documentales de las pruebas funcionales pendientes.
+
+## Catálogo de diagramas
+
+| ID | Diagrama | Etapa |
+| --- | --- | --- |
+| D10-01 | [Contexto](../../diagramas/fase-10/D10-01-contexto.mmd) | Análisis |
+| D10-02 | [Casos de uso](../../diagramas/fase-10/D10-02-casos-uso.mmd) | Casos de uso |
+| D10-03 | [Navegación](../../diagramas/fase-10/D10-03-navegacion.mmd) | Experiencia |
+| D10-04 | [Estados de operación](../../diagramas/fase-10/D10-04-estados.mmd) | Experiencia |
+| D10-05 | [Pantallas](../../diagramas/fase-10/D10-05-pantallas.mmd) | Experiencia |
+| D10-06 | [Componentes](../../diagramas/fase-10/D10-06-componentes.mmd) | Diseño técnico |
+| D10-07 | [Secuencia de reserva](../../diagramas/fase-10/D10-07-secuencia-reserva.mmd) | Diseño técnico |
+| D10-08 | [Datos existentes](../../diagramas/fase-10/D10-08-datos.mmd) | Diseño técnico |
+| D10-09 | [Despliegue](../../diagramas/fase-10/D10-09-despliegue.mmd) | Diseño técnico |
+| D10-10 | [Etapas de entrega](../../diagramas/fase-10/D10-10-etapas.mmd) | Validación |
+
+## Decisiones principales
+
+Se propone React con TypeScript y Vite, un servidor web sin privilegios y un proxy `/api/` hacia FastAPI. La clave de laboratorio se mantendrá en memoria. Las operaciones pendientes se conservarán en la sesión de la pestaña sin guardar la credencial. El frontend no accederá directamente a PostgreSQL ni al worker.
+
+El backend no ofrece listado de reservas, registro de usuarios, pagos ni cancelaciones. Consultar una reserva requiere conocer su identificador. La confirmación de una reserva no acredita envío de correo: el receptor actual es simulado.
+
+## Evidencia y estado
+
+Análisis basado en `aplicacion/reservas/api.py`, `store.py`, `schema.sql`, `config.py`, `worker.py`, `aplicacion/README.md`, `compose.yaml` y los manifiestos existentes. La sesión anterior comprobó el arranque Compose, readiness, documentación HTTP 200 y catálogo con 1000 cupos. No se realizaron nuevas pruebas de negocio durante la redacción. Los ensayos históricos tienen su alcance en `evidencias/`.
+
+No se cambió la aplicación, la base de datos ni los manifiestos. No se realizaron operaciones remotas Git. Construcción, aceptación y despliegue del frontend quedan como trabajo posterior.

@@ -1,0 +1,14 @@
+flowchart TB
+  B[Navegador] --> E[Entrada al frontend]
+  subgraph PROP[Topología propuesta]
+    E --> F[Frontend y proxy puerto 8080]
+    F -->|API interna| A[Service o servicio de API]
+    A --> R[Réplicas FastAPI]
+    R --> D[(PostgreSQL)]
+    W[Worker] --> D
+  end
+  C[Compose local 127.0.0.1:8083] -.-> E
+  K[kind con entrada HTTP de laboratorio] -.-> E
+  O[OpenShift Route con HTTPS] -.-> E
+  N[Compose y kind usan base del laboratorio] -.-> D
+  X[OpenShift usa PostgreSQL externo TLS] -.-> D

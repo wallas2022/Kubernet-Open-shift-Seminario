@@ -1,0 +1,8 @@
+flowchart TB
+  P[Participante] -->|Consultar y reservar| F[Frontend propuesto]
+  I[Instructor] -->|Preparar entorno y entregar clave privada| P
+  F -->|HTTP con clave de laboratorio| A[API existente]
+  A -->|Transacciones| D[(PostgreSQL)]
+  W[Worker existente] -->|Leer outbox y registrar recepción simulada| D
+  I -->|Diagnóstico técnico| S[Swagger existente]
+  S --> A

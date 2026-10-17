@@ -1,0 +1,12 @@
+flowchart TB
+  H1[H1 Revisión de análisis y diseño]
+  H2[H2 Prototipo de pantallas y estados]
+  H3[H3 Integración real y recuperación idempotente]
+  H4[H4 Contenedor y Docker Compose]
+  H5[H5 Validación en clúster elegido]
+  H6[H6 Documentación y aceptación]
+  H1 --> H2 --> H3 --> H4 --> H5 --> H6
+  H3 --> E[Guardar evidencias por caso de prueba]
+  H4 --> E
+  H5 --> E
+  E --> H6

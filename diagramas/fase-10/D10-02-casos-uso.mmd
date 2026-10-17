@@ -1,0 +1,21 @@
+flowchart LR
+  P[Participante]
+  subgraph FE[Frontend propuesto]
+    C1([CU01 Acceder al laboratorio])
+    C2([CU02 Explorar eventos y cupos])
+    C3([CU03 Crear reserva])
+    C4([CU04 Recuperar operación incierta])
+    C5([CU05 Consultar por identificador])
+    C6([CU06 Salir de sesión local])
+  end
+  P --- C1
+  P --- C2
+  P --- C3
+  P --- C4
+  P --- C5
+  P --- C6
+  C1 --- A[API de reservas]
+  C2 --- A
+  C3 --- A
+  C4 --- A
+  C5 --- A

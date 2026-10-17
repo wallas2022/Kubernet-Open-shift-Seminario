@@ -1,0 +1,18 @@
+flowchart TB
+  subgraph NAV[Navegador]
+    V[Pantallas y formularios]
+    S[Sesión con clave en memoria]
+    O[Control de operación pendiente]
+    L[(sessionStorage sin credencial)]
+    H[Cliente HTTP y errores normalizados]
+    V --> S
+    V --> O
+    O --> L
+    V --> H
+    O --> H
+    S --> H
+  end
+  H -->|Mismo origen /api/| N[Servidor estático y proxy propuestos]
+  N -->|Eliminar prefijo /api| A[FastAPI existente]
+  A --> D[(PostgreSQL)]
+  W[Worker existente] --> D

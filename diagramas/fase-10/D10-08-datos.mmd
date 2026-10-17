@@ -1,0 +1,31 @@
+erDiagram
+  events ||--o{ reservations : recibe
+  reservations ||--o| outbox : genera
+  outbox ||--o| notification_deliveries : registra
+  reservations ||--o{ notification_deliveries : referencia
+  events {
+    uuid id PK
+    text name
+    integer capacity
+    integer available
+  }
+  reservations {
+    uuid id PK
+    uuid client_id
+    varchar idempotency_key "Unica con client_id"
+    uuid event_id FK
+    integer quantity
+    text status
+    timestamptz created_at
+  }
+  outbox {
+    uuid id PK
+    uuid reservation_id FK,UK
+    jsonb payload
+    timestamptz processed_at
+  }
+  notification_deliveries {
+    uuid event_id PK,FK
+    uuid reservation_id FK
+    timestamptz delivered_at
+  }

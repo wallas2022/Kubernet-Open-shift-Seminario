@@ -1,0 +1,12 @@
+stateDiagram-v2
+  [*] --> Edicion
+  Edicion --> Enviando: Guardar y enviar
+  Enviando --> Confirmada: 201 o 200
+  Enviando --> Rechazada: Rechazo conocido
+  Enviando --> Incierta: Sin respuesta fiable
+  Enviando --> Reautenticar: 401
+  Enviando --> Bloqueada: Clave incompatible
+  Incierta --> Recuperacion: Misma clave y contenido
+  Reautenticar --> Recuperacion: Mismo token
+  Recuperacion --> Confirmada: 201 o 200
+  Recuperacion --> Pendiente: Nuevo fallo técnico

@@ -1,0 +1,25 @@
+sequenceDiagram
+  actor P as Participante
+  participant F as Frontend
+  participant A as API
+  participant D as PostgreSQL
+  P->>F: Confirmar evento y cantidad
+  Note over F: Guardar intención sin token
+  F->>A: POST con ambas claves
+  A->>D: Inventario, reserva y outbox
+  D-->>A: Commit
+  alt Respuesta recibida
+    A-->>F: 201 y reserva confirmada
+  else Respuesta perdida tras commit
+    A--xF: Respuesta no recibida
+    F-->>P: Resultado incierto
+    P->>F: Recuperar resultado
+    F->>A: POST con misma clave y payload
+    A->>D: Leer por cliente y clave
+    D-->>A: Misma reserva
+    A-->>F: 200 con mismo UUID
+  end
+  Note over F: Retirar pendiente
+  F-->>P: Mostrar comprobante
+  F->>A: Actualizar disponibilidad
+  Note over D: Worker procesa outbox después

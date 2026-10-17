@@ -1,0 +1,26 @@
+flowchart LR
+  subgraph P02[P02 Catálogo]
+    direction TB
+    H[Cabecera y acciones de consulta y salida]
+    AV[Avisos y estado de actualización]
+    EV[Evento y cupos observados]
+    B[Actualizar o Reservar]
+    H --- AV --- EV --- B
+  end
+  subgraph P03[P03 Reserva]
+    direction TB
+    DE[Nombre y disponibilidad]
+    CA[Cantidad entre 1 y 100]
+    RE[Resumen de evento y unidades]
+    CO[Confirmar o Volver]
+    DE --- CA --- RE --- CO
+  end
+  subgraph P04[P04 Comprobante]
+    direction TB
+    ES[Reserva confirmada]
+    ID[Identificador completo y copiar]
+    DT[Cantidad y fecha con zona horaria]
+    VC[Volver al catálogo]
+    ES --- ID --- DT --- VC
+  end
+  P02 --> P03 --> P04
