@@ -1,0 +1,41 @@
+﻿{
+    "realHttpStatuses":  [
+                             401,
+                             200
+                         ],
+    "secretChecks":  12,
+    "commands":  [
+                     "npm test",
+                     "npm run build",
+                     "npm run verify:secrets",
+                     "node scripts/verify-access.mjs",
+                     "node scripts/verify-access.mjs --real"
+                 ],
+    "sprint":  "S04",
+    "controlledBrowserChecks":  32,
+    "realApiRequests":  2,
+    "npm":  "10.9.8",
+    "publication":  "local review only",
+    "build":  "passed",
+    "tests":  {
+                  "passed":  19,
+                  "failed":  0
+              },
+    "previousSprint":  {
+                           "commit":  "e0ace99",
+                           "push":  "successful",
+                           "id":  "S03"
+                       },
+    "node":  "22.23.2",
+    "reservationsCreated":  0,
+    "sourceHashes":  {
+                         "frontend/src/session/SessionContext.tsx":  "FAB4182FD84EF706850BBCF08B0713CADFF99A604C750F0D19A5781636A066DC",
+                         "frontend/src/session/useLaboratoryAccess.ts":  "C956F32C94A34257BD16AFF6DFF535830B8D14AC19E8FE7089AA25E3E85DF3C2",
+                         "frontend/scripts/verify-access.mjs":  "F000F4866466605D1F064FAE71A9123B716B2103222B2503316C86B65F881769",
+                         "frontend/src/pages/WelcomePage.tsx":  "09619B4719C3F5C8D3B50A91A74A63F75B21C15BDA621F9C186FC186F0A0C370",
+                         "frontend/src/session/LaboratoryAccess.tsx":  "242A2C2DBD07105BAE58725DFE584C8778CAE41C53B2967E689C2B0AFCD74623",
+                         "frontend/src/styles.css":  "C9031D6A788F82760841152309D5A31C35F3AE237DC0F91A0860ABD56620F58D"
+                     },
+    "realBrowserChecks":  8,
+    "date":  "2026-10-17T16:10:58.4606929-06:00"
+}

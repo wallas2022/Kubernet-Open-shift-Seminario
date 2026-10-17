@@ -1,5 +1,5 @@
 import { Step } from '../components/Step';
-import { TemporaryCredentialPanel } from '../session/TemporaryCredentialPanel';
+import { LaboratoryAccess } from '../session/LaboratoryAccess';
 
 export function WelcomePage() {
   return <div className="page">
@@ -17,10 +17,11 @@ export function WelcomePage() {
         <h1 id="titulo">Un lugar para<br /><span>tu próximo evento.</span></h1>
         <p className="lead">Consulta los cupos de un evento y conserva la confirmación de tu reserva en un mismo lugar.</p>
         <p className="notice"><span className="notice-icon" aria-hidden="true">i</span>
-          <span><strong>Estamos preparando la experiencia.</strong><br />Esta primera entrega es una vista inicial. El acceso, el catálogo y las reservas aún no están habilitados.</span>
+          <span><strong>Una demo para aprender.</strong><br />Ya puedes validar tu acceso al laboratorio. El catálogo y las reservas se habilitarán en las próximas entregas.</span>
         </p>
       </section>
-      <section className="journey" aria-labelledby="recorrido">
+      <LaboratoryAccess />
+      <section className="journey journey-preview" aria-labelledby="recorrido">
         <div className="section-heading"><span className="eyebrow">ASÍ SERÁ EL RECORRIDO</span><h2 id="recorrido">De elegir a confirmar.</h2></div>
         <ol className="steps">
           <Step number="01" title="Consulta el evento">Revisa los cupos disponibles antes de elegir cuántos necesitas.</Step>
@@ -29,8 +30,7 @@ export function WelcomePage() {
         </ol>
         <div className="journey-note"><span aria-hidden="true">↗</span><p>Los cupos se confirmarán al procesar cada reserva.</p></div>
       </section>
-      <TemporaryCredentialPanel />
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Prueba local · S02</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Acceso al laboratorio · S04</span></footer>
   </div>;
 }

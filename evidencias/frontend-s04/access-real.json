@@ -1,0 +1,50 @@
+{
+  "sprint": "S04",
+  "date": "2026-10-17T21:42:09.615Z",
+  "browser": "145.0.7632.6",
+  "mode": "real-local-api",
+  "passed": true,
+  "checks": 8,
+  "results": [
+    {
+      "name": "masked-field",
+      "passed": true
+    },
+    {
+      "name": "blank-does-not-call-api",
+      "passed": true
+    },
+    {
+      "name": "real-401-denied",
+      "passed": true
+    },
+    {
+      "name": "success-field-removed",
+      "passed": true
+    },
+    {
+      "name": "success-focus",
+      "passed": true
+    },
+    {
+      "name": "real-200-access",
+      "passed": true
+    },
+    {
+      "name": "headers-storage-url-logs-and-runtime",
+      "passed": true
+    },
+    {
+      "name": "final-reload-clears-access",
+      "passed": true
+    }
+  ],
+  "requests": 2,
+  "statuses": [
+    401,
+    200
+  ],
+  "credentialsRecorded": false,
+  "reservationsCreated": 0,
+  "scope": "GET /catalogo through local frontend proxy, valid and invalid credentials."
+}

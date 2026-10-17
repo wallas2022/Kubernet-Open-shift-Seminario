@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación, S01 y S02 publicados; S03 autorizado para trabajo local y preparado para revisión. Las pantallas de negocio siguen pendientes de los sprints posteriores.
+Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S03 publicados; S04 autorizado para trabajo local y preparado para revisión. El catálogo visible y las reservas siguen pendientes de los sprints posteriores.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -44,7 +44,11 @@ El usuario autorizó S02 mediante «sigamos S02» y aprobó su publicación medi
 
 ## Entrega de S03
 
-El usuario autorizó iniciar S03 mediante «autorizao S03». El [informe Markdown](sprints/S03/fuentes/DOC-S03-01-entrega.md) y su [Word](sprints/S03/word/DOC-S03-01-entrega.docx) describen el cliente HTTP, timeout y resultados inciertos de RN07. El [diagrama editable](../../diagramas/fase-10/sprints/S03-cliente-http.mmd) resume la clasificación. Las pruebas usan respuestas controladas sin reservas reales; PV08 completo sigue previsto para S10. S03 requiere aprobación antes de commit y push; S04 no está autorizado.
+El usuario autorizó iniciar S03 mediante «autorizao S03» y aprobó publicarlo mediante «autorizado y sigue con S04». Commit y push completados en e0ace99. El [informe Markdown](sprints/S03/fuentes/DOC-S03-01-entrega.md) y su [Word](sprints/S03/word/DOC-S03-01-entrega.docx) conservan la entrega revisada. El [diagrama editable](../../diagramas/fase-10/sprints/S03-cliente-http.mmd) resume la clasificación. PV08 completo sigue previsto para S10.
+
+## Entrega de S04
+
+El usuario autorizó el trabajo local de S04 junto con la publicación de S03. El [informe Markdown](sprints/S04/fuentes/DOC-S04-01-entrega.md) y su [Word](sprints/S04/word/DOC-S04-01-entrega.docx) documentan RF01, acceso con clave enmascarada, errores y pruebas. El [diagrama editable](../../diagramas/fase-10/sprints/S04-acceso-laboratorio.mmd) describe la validación. La prueba real recibió 401 con clave inválida y 200 con clave válida, sin crear reservas. S04 requiere aprobación antes de commit y push; S05 no está autorizado.
 
 ## Decisiones principales
 

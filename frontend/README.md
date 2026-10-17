@@ -1,6 +1,6 @@
 # Frontend de reservas del seminario
 
-S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext y un panel temporal para verificar RN04. S03 implementa el cliente HTTP de RN07, disponible para las futuras pantallas; la vista actual no lo invoca ni autentica ni crea reservas. Las pantallas de negocio corresponden a S04 en adelante.
+S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext para RN04. S03 implementa el cliente HTTP de RN07. S04 sustituye el panel temporal por acceso conectado a GET /catalogo: activa la sesión únicamente tras validar la respuesta. El catálogo visible y las reservas siguen pendientes de S05 en adelante.
 
 ## Arranque local
 
@@ -21,7 +21,7 @@ No incluir claves en archivos del frontend, variables públicas, query strings o
 
 El destino del proxy solo admite HTTP en los nombres locales indicados, sin usuario, contraseña, parámetros ni ruta adicional. Las peticiones /api con query se rechazan sin reflejar contenido. Las rutas .env se bloquean antes del fallback de la SPA, también con nombre codificado. El servidor de desarrollo restringe los archivos a la raíz frontend.
 
-Las futuras claves se transportarán en headers, por cliente. S01 comprueba esa frontera con claves aleatorias sintéticas y un receptor temporal. No se incorporan claves de la demo real. La API seguirá autorizando las solicitudes; estas restricciones no sustituyen autenticación ni un gestor de secretos de producción.
+Las claves se transportan en headers, por cliente. S01 comprueba esa frontera con claves aleatorias sintéticas y un receptor temporal. No se incorporan claves de la demo real al código ni a los entregables. La API autoriza las solicitudes; estas restricciones no sustituyen un gestor de secretos de producción.
 
 ## Comprobaciones
 
@@ -40,9 +40,9 @@ La revisión automatizada de navegador usa Playwright y necesita Chromium instal
 
 `npm run build` comprueba tipos y genera dist. `npm run preview` sirve únicamente la compilación estática en localhost:4173; no ofrece un proxy de producción. Nginx, imagen de aplicación, Compose, sondas y clúster se implementarán en S18. Ninguna operación de reserva se ejecuta al abrir la pantalla inicial.
 
-S02 usa un almacén por instancia de SessionProvider, sin almacenamiento persistente. `useSession()` ofrece hasCredential, setCredential, readCredential y clearCredential para la futura integración. El campo enmascarado se vacía después de cada envío local; limpiar, pagehide o desmontar elimina la referencia del almacén. Una recarga crea un almacén vacío. No se garantiza borrado físico de strings por el recolector de memoria, ni se controla un gestor de contraseñas o extensión ajena a la aplicación. El panel solicita únicamente valores de prueba y no valida identidad. No se implementa todavía el registro de reserva pendiente, ni la salida con advertencia de S13.
+S02 usa un almacén por instancia de SessionProvider, sin almacenamiento persistente. `useSession()` ofrece hasCredential, setCredential, readCredential y clearCredential. S04 añade isAuthenticated y confirmCredential: la presencia temporal de una clave no equivale a acceso validado. El campo enmascarado se vacía después del envío; pagehide o desmontar el proveedor elimina la referencia del almacén. Una recarga crea un almacén vacío. No se garantiza borrado físico de strings por el recolector de memoria, ni se controla un gestor de contraseñas o extensión ajena a la aplicación. El panel temporal de S02 queda como fuente histórica sin mostrarse en la aplicación. No se implementa todavía el registro de reserva pendiente, ni la salida con advertencia de S13.
 
-La comprobación S02 se ejecuta con `node scripts/verify-session.mjs` y Chromium disponible. S02_BROWSER_URL y S02_EVIDENCE_DIR permiten indicar URL y destino de evidencia. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. La comprobación S01 histórica exige cero campos y corresponde al código de aquella entrega; para S02 se usa verify-session.mjs. S01 y S02 están publicados; S03 requiere aprobación antes de commit y push.
+Las comprobaciones verify-browser.mjs y verify-session.mjs corresponden respectivamente a las pantallas históricas de S01 y S02. S04 utiliza verify-access.mjs para la pantalla actual. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. S01 a S03 están publicados; S04 requiere aprobación antes de commit y push.
 
 ## Cliente HTTP de S03
 
@@ -52,7 +52,15 @@ Los resultados son una unión ApiResult: éxito con status y data validado, o fa
 
 Retry-After para 429/503 solo aporta segundos de orientación; no programa otro envío. Error y detail se normalizan por lista de códigos conocidos y estado HTTP. No se exponen mensajes arbitrarios, cuerpos de error ni excepciones del fetch. Las respuestas HTML, vacías o incompatibles producen un resultado controlado. La API del cliente exige una intención con clave suministrada; no genera ni persiste operaciones. PendingOperation define el contrato futuro sin credencial; S08/S10 implementarán persistencia y recuperación.
 
-`node scripts/verify-http.mjs` prueba respuestas controladas en Chromium sin llamar al backend. S03_BROWSER_URL y S03_EVIDENCE_DIR configuran la URL de desarrollo y las evidencias. La carga dinámica del cliente usa el servidor Vite, no preview. En Docker se ejecuta con la misma red indicada para S02 y S03_BROWSER_URL=http://127.0.0.1:5173. Los tests Node incluyen un servidor HTTP efímero que simula una respuesta perdida después de incrementar un contador; esto no verifica un commit de PostgreSQL ni PV08 completo. La compilación actual elimina el cliente de los assets de la pantalla inicial porque todavía no lo consume; los tipos, tests y prueba Chromium verifican el módulo antes de integrarlo en S04.
+`node scripts/verify-http.mjs` prueba respuestas controladas en Chromium sin llamar al backend. S03_BROWSER_URL y S03_EVIDENCE_DIR configuran la URL de desarrollo y las evidencias. La carga dinámica del cliente usa el servidor Vite, no preview. En Docker se ejecuta con la misma red indicada para S02 y S03_BROWSER_URL=http://127.0.0.1:5173. Los tests Node incluyen un servidor HTTP efímero que simula una respuesta perdida después de incrementar un contador; esto no verifica un commit de PostgreSQL ni PV08 completo. Desde S04, el cliente sí se incluye en los assets porque el acceso lo utiliza.
+
+## Acceso de S04
+
+Abrir http://127.0.0.1:5180 e ingresar una clave proporcionada por el instructor. Entrar ejecuta un GET /api/catalogo por el proxy local. Un 200 con events válido, vacío o con eventos, activa la sesión. Un 401 muestra clave no válida; un error de red, timeout, 5xx, HTML o respuesta incompatible muestra fallo técnico. Los fallos limpian la credencial. No se solicita la clave mediante URL ni se precarga desde configuración. No se envían POST.
+
+El campo se vacía antes de la espera y el formulario queda deshabilitado mientras se valida. Un bloqueo inmediato evita también dos eventos submit en el mismo ciclo. pagehide aborta la espera e impide que una respuesta tardía reactive el acceso. Tras validar se muestra una confirmación sin catálogo ficticio; Volver al acceso elimina la credencial. La salida con advertencia sobre reservas pendientes sigue en S13.
+
+`node scripts/verify-access.mjs` ejecuta casos controlados, incluidos el timeout predeterminado de 15 segundos, doble envío y recarga. S04_BROWSER_URL y S04_EVIDENCE_DIR configuran URL y evidencia. `--real` recibe por stdin un JSON con la propiedad credential y comprueba únicamente GET /catalogo con clave válida e inválida. Usar entrada desde memoria o un gestor seguro, sin escribir la clave en comandos ni archivos; no pasar valores por argumentos o variables VITE_. Las evidencias solo guardan resultados y códigos HTTP, sin la credencial.
 
 ## Fuentes técnicas verificadas
 

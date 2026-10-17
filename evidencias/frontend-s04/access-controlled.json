@@ -1,0 +1,151 @@
+{
+  "sprint": "S04",
+  "date": "2026-10-17T21:47:46.779Z",
+  "browser": "145.0.7632.6",
+  "mode": "intercepted-responses",
+  "passed": true,
+  "checks": 32,
+  "results": [
+    {
+      "name": "masked-field",
+      "passed": true
+    },
+    {
+      "name": "blank-does-not-call-api",
+      "passed": true
+    },
+    {
+      "name": "invalid-denied-and-cleared",
+      "passed": true
+    },
+    {
+      "name": "invalid-not-authenticated",
+      "passed": true
+    },
+    {
+      "name": "unavailable-denied-and-cleared",
+      "passed": true
+    },
+    {
+      "name": "unavailable-not-authenticated",
+      "passed": true
+    },
+    {
+      "name": "html-denied-and-cleared",
+      "passed": true
+    },
+    {
+      "name": "html-not-authenticated",
+      "passed": true
+    },
+    {
+      "name": "schema-denied-and-cleared",
+      "passed": true
+    },
+    {
+      "name": "schema-not-authenticated",
+      "passed": true
+    },
+    {
+      "name": "network-denied-and-cleared",
+      "passed": true
+    },
+    {
+      "name": "network-not-authenticated",
+      "passed": true
+    },
+    {
+      "name": "timeout-denied-and-cleared",
+      "passed": true
+    },
+    {
+      "name": "timeout-not-authenticated",
+      "passed": true
+    },
+    {
+      "name": "default-timeout-observed",
+      "passed": true
+    },
+    {
+      "name": "success-field-removed",
+      "passed": true
+    },
+    {
+      "name": "success-focus",
+      "passed": true
+    },
+    {
+      "name": "empty-catalog-allows-access",
+      "passed": true
+    },
+    {
+      "name": "reload-requires-key",
+      "passed": true
+    },
+    {
+      "name": "success-field-removed",
+      "passed": true
+    },
+    {
+      "name": "success-focus",
+      "passed": true
+    },
+    {
+      "name": "events-catalog-allows-access",
+      "passed": true
+    },
+    {
+      "name": "reload-requires-key",
+      "passed": true
+    },
+    {
+      "name": "not-authenticated-before-response",
+      "passed": true
+    },
+    {
+      "name": "success-field-removed",
+      "passed": true
+    },
+    {
+      "name": "success-focus",
+      "passed": true
+    },
+    {
+      "name": "double-submit-one-request",
+      "passed": true
+    },
+    {
+      "name": "late-response-does-not-reopen-access",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-horizontal-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-horizontal-overflow",
+      "passed": true
+    },
+    {
+      "name": "headers-storage-url-logs-and-runtime",
+      "passed": true
+    },
+    {
+      "name": "final-reload-clears-access",
+      "passed": true
+    }
+  ],
+  "requests": 10,
+  "statuses": [
+    401,
+    503,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "credentialsRecorded": false,
+  "reservationsCreated": 0,
+  "scope": "UI controlled scenarios, including 15-second default timeout."
+}

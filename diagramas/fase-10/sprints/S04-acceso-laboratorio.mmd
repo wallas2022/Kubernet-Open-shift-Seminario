@@ -1,0 +1,13 @@
+flowchart TD
+  A[Clave enmascarada sin persistencia] --> B{Dato local válido}
+  B -->|No| C[Error de campo sin petición]
+  B -->|Sí| D[Vaciar campo y bloquear envío duplicado]
+  D --> E[GET /api/catalogo con X-Api-Key]
+  E --> F{Respuesta}
+  F -->|200 y events válido incluso vacío| G[Activar sesión local]
+  F -->|401| H[Clave no válida y limpiar credencial]
+  F -->|Red timeout 5xx o contrato inesperado| I[Fallo técnico y limpiar credencial]
+  G --> J[Confirmar acceso sin habilitar catálogo todavía]
+  J --> K[Volver o recargar elimina sesión]
+  E -->|pagehide o desmontaje| L[Abortar espera e ignorar respuesta tardía]
+  L --> K
