@@ -8,6 +8,7 @@ function identifier(value: string) {
 /** Paths contain resource identifiers only: never credentials or arbitrary query strings. */
 export const apiPaths = {
   catalog: '/api/catalogo',
+  createReservation: '/api/reservas',
   availability: (eventId: string) => `/api/eventos/${identifier(eventId)}/disponibilidad`,
   reservation: (reservationId: string) => `/api/reservas/${identifier(reservationId)}`,
 } as const;

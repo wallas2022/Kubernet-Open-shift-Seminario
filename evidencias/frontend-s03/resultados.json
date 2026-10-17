@@ -1,0 +1,32 @@
+﻿{
+    "testTimeoutMs":  20,
+    "secretChecks":  12,
+    "commands":  [
+                     "npm test",
+                     "npm run build",
+                     "npm run verify:secrets",
+                     "node scripts/verify-http.mjs"
+                 ],
+    "sprint":  "S03",
+    "browserCases":  10,
+    "npm":  "10.9.8",
+    "publication":  "local review only",
+    "build":  "passed",
+    "tests":  {
+                  "passed":  19,
+                  "failed":  0
+              },
+    "node":  "22.23.2",
+    "defaultTimeoutMs":  15000,
+    "scope":  "Controlled responses and ephemeral HTTP server; no actual database commit, real reservations or S10 recovery tested.",
+    "sourceHashes":  {
+                         "frontend/tests/client.test.mjs":  "A4B4AB014B8FACB48990D21EB53FCD779BE949B896D6E2753CA0F0AAB5322F47",
+                         "frontend/src/api/useApiClient.ts":  "12764DBDD1DC61827A3104F0FC9B938ACC97EF34767E1CF80EB52560FA703CF6",
+                         "frontend/scripts/verify-http.mjs":  "DFCDBFE449B7F43D4276A07C6B0D2FA045DC50D6222CF4035CB49ABE70D49F5D",
+                         "frontend/src/api/client.ts":  "8E94D68CDAAE32AE0CD6DB1A81D9F5BD320209F6218F62642D568F4C4BD20AD3",
+                         "frontend/src/api/paths.ts":  "8F8CF40B9C572931FFAF256CB05A37B8935F22E071D41B463DD5BE229C8CC2DF",
+                         "frontend/src/api/validation.ts":  "A0778BE0E72B0756AED55A8E81645AAC12D71F5AA661A9BBB0CDBD34F04556E4",
+                         "frontend/src/api/contracts.ts":  "D1853FCE164ACCC3BFC6F1B5CA858324A804D3CEBC91EA698F993EA85E143F47"
+                     },
+    "date":  "2026-10-17T15:12:43.3116399-06:00"
+}

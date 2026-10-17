@@ -1,0 +1,17 @@
+[
+  {
+    "diagram": "S01-base-frontend.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S02-credencial-memoria.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S03-cliente-http.mmd",
+    "parse": "pass",
+    "render": "pass"
+  }
+]

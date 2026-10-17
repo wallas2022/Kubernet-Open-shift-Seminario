@@ -1,0 +1,12 @@
+flowchart TD
+  A[Llamada explícita y credencial en memoria] --> B{Datos locales válidos}
+  B -->|No| C[No enviado]
+  B -->|Sí| D[Un fetch con headers y timeout de 15 segundos]
+  D --> E{Respuesta válida}
+  E -->|200 o 201 y contrato válido| F[Datos tipados y estado HTTP]
+  E -->|Rechazo conocido de dominio| G[Lectura fallida o POST rechazado]
+  E -->|Timeout o red o protocolo o 5xx| H{Método}
+  H -->|GET| I[Lectura fallida]
+  H -->|POST| J[Resultado incierto]
+  J --> K[Sin reintento automático]
+  K --> L[Recuperación explícita prevista para S10]

@@ -1,0 +1,82 @@
+{
+  "sprint": "S03",
+  "date": "2026-10-17T21:10:30.038Z",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "cases": [
+    {
+      "name": "catalog-empty",
+      "passed": true,
+      "result": "success",
+      "outcome": "confirmed-response-fixture",
+      "requests": 1
+    },
+    {
+      "name": "unauthorized-detail",
+      "passed": true,
+      "result": "invalid_credentials",
+      "outcome": "read-failed",
+      "requests": 1
+    },
+    {
+      "name": "post-created",
+      "passed": true,
+      "result": "success",
+      "outcome": "confirmed-response-fixture",
+      "requests": 1
+    },
+    {
+      "name": "post-replayed",
+      "passed": true,
+      "result": "success",
+      "outcome": "confirmed-response-fixture",
+      "requests": 1
+    },
+    {
+      "name": "html-proxy",
+      "passed": true,
+      "result": "unexpected_response",
+      "outcome": "uncertain",
+      "requests": 1
+    },
+    {
+      "name": "empty-proxy",
+      "passed": true,
+      "result": "unexpected_response",
+      "outcome": "uncertain",
+      "requests": 1
+    },
+    {
+      "name": "post-unavailable",
+      "passed": true,
+      "result": "database_unavailable",
+      "outcome": "uncertain",
+      "requests": 1
+    },
+    {
+      "name": "post-disconnected",
+      "passed": true,
+      "result": "network_error",
+      "outcome": "uncertain",
+      "requests": 1
+    },
+    {
+      "name": "post-timeout",
+      "passed": true,
+      "result": "timeout",
+      "outcome": "uncertain",
+      "requests": 1
+    },
+    {
+      "name": "redirect-blocked",
+      "passed": true,
+      "result": "network_error",
+      "outcome": "uncertain",
+      "requests": 1
+    }
+  ],
+  "headerAndSecrecyChecks": true,
+  "credentialsRecorded": false,
+  "backendRequests": 0,
+  "scope": "Intercepted Chromium responses; no real reservation, database commit or recovery tested."
+}

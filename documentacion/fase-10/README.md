@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 publicados; S02 autorizado para trabajo local y preparado para revisión. Las operaciones de negocio siguen pendientes de los sprints posteriores.
+Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación, S01 y S02 publicados; S03 autorizado para trabajo local y preparado para revisión. Las pantallas de negocio siguen pendientes de los sprints posteriores.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -40,7 +40,11 @@ El usuario autorizó el inicio de S01 y, tras revisar la entrega, autorizó su c
 
 ## Entrega de S02
 
-El usuario autorizó S02 mediante «sigamos S02». El [informe Markdown](sprints/S02/fuentes/DOC-S02-01-entrega.md) y su [Word](sprints/S02/word/DOC-S02-01-entrega.docx) describen SessionContext, el panel temporal y las verificaciones de RN04. El [diagrama editable](../../diagramas/fase-10/sprints/S02-credencial-memoria.mmd) muestra el ciclo de vida en memoria. S02 no autentica contra la API. La entrega requiere aprobación antes de commit y push; S03 no está autorizado.
+El usuario autorizó S02 mediante «sigamos S02» y aprobó su publicación mediante «confirmado». Commit y push completados en fc4bb25. El [informe Markdown](sprints/S02/fuentes/DOC-S02-01-entrega.md) y su [Word](sprints/S02/word/DOC-S02-01-entrega.docx) conservan la entrega revisada. El [diagrama editable](../../diagramas/fase-10/sprints/S02-credencial-memoria.mmd) muestra el ciclo de vida en memoria. S02 no autentica contra la API.
+
+## Entrega de S03
+
+El usuario autorizó iniciar S03 mediante «autorizao S03». El [informe Markdown](sprints/S03/fuentes/DOC-S03-01-entrega.md) y su [Word](sprints/S03/word/DOC-S03-01-entrega.docx) describen el cliente HTTP, timeout y resultados inciertos de RN07. El [diagrama editable](../../diagramas/fase-10/sprints/S03-cliente-http.mmd) resume la clasificación. Las pruebas usan respuestas controladas sin reservas reales; PV08 completo sigue previsto para S10. S03 requiere aprobación antes de commit y push; S04 no está autorizado.
 
 ## Decisiones principales
 
