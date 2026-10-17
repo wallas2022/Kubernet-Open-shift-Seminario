@@ -1,0 +1,11 @@
+flowchart TD
+  A[Valor temporal en campo enmascarado] --> B{No vacío ni saltos de línea}
+  B -->|No| C[Error genérico y campo vacío]
+  B -->|Sí| D[SessionContext por instancia]
+  D --> E[Almacén privado en memoria]
+  D --> F[Estado visible sin valor de credencial]
+  E --> G[Lectura disponible para futuro cliente HTTP]
+  E --> H[Limpiar o pagehide o desmontar]
+  H --> I[Referencia eliminada]
+  I --> J[Recarga inicia sin credencial]
+  E -.-> K[Sin storage ni cookies ni URL ni logs]

@@ -1,5 +1,6 @@
 import { WelcomePage } from '../pages/WelcomePage';
+import { SessionProvider } from '../session/SessionContext';
 
 export function App() {
-  return <WelcomePage />;
+  return <SessionProvider><WelcomePage /></SessionProvider>;
 }

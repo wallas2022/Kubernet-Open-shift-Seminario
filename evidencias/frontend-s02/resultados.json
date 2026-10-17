@@ -1,0 +1,26 @@
+﻿{
+    "tests":  {
+                  "passed":  7,
+                  "failed":  0
+              },
+    "build":  "passed",
+    "sourceHashes":  {
+                         "frontend/scripts/verify-session.mjs":  "671152A5482B59B9E0B8862014994C9F28E5FE1C43FA892245507141854EAB74",
+                         "frontend/src/session/credentialStore.ts":  "337E6DA3091320A1ECAD87BBFE5C3B064E6FD814E5F425E3C7E4ADC2B4F95AFE",
+                         "frontend/tests/session.test.mjs":  "60C6FDA6F49DDBDA81872240B44F779488E2084083E286746B265F408EB5167F",
+                         "frontend/src/app/App.tsx":  "E996A7C008E3FE902E3FB01BE7F772D7100FDFEE52030BC1E2448967B646E808",
+                         "frontend/src/pages/WelcomePage.tsx":  "E51169F332B3C0203493EE49E49D76791CBF1D98713432DD39AEBAC46F13FACF",
+                         "frontend/src/styles.css":  "75B14C3C64EEDD3E7288517A0AC931C4D4F22EC8206E744B076E6115562523B6",
+                         "frontend/src/session/TemporaryCredentialPanel.tsx":  "0B2D18447D1DC1C6DBD3F9D3D511A738593E01A4176419B1720A1414353A3FAB",
+                         "frontend/src/session/SessionContext.tsx":  "21157BBF8EA9BA98107AF97AE3D01FA57AD6763C6067B105B1DDDCE4F9DF4CD3"
+                     },
+    "notes":  [
+                  "Browser rerun after server restart passed; stale dev modules previously failed the new pagehide draft assertion.",
+                  "No business API or reservations executed."
+              ],
+    "secretChecks":  12,
+    "browserChecks":  16,
+    "date":  "2026-10-17T14:52:53.0232420-06:00",
+    "publication":  "local review only",
+    "sprint":  "S02"
+}

@@ -1,4 +1,5 @@
 import { Step } from '../components/Step';
+import { TemporaryCredentialPanel } from '../session/TemporaryCredentialPanel';
 
 export function WelcomePage() {
   return <div className="page">
@@ -28,7 +29,8 @@ export function WelcomePage() {
         </ol>
         <div className="journey-note"><span aria-hidden="true">↗</span><p>Los cupos se confirmarán al procesar cada reserva.</p></div>
       </section>
+      <TemporaryCredentialPanel />
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Vista inicial · S01</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Prueba local · S02</span></footer>
   </div>;
 }

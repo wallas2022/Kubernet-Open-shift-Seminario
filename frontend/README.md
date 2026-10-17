@@ -1,6 +1,6 @@
 # Frontend de reservas del seminario
 
-S01 implementa la base React y TypeScript, la pantalla inicial y los controles RN03. No incluye autenticación, sesión, consultas de catálogo ni creación de reservas. `src/api/contracts.ts` y `paths.ts` definen la frontera de integración; el transporte HTTP funcional corresponde a S03 y las pantallas de negocio a S04 en adelante.
+S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext y un panel temporal para verificar RN04. No incluye autenticación, consultas de catálogo ni creación de reservas. `src/api/contracts.ts` y `paths.ts` definen la frontera de integración; el transporte HTTP funcional corresponde a S03 y las pantallas de negocio a S04 en adelante.
 
 ## Arranque local
 
@@ -40,7 +40,9 @@ La revisión automatizada de navegador usa Playwright y necesita Chromium instal
 
 `npm run build` comprueba tipos y genera dist. `npm run preview` sirve únicamente la compilación estática en localhost:4173; no ofrece un proxy de producción. Nginx, imagen de aplicación, Compose, sondas y clúster se implementarán en S18. Ninguna operación de reserva se ejecuta al abrir la pantalla inicial.
 
-No se han creado SessionContext, transporte HTTP ni formularios de acceso: pertenecen a los siguientes sprints. Cada entrega requiere aprobación antes de commit y push. Esta entrega se mantiene local hasta que el usuario la apruebe.
+S02 usa un almacén por instancia de SessionProvider, sin almacenamiento persistente. `useSession()` ofrece hasCredential, setCredential, readCredential y clearCredential para la futura integración. El campo enmascarado se vacía después de cada envío local; limpiar, pagehide o desmontar elimina la referencia del almacén. Una recarga crea un almacén vacío. No se garantiza borrado físico de strings por el recolector de memoria, ni se controla un gestor de contraseñas o extensión ajena a la aplicación. El panel solicita únicamente valores de prueba y no valida identidad. No se implementa todavía el registro de reserva pendiente, ni la salida con advertencia de S13.
+
+La comprobación S02 se ejecuta con `node scripts/verify-session.mjs` y Chromium disponible. S02_BROWSER_URL y S02_EVIDENCE_DIR permiten indicar URL y destino de evidencia. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. La comprobación S01 histórica exige cero campos y corresponde al código de aquella entrega; para S02 se usa verify-session.mjs. Cada entrega requiere aprobación antes de commit y push. S02 se mantiene local hasta que el usuario la apruebe.
 
 ## Fuentes técnicas verificadas
 

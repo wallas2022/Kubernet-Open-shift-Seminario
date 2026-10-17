@@ -3,6 +3,7 @@ from docx import Document
 from docx.shared import Pt, Cm, Inches, RGBColor
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
+from docx.image.image import Image
 import re, argparse
 
 parser=argparse.ArgumentParser()
@@ -11,6 +12,10 @@ parser.add_argument('--output',default='word/DOC-10-06-plan-sprints-codificacion
 parser.add_argument('--subtitle',default='Planificación de 19 sprints y aprobación de publicación')
 parser.add_argument('--expected-sprints',type=int,default=19)
 parser.add_argument('--figure')
+parser.add_argument('--figure-max-height',type=float,default=8.5)
+parser.add_argument('--figure-title',default='Frontera de integración de S01')
+parser.add_argument('--figure-caption',default='Fuente editable: diagramas/fase-10/sprints/S01-base-frontend.mmd. La pantalla inicial no solicita credenciales ni realiza operaciones de negocio.')
+parser.add_argument('--footer-label')
 args=parser.parse_args()
 
 base=Path('/work/documentacion/fase-10')
@@ -85,11 +90,13 @@ while i<len(lines):
     i+=1
 if args.figure:
     doc.add_page_break()
-    doc.add_paragraph('Frontera de integración de S01','Heading 1')
-    doc.add_picture(args.figure,width=Inches(6.69))
-    doc.add_paragraph('Fuente editable: diagramas/fase-10/sprints/S01-base-frontend.mmd. La pantalla inicial no solicita credenciales ni realiza operaciones de negocio.')
+    doc.add_paragraph(args.figure_title,'Heading 1')
+    figure=Image.from_file(args.figure)
+    width=min(6.69,args.figure_max_height*figure.px_width/figure.px_height)
+    doc.add_picture(args.figure,width=Inches(width))
+    doc.add_paragraph(args.figure_caption)
 upd=OxmlElement('w:updateFields');upd.set(qn('w:val'),'true');doc.settings.element.append(upd)
-footer=s.footer.paragraphs[0];footer.alignment=2;footer.add_run(('S01 RN03' if args.expected_sprints==0 else 'DOC 10 06')+' | ')
+footer=s.footer.paragraphs[0];footer.alignment=2;footer.add_run((args.footer_label or ('S01 RN03' if args.expected_sprints==0 else 'DOC 10 06'))+' | ')
 field=OxmlElement('w:fldSimple');field.set(qn('w:instr'),'PAGE');footer._p.append(field)
 out.parent.mkdir(parents=True,exist_ok=True)
 doc.save(out)
