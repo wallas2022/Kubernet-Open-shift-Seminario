@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import type { EventSummary } from '../api/contracts';
+import { AvailabilityPage } from '../availability/AvailabilityPage';
 import { useSession } from '../session/SessionContext';
 import { useCatalog } from './useCatalog';
 
@@ -6,8 +8,10 @@ export function CatalogPage() {
   const { clearCredential } = useSession();
   const { data, status, loadedAt, refresh } = useCatalog();
   const heading = useRef<HTMLHeadingElement>(null);
-  useEffect(() => { heading.current?.focus(); }, []);
+  const [selected, setSelected] = useState<EventSummary | null>(null);
+  useEffect(() => { if (!selected) heading.current?.focus(); }, [selected]);
   const busy = status === 'loading' || status === 'refreshing';
+  if (selected) return <AvailabilityPage key={selected.id} event={selected} onBack={() => setSelected(null)} />;
   return <div className="page catalog-page">
     <a className="skip-link" href="#contenido">Ir al contenido</a>
     <header className="header">
@@ -55,11 +59,13 @@ export function CatalogPage() {
               <div><dt>Capacidad total</dt><dd>{event.capacity}</dd></div>
               <div className="event-identifier"><dt>Identificador del evento</dt><dd>{event.id}</dd></div>
             </dl>
+            <button type="button" className="view-availability" onClick={() => setSelected(event)} disabled={busy}
+              aria-label={`Consultar disponibilidad de ${event.name}`}>Consultar disponibilidad <span aria-hidden="true">↗</span></button>
           </article>)}
         </div>}
-        {data && <p className="catalog-footnote">La disponibilidad puede cambiar. La consulta de un evento y las reservas se habilitarán en las próximas entregas.</p>}
+        {data && <p className="catalog-footnote">La disponibilidad puede cambiar. Selecciona un evento para consultar sus cupos. Las reservas se habilitarán próximamente.</p>}
       </section>
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Catálogo de eventos · S05</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Catálogo y disponibilidad · S06</span></footer>
   </div>;
 }

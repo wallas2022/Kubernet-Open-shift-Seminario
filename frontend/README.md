@@ -1,6 +1,6 @@
 # Frontend de reservas del seminario
 
-S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext para RN04 y S03 el cliente HTTP de RN07. S04 valida el acceso mediante GET /catalogo. S05 muestra el catálogo autenticado con tarjetas reales, estados de carga, vacío y error, y actualización manual. La consulta individual y las reservas siguen pendientes de S06 en adelante.
+S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext para RN04 y S03 el cliente HTTP de RN07. S04 valida el acceso mediante GET /catalogo. S05 muestra el catálogo autenticado con estados y actualización manual. S06 permite seleccionar un evento y consultar su disponibilidad real. El formulario y las reservas siguen pendientes de S07 en adelante.
 
 ## Arranque local
 
@@ -42,7 +42,7 @@ La revisión automatizada de navegador usa Playwright y necesita Chromium instal
 
 S02 usa un almacén por instancia de SessionProvider, sin almacenamiento persistente. `useSession()` ofrece hasCredential, setCredential, readCredential y clearCredential. S04 añade isAuthenticated y confirmCredential: la presencia temporal de una clave no equivale a acceso validado. El campo enmascarado se vacía después del envío; pagehide o desmontar el proveedor elimina la referencia del almacén. Una recarga crea un almacén vacío. No se garantiza borrado físico de strings por el recolector de memoria, ni se controla un gestor de contraseñas o extensión ajena a la aplicación. El panel temporal de S02 queda como fuente histórica sin mostrarse en la aplicación. No se implementa todavía el registro de reserva pendiente, ni la salida con advertencia de S13.
 
-Las comprobaciones verify-browser.mjs, verify-session.mjs y verify-access.mjs corresponden a las pantallas históricas de S01, S02 y S04. S05 utiliza verify-catalog.mjs para la navegación actual. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. S01 a S04 están publicados; S05 requiere aprobación antes de commit y push.
+Las comprobaciones verify-browser.mjs, verify-session.mjs y verify-access.mjs corresponden a las pantallas históricas de S01, S02 y S04. verify-catalog.mjs comprueba el catálogo y verify-availability.mjs la selección de S06. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. S01 a S05 están publicados; S06 requiere aprobación antes de commit y push. Al repetir pruebas históricas, usar una carpeta de evidencia nueva para conservar sus entregas publicadas.
 
 ## Cliente HTTP de S03
 
@@ -64,7 +64,17 @@ El campo se vacía antes de la espera y el formulario queda deshabilitado mientr
 
 CatalogPage solo se muestra con sesión validada. useCatalog consulta GET /api/catalogo, mantiene datos y fecha de la última lectura solo en memoria y permite una lectura a la vez. Se renderizan nombre, UUID, capacidad y available recibidos y validados por el cliente. No se inventan cupos ni se insertan nombres como HTML. No hay polling ni solicitudes POST.
 
-Un fallo inicial ofrece Reintentar sin mostrar datos ni confundirlo con events vacío. Un fallo de actualización conserva exactamente la lectura anterior con aviso de Información desactualizada y su hora original, incluso si estaba vacía. Una lectura correcta reemplaza la anterior y retira el aviso. Un 401 elimina la sesión; salir de la vista aborta la espera e impide aplicar resultados tardíos. El catálogo no se conserva entre sesiones ni tras recarga. La selección de evento pertenece a S06.
+Un fallo inicial ofrece Reintentar sin mostrar datos ni confundirlo con events vacío. Un fallo de actualización conserva exactamente la lectura anterior con aviso de Información desactualizada y su hora original, incluso si estaba vacía. Una lectura correcta reemplaza la anterior y retira el aviso. Un 401 elimina la sesión; salir de la vista aborta la espera e impide aplicar resultados tardíos. El catálogo no se conserva entre sesiones ni tras recarga. S06 incorpora Consultar disponibilidad por evento.
+
+## Disponibilidad de S06
+
+Consultar disponibilidad abre una vista por evento y ejecuta GET /api/eventos/{id}/disponibilidad. El UUID se valida por el cliente de S03 y la respuesta debe corresponder al mismo evento. Nombre del evento procede de la última lectura del catálogo; id, capacity y available proceden del endpoint individual. No se usan los cupos de la tarjeta como sustituto de una lectura de disponibilidad.
+
+La pantalla muestra carga, campos reales, momento de lectura con zona horaria del navegador y Actualizar disponibilidad. Un fallo técnico con datos anteriores conserva sus valores y fecha con aviso de desactualización. Sin datos previos, no inventa números. Un 404 retira la lectura anterior y muestra Evento no disponible; un 401 elimina la sesión. Volver o seleccionar otro evento aborta la espera e impide que una respuesta tardía sobrescriba la nueva selección.
+
+Cero cupos muestra un aviso explícito y bloquea Reservar. El botón permanece deshabilitado también con cupos positivos porque el formulario y la creación se desarrollarán en los siguientes sprints; no se simula una reserva. La lectura no garantiza inventario. Volver al catálogo conserva su lectura anterior con su fecha, sin afirmar que se haya actualizado automáticamente.
+
+`node scripts/verify-availability.mjs` prueba respuestas controladas y `--real` recibe credential por stdin para comprobar el endpoint de un evento de la API local. S06_BROWSER_URL y S06_EVIDENCE_DIR permiten configurar URL y destino. Los ensayos solo usan GET; no crean reservas. Las capturas reales y las de fixtures se identifican en evidencias/frontend-s06.
 
 `node scripts/verify-catalog.mjs` revisa carga, datos, vacío, errores, lectura desactualizada, actualización, cambios de sesión y dos anchos de pantalla. S05_BROWSER_URL y S05_EVIDENCE_DIR configuran URL y evidencia. `--real` recibe credential por stdin, valida tarjetas contra la API local y actualiza con un GET adicional, sin crear reservas. Las capturas con fixtures y la captura de API real están identificadas en evidencias/frontend-s05. Las capturas no acreditan la revisión integral de accesibilidad o adaptación de S16/S17.
 

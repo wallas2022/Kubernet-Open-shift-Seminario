@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S04 publicados; S05 autorizado para trabajo local y preparado para revisión. La selección de eventos y las reservas siguen pendientes de los sprints posteriores.
+Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S05 publicados; S06 autorizado para trabajo local y preparado para revisión. El formulario y el envío de reservas siguen pendientes de los sprints posteriores.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -52,7 +52,11 @@ El usuario autorizó el trabajo local de S04 y aprobó su publicación mediante 
 
 ## Entrega de S05
 
-El usuario autorizó el siguiente sprint después de publicar S04. El [informe Markdown](sprints/S05/fuentes/DOC-S05-01-entrega.md) y su [Word](sprints/S05/word/DOC-S05-01-entrega.docx) documentan el catálogo autenticado de RF02, sus estados y actualización. El [diagrama editable](../../diagramas/fase-10/sprints/S05-catalogo-eventos.mmd) distingue error inicial y lectura desactualizada. Se verificaron fixtures controlados y datos reales de la API local sin crear reservas. S05 requiere aprobación antes de commit y push; S06 no está autorizado.
+El usuario autorizó S05 y aprobó publicar su entrega. Commit y push completados en 9f23657. El [informe Markdown](sprints/S05/fuentes/DOC-S05-01-entrega.md) y su [Word](sprints/S05/word/DOC-S05-01-entrega.docx) conservan la entrega revisada. El [diagrama editable](../../diagramas/fase-10/sprints/S05-catalogo-eventos.mmd) distingue error inicial y lectura desactualizada. Se verificaron datos controlados y reales sin crear reservas.
+
+## Entrega de S06
+
+El usuario autorizó el siguiente sprint después de publicar S05. El [informe Markdown](sprints/S06/fuentes/DOC-S06-01-entrega.md) y su [Word](sprints/S06/word/DOC-S06-01-entrega.docx) documentan selección y disponibilidad de RF03. El [diagrama editable](../../diagramas/fase-10/sprints/S06-disponibilidad-evento.mmd) distingue cero cupos, 404 y dato desactualizado. Se verificó el endpoint real sin crear reservas. S06 requiere aprobación antes de commit y push; S07 no está autorizado.
 
 ## Decisiones principales
 

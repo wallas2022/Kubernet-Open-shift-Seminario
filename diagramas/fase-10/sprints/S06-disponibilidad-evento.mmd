@@ -1,0 +1,9 @@
+flowchart TD
+  A[Seleccionar evento del catálogo] --> B[GET disponibilidad por UUID]
+  B --> C{200 con contrato válido}
+  C -->|Sí| D[Campos reales y hora de lectura. Cero cupos bloquea reserva. Lectura sin garantía de inventario]
+  C -->|No| E[401: reingreso. 404: retirar datos. Fallo técnico: lectura previa con aviso o error sin números]
+  D --> F[Actualizar solo por acción explícita]
+  E --> F
+  F --> B
+  B -.-> G[Volver o cambiar de evento: abortar e ignorar respuesta tardía]

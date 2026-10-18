@@ -1,0 +1,141 @@
+{
+  "sprint": "S05",
+  "date": "2026-10-17T23:33:38.941Z",
+  "mode": "intercepted-responses",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 28,
+  "results": [
+    {
+      "name": "unauthenticated-no-catalog",
+      "passed": true
+    },
+    {
+      "name": "invalid-key-no-catalog",
+      "passed": true
+    },
+    {
+      "name": "loading-does-not-invent-data",
+      "passed": true
+    },
+    {
+      "name": "event-count-matches-response",
+      "passed": true
+    },
+    {
+      "name": "event-1-fields",
+      "passed": true
+    },
+    {
+      "name": "event-2-fields",
+      "passed": true
+    },
+    {
+      "name": "event-3-fields",
+      "passed": true
+    },
+    {
+      "name": "event-names-render-as-text",
+      "passed": true
+    },
+    {
+      "name": "zero-stock-is-real-zero",
+      "passed": true
+    },
+    {
+      "name": "catalog-heading-focus",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "unavailable-retains-data-with-stale-warning",
+      "passed": true
+    },
+    {
+      "name": "network-retains-data-with-stale-warning",
+      "passed": true
+    },
+    {
+      "name": "html-retains-data-with-stale-warning",
+      "passed": true
+    },
+    {
+      "name": "schema-retains-data-with-stale-warning",
+      "passed": true
+    },
+    {
+      "name": "refresh-in-progress-disabled",
+      "passed": true
+    },
+    {
+      "name": "one-refresh-replaces-data-and-clears-warning",
+      "passed": true
+    },
+    {
+      "name": "401-removes-catalog-and-requires-key",
+      "passed": true
+    },
+    {
+      "name": "event-count-matches-response",
+      "passed": true
+    },
+    {
+      "name": "event-1-fields",
+      "passed": true
+    },
+    {
+      "name": "new-session-no-previous-catalog",
+      "passed": true
+    },
+    {
+      "name": "initial-error-distinct-from-empty",
+      "passed": true
+    },
+    {
+      "name": "retry-to-valid-empty-catalog",
+      "passed": true
+    },
+    {
+      "name": "empty-cache-also-marked-stale",
+      "passed": true
+    },
+    {
+      "name": "late-response-after-leaving-ignored",
+      "passed": true
+    },
+    {
+      "name": "header-storage-url-log-and-runtime-safety",
+      "passed": true
+    },
+    {
+      "name": "reload-requires-access",
+      "passed": true
+    }
+  ],
+  "requests": 16,
+  "statuses": [
+    401,
+    200,
+    200,
+    503,
+    200,
+    200,
+    200,
+    401,
+    200,
+    200,
+    200,
+    503,
+    200,
+    503
+  ],
+  "credentialsRecorded": false,
+  "reservationsCreated": 0
+}

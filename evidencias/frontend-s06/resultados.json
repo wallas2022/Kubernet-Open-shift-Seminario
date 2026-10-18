@@ -1,0 +1,38 @@
+﻿{
+    "catalogRegressionChecks":  28,
+    "secretChecks":  12,
+    "commands":  [
+                     "npm test",
+                     "npm run build",
+                     "npm run verify:secrets",
+                     "node scripts/verify-availability.mjs",
+                     "node scripts/verify-availability.mjs --real",
+                     "node scripts/verify-catalog.mjs with new S05_EVIDENCE_DIR"
+                 ],
+    "sprint":  "S06",
+    "previousSprint":  {
+                           "commit":  "9f23657",
+                           "push":  "successful",
+                           "id":  "S05"
+                       },
+    "realApiRequests":  4,
+    "npm":  "10.9.8",
+    "realAvailabilityChecks":  6,
+    "build":  "passed",
+    "tests":  {
+                  "passed":  19,
+                  "failed":  0
+              },
+    "controlledAvailabilityChecks":  21,
+    "node":  "22.23.2",
+    "reservationsCreated":  0,
+    "sourceHashes":  {
+                         "frontend/scripts/verify-availability.mjs":  "5D93E7E8CB15A59F1189D11510AB8BBCA301426438DA481D9523E8235BAC23A6",
+                         "frontend/src/availability/AvailabilityPage.tsx":  "D7BE639C171594F6F38407112DCEFC32345103B4D770C984551E6AC8CE8A8075",
+                         "frontend/src/availability/useAvailability.ts":  "FC9904D99CC172F0F7127C44E86F7E73066084D769C87AAA1CC5C0341B389E25",
+                         "frontend/src/catalog/CatalogPage.tsx":  "B7C6FD594F12C1ED17B8CC2F58A403C20581171CD743D79EAB112F8D91FF628D",
+                         "frontend/src/styles.css":  "27AB53C3AB4A55BF8884D95E54C2A3CA7D36F43FD2973996F123A391E55EBD0F"
+                     },
+    "date":  "2026-10-18T15:13:14.8338586-06:00",
+    "publication":  "local review only"
+}

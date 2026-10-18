@@ -1,0 +1,55 @@
+{
+  "sprint": "S06",
+  "date": "2026-10-17T23:33:30.432Z",
+  "mode": "real-local-api",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 6,
+  "results": [
+    {
+      "name": "availability-fields-match-endpoint",
+      "passed": true
+    },
+    {
+      "name": "real-selected-event-id",
+      "passed": true
+    },
+    {
+      "name": "availability-fields-match-endpoint",
+      "passed": true
+    },
+    {
+      "name": "real-refresh-single-get",
+      "passed": true
+    },
+    {
+      "name": "headers-storage-url-logs-and-runtime-safe",
+      "passed": true
+    },
+    {
+      "name": "reload-requires-access",
+      "passed": true
+    }
+  ],
+  "requests": 4,
+  "statuses": [
+    {
+      "path": "/api/catalogo",
+      "status": 200
+    },
+    {
+      "path": "/api/catalogo",
+      "status": 200
+    },
+    {
+      "path": "/api/eventos/00000000-0000-0000-0000-000000000001/disponibilidad",
+      "status": 200
+    },
+    {
+      "path": "/api/eventos/00000000-0000-0000-0000-000000000001/disponibilidad",
+      "status": 200
+    }
+  ],
+  "credentialsRecorded": false,
+  "reservationsCreated": 0
+}

@@ -1,0 +1,13 @@
+﻿{
+    "screenshotsReviewed":  [
+                                "pantalla-disponibilidad-real.png",
+                                "pantalla-movil.png",
+                                "pantalla-sin-cupos.png",
+                                "pantalla-evento-no-disponible.png"
+                            ],
+    "pages":  5,
+    "sprint":  "S06",
+    "sourceSha256":  "E6C51B369E810AD6DBA6C025942A38FB3B2A9A6173F2210E6189EC90060E723B",
+    "wordSha256":  "F71EFD11C70E34924E522B9F8C9C572AD53A58C307A77B185B6B598DF3C28296",
+    "visuallyReviewed":  true
+}
