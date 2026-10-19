@@ -2,6 +2,11 @@
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
+import sys
+
+port = int(sys.argv[1]) if len(sys.argv) > 1 else 5181
+if port not in (5181, 5182):
+    raise ValueError('Only isolated laboratory ports are allowed')
 
 class Bridge(BaseHTTPRequestHandler):
     def log_message(self, *args):
@@ -10,8 +15,8 @@ class Bridge(BaseHTTPRequestHandler):
     def forward(self):
         body = self.rfile.read(int(self.headers.get('Content-Length', 0))) or None
         headers = {k: v for k, v in self.headers.items() if k.lower() not in ('host', 'connection')}
-        headers['Host'] = 'localhost:5181'
-        request = Request('http://host.docker.internal:5181' + self.path, data=body, headers=headers, method=self.command)
+        headers['Host'] = f'localhost:{port}'
+        request = Request(f'http://host.docker.internal:{port}' + self.path, data=body, headers=headers, method=self.command)
         try:
             response = urlopen(request, timeout=20)
         except HTTPError as error:
@@ -28,4 +33,4 @@ class Bridge(BaseHTTPRequestHandler):
 
     do_GET = do_POST = forward
 
-ThreadingHTTPServer(('127.0.0.1', 5181), Bridge).serve_forever()
+ThreadingHTTPServer(('127.0.0.1', port), Bridge).serve_forever()

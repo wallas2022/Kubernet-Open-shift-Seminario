@@ -1,0 +1,292 @@
+{
+  "sprint": "S08",
+  "date": "2026-10-19T15:05:45.026Z",
+  "mode": "intercepted-responses",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 70,
+  "results": [
+    {
+      "name": "success-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "success-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "success-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "success-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "success-pending-lifecycle",
+      "passed": true
+    },
+    {
+      "name": "success-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "success-state-focus",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "navigation-does-not-reset-lock",
+      "passed": true
+    },
+    {
+      "name": "success-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "repeat-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "repeat-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "repeat-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "repeat-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "repeat-pending-lifecycle",
+      "passed": true
+    },
+    {
+      "name": "repeat-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "repeat-state-focus",
+      "passed": true
+    },
+    {
+      "name": "repeat-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "write-denied-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "write-denied-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "write-denied-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "write-denied-state-focus",
+      "passed": true
+    },
+    {
+      "name": "write-denied-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "sold-out-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "sold-out-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "sold-out-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "sold-out-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "sold-out-pending-lifecycle",
+      "passed": true
+    },
+    {
+      "name": "sold-out-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "sold-out-state-focus",
+      "passed": true
+    },
+    {
+      "name": "sold-out-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "sold-out-reload-does-not-resend",
+      "passed": true
+    },
+    {
+      "name": "sold-out-reload-keeps-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "lost-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "lost-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "lost-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "lost-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "lost-pending-lifecycle",
+      "passed": true
+    },
+    {
+      "name": "lost-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "lost-state-focus",
+      "passed": true
+    },
+    {
+      "name": "lost-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "lost-reload-does-not-resend",
+      "passed": true
+    },
+    {
+      "name": "lost-reload-keeps-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "bad-response-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "bad-response-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "bad-response-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "bad-response-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "bad-response-pending-lifecycle",
+      "passed": true
+    },
+    {
+      "name": "bad-response-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "bad-response-state-focus",
+      "passed": true
+    },
+    {
+      "name": "bad-response-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "bad-response-reload-does-not-resend",
+      "passed": true
+    },
+    {
+      "name": "bad-response-reload-keeps-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "server-error-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "server-error-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "server-error-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "server-error-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "server-error-pending-lifecycle",
+      "passed": true
+    },
+    {
+      "name": "server-error-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "server-error-state-focus",
+      "passed": true
+    },
+    {
+      "name": "server-error-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "server-error-reload-does-not-resend",
+      "passed": true
+    },
+    {
+      "name": "server-error-reload-keeps-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "existing-record-blocks-new-intention",
+      "passed": true
+    },
+    {
+      "name": "existing-record-preserves-original-record",
+      "passed": true
+    },
+    {
+      "name": "corrupt-record-blocks-new-intention",
+      "passed": true
+    },
+    {
+      "name": "corrupt-record-preserves-original-record",
+      "passed": true
+    },
+    {
+      "name": "no-browser-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "no-credential-in-browser-logs-urls-or-report",
+      "passed": true
+    }
+  ],
+  "uiPosts": 6,
+  "credentialsRecorded": false
+}

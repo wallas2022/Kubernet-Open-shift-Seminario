@@ -9,7 +9,7 @@ const accepted = { ok: true, status: 201, data: { id: eventId, event_id: eventId
 function fixture(overrides = {}) {
   const values = new Map(); const calls = []; let generated = 0;
   const credential = randomBytes(32).toString('hex');
-  const storage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
+  const storage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value), removeItem: key => values.delete(key) };
   const dependencies = { storage: () => storage, readCredential: () => credential,
     fingerprint: async () => fingerprint, operationKey: () => `intent-${++generated}`,
     post: async intent => { assert.ok(parsePending(values.get(PENDING_KEY))); calls.push(intent); return accepted; }, ...overrides };
@@ -27,7 +27,7 @@ test('S08 synchronous latch blocks clicks before hashing and persists frozen pay
   assert.deepEqual(Object.keys(f.calls[0]).sort(), ['eventId', 'operationKey', 'quantity']);
   await f.engine.send(review); assert.equal(f.calls.length, 1);
   assert.equal(f.engine.getSnapshot().phase, 'accepted');
-  assert.ok(!f.values.get(PENDING_KEY).includes(f.credential));
+  assert.equal(f.values.has(PENDING_KEY), false);
 });
 test('S08 inaccessible storage blocks even initial creation', async () => {
   const f = fixture({ storage: () => { throw Error('denied'); } });
@@ -41,7 +41,7 @@ test('S08 failed or silently lost write blocks POST', async () => {
   }
 });
 test('S08 existing or corrupt record is preserved and never overwritten', async () => {
-  const f = fixture(); await f.engine.send(review);
+  const f = fixture({ post: async intent => { f.calls.push(intent); return { ok: false, outcome: 'uncertain' }; } }); await f.engine.send(review);
   for (const raw of [f.values.get(PENDING_KEY), '{broken', JSON.stringify({ ...parsePending(f.values.get(PENDING_KEY)), apiKey: 'forbidden' })]) {
     const storage = { getItem: () => raw, setItem: () => assert.fail('must not overwrite') };
     const engine = createCreationEngine({ ...f.dependencies, storage: () => storage });
@@ -96,4 +96,55 @@ test('S08 fingerprint is SHA256 without storing the credential', async () => {
   const f = fixture(); const first = await credentialFingerprint(f.credential);
   assert.match(first, /^[a-f0-9]{64}$/); assert.notEqual(first, f.credential);
   assert.equal(first, await credentialFingerprint(f.credential));
+});
+
+test('S09 201 and 200 retain the same immutable receipt and remove only validated pending', async () => {
+  for (const status of [201, 200]) {
+    const data = { ...accepted.data, extra: 'must not persist' };
+    const f = fixture({ post: async () => ({ ok: true, status, data }) });
+    await f.engine.send(review);
+    const state = f.engine.getSnapshot();
+    assert.equal(state.receipt.reservation.id, accepted.data.id);
+    assert.equal(state.receipt.responseStatus, status);
+    assert.equal(state.receipt.pendingCleared, true);
+    assert.equal(f.values.size, 0);
+    assert.ok(Object.isFrozen(state.receipt.reservation));
+    data.quantity = 99;
+    assert.equal(state.receipt.reservation.quantity, 2);
+    assert.equal('extra' in state.receipt.reservation, false);
+    assert.match(state.message, status === 201 ? /creada/ : /recuperada/);
+  }
+});
+
+test('S09 malformed, mismatched and unexpected successful responses preserve pending without receipt', async () => {
+  for (const result of [
+    { ...accepted, status: 202 },
+    { ...accepted, data: { ...accepted.data, event_id: '00000000-0000-4000-8000-000000000002' } },
+    { ...accepted, data: { ...accepted.data, quantity: 3 } },
+    { ...accepted, data: { ...accepted.data, id: 'bad' } },
+    { ...accepted, data: { ...accepted.data, status: 'pending' } },
+    { ...accepted, data: { ...accepted.data, created_at: 'yesterday' } },
+  ]) {
+    const f = fixture({ post: async () => result }); await f.engine.send(review);
+    assert.equal(f.engine.getSnapshot().phase, 'uncertain');
+    assert.equal(f.engine.getSnapshot().receipt, undefined);
+    assert.ok(f.values.has(PENDING_KEY));
+  }
+});
+
+test('S09 failed cleanup or replaced record cannot hide confirmation or delete another pending', async () => {
+  for (const mode of ['throws', 'ignored', 'replaced']) {
+    const f = fixture({ post: async () => {
+      if (mode === 'throws') f.storage.removeItem = () => { throw Error('denied'); };
+      if (mode === 'ignored') f.storage.removeItem = () => {};
+      if (mode === 'replaced') f.values.set(PENDING_KEY, '{another-record');
+      return accepted;
+    } });
+    await f.engine.send(review);
+    assert.equal(f.engine.getSnapshot().phase, 'accepted');
+    assert.equal(f.engine.getSnapshot().receipt.pendingCleared, false);
+    assert.equal(f.engine.getSnapshot().receipt.reservation.id, accepted.data.id);
+    assert.ok(f.values.has(PENDING_KEY));
+    if (mode === 'replaced') assert.equal(f.values.get(PENDING_KEY), '{another-record');
+  }
 });

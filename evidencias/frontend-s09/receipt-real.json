@@ -1,0 +1,123 @@
+{
+  "sprint": "S09",
+  "date": "2026-10-19T15:05:18.999Z",
+  "browser": "145.0.7632.6",
+  "mode": "exclusive-api-postgresql",
+  "passed": true,
+  "checks": 28,
+  "results": [
+    {
+      "name": "created-pending-precedes-post",
+      "passed": true
+    },
+    {
+      "name": "created-server-created",
+      "passed": true
+    },
+    {
+      "name": "created-uuid-visible",
+      "passed": true
+    },
+    {
+      "name": "created-event-quantity-status",
+      "passed": true
+    },
+    {
+      "name": "created-server-date",
+      "passed": true
+    },
+    {
+      "name": "created-correct-outcome-label",
+      "passed": true
+    },
+    {
+      "name": "created-focus",
+      "passed": true
+    },
+    {
+      "name": "created-pending-cleanup",
+      "passed": true
+    },
+    {
+      "name": "created-failed-read-keeps-receipt",
+      "passed": true
+    },
+    {
+      "name": "created-no-second-send",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "created-one-ui-post",
+      "passed": true
+    },
+    {
+      "name": "created-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "repeat-pending-precedes-post",
+      "passed": true
+    },
+    {
+      "name": "repeat-server-created",
+      "passed": true
+    },
+    {
+      "name": "real-replay-same-uuid",
+      "passed": true
+    },
+    {
+      "name": "repeat-uuid-visible",
+      "passed": true
+    },
+    {
+      "name": "repeat-event-quantity-status",
+      "passed": true
+    },
+    {
+      "name": "repeat-server-date",
+      "passed": true
+    },
+    {
+      "name": "repeat-correct-outcome-label",
+      "passed": true
+    },
+    {
+      "name": "repeat-focus",
+      "passed": true
+    },
+    {
+      "name": "repeat-pending-cleanup",
+      "passed": true
+    },
+    {
+      "name": "repeat-failed-read-keeps-receipt",
+      "passed": true
+    },
+    {
+      "name": "repeat-no-second-send",
+      "passed": true
+    },
+    {
+      "name": "repeat-one-ui-post",
+      "passed": true
+    },
+    {
+      "name": "repeat-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "no-secret-in-evidence",
+      "passed": true
+    }
+  ],
+  "credentialsRecorded": false
+}

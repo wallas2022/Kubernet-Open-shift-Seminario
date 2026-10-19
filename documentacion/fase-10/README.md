@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha de actualización: 19 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S07 publicados; S08 aprobado para commit y push. El envío idempotente se verificó en un laboratorio exclusivo; recuperación y salida completa siguen pendientes.
+Fecha de actualización: 19 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S08 publicados; S09 aprobado para commit y push. Recuperación y salida completa siguen pendientes.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -75,4 +75,8 @@ Análisis basado en `aplicacion/reservas/api.py`, `store.py`, `schema.sql`, `con
 No se cambió la aplicación, la base de datos ni los manifiestos. No se realizaron operaciones remotas Git. Construcción, aceptación y despliegue del frontend quedan como trabajo posterior.
 ## Entrega S08 aprobada
 
-S08 RF05 incorpora creación idempotente y bloqueo de doble envío. Entrega aprobada para commit y push el 19 de octubre de 2026. [Informe y entregables](sprints/S08/README.md). Pasaron 34 pruebas Node, compilación, 12 controles de secretos, 74 comprobaciones con respuestas controladas y 30 con API y PostgreSQL exclusivos. La auditoría confirmó 23 reservas y 23 outbox para 25 cupos, sin sobreventa. Recuperación y salida completa pendientes de S10 y S13. S09 no iniciado.
+S08 RF05 incorpora creación idempotente y bloqueo de doble envío. Publicado mediante el commit 8c9528c en origin/master. [Informe y entregables](sprints/S08/README.md). Pasaron 34 pruebas Node, compilación, 12 controles de secretos, 74 comprobaciones con respuestas controladas y 30 con API y PostgreSQL exclusivos. La auditoría confirmó 23 reservas y 23 outbox para 25 cupos, sin sobreventa. Recuperación y salida completa pendientes de S10 y S13.
+
+## Entrega S09 aprobada
+
+S09 RF06 incorpora comprobante para 201 y 200 y retiro del pendiente solo con confirmación válida. [Informe y entregables](sprints/S09/README.md). Pasaron 37 pruebas Node, compilación, 12 controles de secretos, 58 comprobaciones con fixtures, 28 con API real exclusiva y 70 de regresión de S08. La auditoría confirmó dos reservas y dos outbox para cuatro cupos. Word de cuatro páginas revisado visualmente. Aprobado por el usuario para commit y push el 19 de octubre de 2026. S10 no iniciado.

@@ -1,0 +1,15 @@
+flowchart TD
+    A[Respuesta del POST] --> B{201 o 200 y contrato válido}
+    B -->|No| C[Conservar pendiente sin comprobante]
+    B -->|Sí| D{Evento y cantidad coinciden}
+    D -->|No| C
+    D -->|Sí| E[Conservar confirmación inmutable en memoria]
+    E --> F{Pendiente original sin reemplazo}
+    F -->|Sí| G[Retirar y verificar ausencia]
+    F -->|No| H[Conservar registro y advertir]
+    G -->|Falla| H
+    G -->|Correcto| I[Mostrar comprobante]
+    H --> I
+    I --> J[201 Creada o 200 Recuperada]
+    J --> K[UUID cantidad estado y fecha del servidor]
+    K --> L[Una lectura fallida no oculta el comprobante]

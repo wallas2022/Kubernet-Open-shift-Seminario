@@ -1,8 +1,8 @@
 import type { ApiResult, PendingOperation, Reservation, ReservationIntent } from '../api/contracts.ts';
-import { isRecord, isUuid } from '../api/validation.ts';
+import { isRecord, isUuid, parseReservation } from '../api/validation.ts';
 
 export const PENDING_KEY = 'seminario.reserva.pendiente.v1';
-type StoragePort = Pick<Storage, 'getItem' | 'setItem'>;
+type StoragePort = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 type Dependencies = {
   storage: () => StoragePort;
   readCredential: () => string | null;
@@ -13,6 +13,7 @@ type Dependencies = {
 export type CreationState = Readonly<{
   phase: 'idle' | 'preparing' | 'sending' | 'accepted' | 'rejected' | 'uncertain' | 'blocked';
   message: string;
+  receipt?: Readonly<{ reservation: Readonly<Reservation>; responseStatus: 200 | 201; pendingCleared: boolean }>;
 }>;
 
 /** Reject malformed/extended records without deleting them or trusting their contents. */
@@ -93,8 +94,25 @@ export function createCreationEngine(dependencies: Dependencies) {
     } catch { result = { ok: false, kind: 'network', outcome: 'uncertain', code: 'network_error' }; }
     controller = null;
     if (result.ok) {
-      publish('accepted', 'La API confirmó la operación. El comprobante se incorporará en S09. No se enviará otra intención desde esta pestaña.');
-      return;
+      const reservation = parseReservation(result.data);
+      if (reservation && (result.status === 200 || result.status === 201)
+        && reservation.event_id.toLowerCase() === pending.eventId.toLowerCase() && reservation.quantity === pending.quantity) {
+        let pendingCleared = false;
+        try {
+          const storage = dependencies.storage();
+          // Never delete a record replaced by another actor while the POST was in flight.
+          if (storage.getItem(PENDING_KEY) === JSON.stringify(pending)) {
+            storage.removeItem(PENDING_KEY);
+            pendingCleared = storage.getItem(PENDING_KEY) === null;
+          }
+        } catch { /* A cleanup failure cannot erase a valid confirmation. */ }
+        state = Object.freeze({ phase: 'accepted', message: result.status === 201
+          ? 'Reserva creada y confirmada.' : 'Operación recuperada. Esta reserva ya estaba confirmada.',
+          receipt: Object.freeze({ reservation: Object.freeze(reservation), responseStatus: result.status, pendingCleared }) });
+        listeners.forEach(listener => listener());
+        return;
+      }
+      result = { ok: false, kind: 'protocol', outcome: 'uncertain', code: 'unexpected_response' };
     }
     if (result.outcome === 'uncertain') {
       // The original sending record is already sufficient if this update fails.

@@ -3,12 +3,15 @@ import type { EventSummary } from '../api/contracts';
 import { useSession } from '../session/SessionContext';
 import { useAvailability } from './useAvailability';
 import { ReservationDraft } from '../reservation/ReservationDraft';
+import { ReservationReceipt } from '../reservation/ReservationReceipt';
+import { useCreation } from '../reservation/CreationContext';
 
 export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBack: () => void }) {
   const { clearCredential } = useSession();
   const { data, loadedAt, status, refresh } = useAvailability(event.id);
   const heading = useRef<HTMLHeadingElement>(null);
   const [draftOpen, setDraftOpen] = useState(false);
+  const { state: creation } = useCreation();
   useEffect(() => { heading.current?.focus(); }, []);
   const busy = status === 'loading' || status === 'refreshing';
   return <div className="page availability-page">
@@ -45,7 +48,7 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
             <div><dt>Capacidad total</dt><dd>{data.capacity}</dd></div>
             <div className="availability-id"><dt>Identificador del evento</dt><dd>{data.id}</dd></div>
           </dl>
-          <div className="reservation-preview">
+          {!creation.receipt && <div className="reservation-preview">
             {draftOpen && status === 'ready' && data.available > 0
               ? <ReservationDraft key={loadedAt} event={event} availability={data} onCancel={() => { setDraftOpen(false); heading.current?.focus(); }} />
               : <>
@@ -54,11 +57,12 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
             <p id="reservation-help">{data.available === 0 ? 'No puedes reservar sin cupos. Puedes actualizar para comprobar si cambian.'
               : status !== 'ready' ? 'Actualiza los cupos antes de preparar una cantidad.' : 'Prepara y revisa tu cantidad antes de cualquier envío.'}</p>
               </>}
-          </div>
+          </div>}
         </article>}
         <p className="catalog-footnote">Esta lectura es informativa y no garantiza inventario. Los cupos se confirman al procesar una reserva.</p>
       </section>
+      <ReservationReceipt />
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Reservas de prueba · S08</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Reservas de prueba · S09</span></footer>
   </div>;
 }

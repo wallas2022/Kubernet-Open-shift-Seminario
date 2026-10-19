@@ -75,17 +75,18 @@ async function scenario(mode, seed) {
   check(posts === 0, `${mode}-review-and-confirmation-have-no-post`);
   await page.getByRole('button', { name: 'Enviar reserva', exact: true }).evaluate(button => { button.click(); button.click(); });
   const expected = mode === 'write-denied' ? /No se pudo guardar/ : mode === 'sold-out' ? /rechazó la reserva/
-    : ['lost', 'bad-response', 'server-error'].includes(mode) ? /No pudimos confirmar el resultado/ : /La API confirmó la operación/;
-  await page.getByRole('region', { name: 'Estado de envío' }).getByText(expected).waitFor();
+    : ['lost', 'bad-response', 'server-error'].includes(mode) ? /No pudimos confirmar el resultado/ : /Reserva creada|Operación recuperada/;
+  const accepted = mode === 'success' || mode === 'repeat';
+  await page.getByRole('region', { name: accepted ? 'Comprobante de reserva' : 'Estado de envío' }).getByText(expected).waitFor();
   check(posts === (mode === 'write-denied' ? 0 : 1), `${mode}-double-click-at-most-one-post`);
   if (posts) {
     check(pendingBeforePost && wireSafe, `${mode}-verified-pending-before-post-and-safe-headers`);
     check(wire.payload.event_id === eventId && wire.payload.quantity === 2, `${mode}-immutable-reviewed-payload`);
   }
   const pendingRaw = await page.evaluate(key => sessionStorage.getItem(key), PENDING_KEY);
-  if (posts) check(pendingRaw !== null && JSON.parse(pendingRaw).state === (['lost', 'bad-response', 'server-error'].includes(mode) ? 'uncertain' : 'sending'), `${mode}-record-retained`);
+  if (posts) check(accepted ? pendingRaw === null : pendingRaw !== null && JSON.parse(pendingRaw).state === (['lost', 'bad-response', 'server-error'].includes(mode) ? 'uncertain' : 'sending'), `${mode}-pending-lifecycle`);
   check(await page.getByRole('button', { name: 'Enviar reserva', exact: true }).count() === 0, `${mode}-no-second-intention-control`);
-  check(await page.getByRole('heading', { name: 'Estado de la operación' }).evaluate(node => document.activeElement === node), `${mode}-state-focus`);
+  check(await page.getByRole('heading', { name: accepted ? 'Comprobante de reserva' : 'Estado de la operación' }).evaluate(node => document.activeElement === node), `${mode}-state-focus`);
   if (mode === 'success') {
     for (const [name, width, height] of [['escritorio', 1280, 1100], ['movil', 360, 900]]) {
       await page.setViewportSize({ width, height });
@@ -95,13 +96,12 @@ async function scenario(mode, seed) {
     await page.getByRole('button', { name: 'Volver al catálogo' }).click();
     await page.locator('.event-card').first().getByRole('button', { name: /Consultar disponibilidad/ }).click();
     await page.locator('section[aria-label="Disponibilidad del evento"][aria-busy=false]').waitFor();
-    await page.getByRole('button', { name: 'Reservar', exact: true }).click();
     check(await page.getByRole('button', { name: 'Enviar reserva', exact: true }).count() === 0 && posts === 1, 'navigation-does-not-reset-lock');
   }
   if (mode === 'lost') await page.screenshot({ path: `${out}/pantalla-${real ? 'real-' : ''}incierta.png`, fullPage: true });
   const safety = await page.evaluate(() => JSON.stringify({ local: Object.entries(localStorage), session: Object.entries(sessionStorage), cookie: document.cookie, html: document.documentElement.outerHTML }));
   check(!safety.includes(credential), `${mode}-credential-not-in-storage-or-page`);
-  if (mode !== 'write-denied') {
+  if (mode !== 'write-denied' && !accepted) {
     await page.reload(); await login();
     await page.getByRole('region', { name: 'Estado de envío' }).getByText(/operación pendiente/).waitFor();
     check(posts === 1, `${mode}-reload-does-not-resend`);
@@ -132,7 +132,8 @@ try {
     check((await success.context.request.get(`${base}/api/eventos/${eventId}/disponibilidad`, { headers: { 'X-Api-Key': credential } }).then(response => response.json())).available === 0, 'real-inventory-never-negative');
   } else {
     for (const mode of ['repeat', 'write-denied', 'sold-out', 'lost', 'bad-response', 'server-error']) { stage = mode; await scenario(mode); }
-    stage = 'existing-record'; await scenario('existing-record', success.pendingRaw);
+    const seededPending = JSON.stringify({ version: 1, eventId, quantity: 2, operationKey: randomUUID(), credentialFingerprint: expectedFingerprint, startedAt: new Date().toISOString(), state: 'uncertain' });
+    stage = 'existing-record'; await scenario('existing-record', seededPending);
     stage = 'corrupt-record'; await scenario('corrupt-record', '{broken');
   }
   check(runtimeErrors.length === 0, 'no-browser-runtime-errors');
