@@ -1,0 +1,59 @@
+{
+  "sprint": "S12",
+  "date": "2026-10-19T19:54:40.434Z",
+  "mode": "controlled-error-matrix",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 12,
+  "results": [
+    {
+      "name": "post401-returns-to-login",
+      "passed": true
+    },
+    {
+      "name": "post401-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "post401-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "post401-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "post401-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "conflict-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "conflict-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "conflict-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "conflict-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "conflict-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "no-secret-in-evidence",
+      "passed": true
+    }
+  ],
+  "credentialsRecorded": false
+}

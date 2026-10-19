@@ -3,7 +3,7 @@ import { useSession } from './SessionContext';
 import { useLaboratoryAccess } from './useLaboratoryAccess';
 
 export function LaboratoryAccess() {
-  const { isAuthenticated, clearCredential } = useSession();
+  const { isAuthenticated, clearCredential, notice } = useSession();
   const { state, login } = useLaboratoryAccess();
   const formRef = useRef<HTMLFormElement>(null);
   const fieldRef = useRef<HTMLInputElement>(null);
@@ -34,6 +34,7 @@ export function LaboratoryAccess() {
       <p className="access-footnote">Al volver o recargar se elimina la clave de esta sesión. Esto no revoca la clave del laboratorio.</p>
     </> : <>
       <p>Introduce la clave que te proporcionó el instructor. La usaremos para comprobar tu acceso.</p>
+      {notice && <p role="alert" className="access-error">{notice}</p>}
       <form ref={formRef} onSubmit={submit} autoComplete="off" noValidate aria-busy={state === 'checking'}>
         <label htmlFor="laboratory-key">Clave de laboratorio</label>
         <input ref={fieldRef} id="laboratory-key" name="laboratory-key" type="password" autoComplete="off" spellCheck={false}

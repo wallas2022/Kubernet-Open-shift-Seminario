@@ -7,7 +7,7 @@ import { ReservationLookup } from '../reservation/ReservationLookup';
 
 export function CatalogPage() {
   const { clearCredential } = useSession();
-  const { data, status, loadedAt, refresh } = useCatalog();
+  const { data, status, loadedAt, refresh, errorMessage } = useCatalog();
   const heading = useRef<HTMLHeadingElement>(null);
   const [selected, setSelected] = useState<EventSummary | null>(null);
   const [lookupOpen, setLookupOpen] = useState(false);
@@ -48,6 +48,7 @@ export function CatalogPage() {
           <strong>{data ? 'Información desactualizada.' : 'No pudimos cargar el catálogo.'}</strong>
           <p>{data ? 'No pudimos actualizar los cupos. Los datos que ves corresponden a la última lectura correcta.'
             : 'Revisa la conexión y vuelve a intentarlo. Todavía no hay datos para mostrar.'}</p>
+          {errorMessage && <p>{errorMessage}</p>}
         </div>}
         {data && data.events.length === 0 && <div className="catalog-empty">
           <span className="empty-symbol" aria-hidden="true">○</span>

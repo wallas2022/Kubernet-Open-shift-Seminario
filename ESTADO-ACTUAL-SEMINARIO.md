@@ -1,5 +1,9 @@
 # Estado actual del seminario
 
+## Actualización de S12 del 19 de octubre de 2026
+
+S11 tiene commit local db16f1d y su publicación queda incluida en la aprobación de S12 del 19 de octubre de 2026. S12 RF09 aprobado para commit y push a origin/master: mensajes de errores normalizados, reingreso explicado por 401 y conservación de pendientes. Pasaron 47 pruebas Node, compilación, 12 controles de secretos, 82 comprobaciones de matriz controlada, diez reales y 72 de regresión. La competencia real por un cupo produjo una confirmación y un rechazo, una reserva y un outbox. Fuente Markdown, Word y Mermaid en las carpetas de S12. S12 aprobado para commit y push el 19 de octubre de 2026; S13 no iniciado.
+
 ## Actualización de S11 del 19 de octubre de 2026
 
 S11 RF08 implementado y aprobado para commit local: consulta por UUID con acceso por propietario y comprobante compartido. Pasaron 43 pruebas Node, compilación, 12 controles de secretos, 42 comprobaciones controladas, 29 con API real y 58 de regresión S09. Propietario autorizado; reserva ajena e inexistente con igual 404 y mensaje genérico. Auditoría exclusiva: una reserva de dos cupos y un outbox, sin cambios por consultar. Informe Markdown y Word de cuatro páginas en documentacion/fase-10/sprints/S11, con Mermaid editable. Aprobado para commit local; S12 autorizado el 19 de octubre de 2026. S10 ya fue publicado mediante cee373a; los apartados anteriores en fecha conservan el historial.

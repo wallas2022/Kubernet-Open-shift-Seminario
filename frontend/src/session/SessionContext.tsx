@@ -8,6 +8,8 @@ type Session = {
   readCredential: () => string | null;
   clearCredential: () => void;
   confirmCredential: () => boolean;
+  expireCredential: () => void;
+  notice: string | null;
 };
 const SessionContext = createContext<Session | null>(null);
 
@@ -15,12 +17,18 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   const [store] = useState(createCredentialStore);
   const [hasCredential, setHasCredential] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [notice, setNotice] = useState<string | null>(null);
   const alive = useRef(true);
   const clearCredential = useCallback(() => {
     store.clear();
     setHasCredential(false);
     setIsAuthenticated(false);
+    setNotice(null);
   }, [store]);
+  const expireCredential = useCallback(() => {
+    clearCredential();
+    setNotice('El acceso ya no está autorizado. Vuelve a ingresar con una clave habilitada. Si hay una operación pendiente, utiliza la misma clave original; el registro se conserva.');
+  }, [clearCredential]);
   useEffect(() => {
     alive.current = true;
     window.addEventListener('pagehide', clearCredential);
@@ -34,6 +42,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     if (!alive.current || !store.replace(value)) return false;
     setHasCredential(true);
     setIsAuthenticated(false);
+    setNotice(null);
     return true;
   }, [store]);
   const readCredential = useCallback(() => alive.current ? store.read() : null, [store]);
@@ -42,7 +51,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     setIsAuthenticated(true);
     return true;
   }, [store]);
-  return <SessionContext.Provider value={{ hasCredential, isAuthenticated, setCredential, readCredential, clearCredential, confirmCredential }}>
+  return <SessionContext.Provider value={{ hasCredential, isAuthenticated, setCredential, readCredential, clearCredential, confirmCredential, expireCredential, notice }}>
     {children}
   </SessionContext.Provider>;
 }

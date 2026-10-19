@@ -1,0 +1,51 @@
+{
+  "sprint": "S12",
+  "date": "2026-10-19T17:57:27.014Z",
+  "mode": "exclusive-postgresql-last-seat-race",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 10,
+  "results": [
+    {
+      "name": "two-identities-one-attempt-each",
+      "passed": true
+    },
+    {
+      "name": "last-seat-one-confirmation",
+      "passed": true
+    },
+    {
+      "name": "last-seat-one-sold-out-message",
+      "passed": true
+    },
+    {
+      "name": "real-api-conflict-contract",
+      "passed": true
+    },
+    {
+      "name": "real-api-validation-contract",
+      "passed": true
+    },
+    {
+      "name": "real-api-unauthorized-contract",
+      "passed": true
+    },
+    {
+      "name": "page-6-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "page-7-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "no-secret-in-evidence",
+      "passed": true
+    }
+  ],
+  "credentialsRecorded": false
+}

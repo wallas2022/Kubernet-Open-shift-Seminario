@@ -28,7 +28,9 @@ export function RecoveryPage() {
         </>}
         {!state.pending && <p>No podemos utilizar este registro. No lo borres ni prepares otra reserva sin revisar el resultado con el instructor.</p>}
         <div className="catalog-actions"><button type="button" className="secondary" disabled={busy} onClick={clearCredential}>Usar otra clave de laboratorio</button></div>
-        <p>Al cambiar de clave conservamos el pendiente. La reserva podría existir aunque no hayas recibido respuesta.</p>
+        <p>{state.phase === 'rejected'
+          ? 'Al cambiar de clave conservamos el registro del rechazo. Revisa el resultado antes de preparar otra intención.'
+          : 'Al cambiar de clave conservamos el pendiente. La reserva podría existir aunque no hayas recibido respuesta.'}</p>
       </section>}
     </main>
     <footer><span>Seminario de plataformas de contenedores</span><span>Recuperación · S10</span></footer>

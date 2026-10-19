@@ -8,7 +8,7 @@ import { useCreation } from '../reservation/CreationContext';
 
 export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBack: () => void }) {
   const { clearCredential } = useSession();
-  const { data, loadedAt, status, refresh } = useAvailability(event.id);
+  const { data, loadedAt, status, refresh, errorMessage } = useAvailability(event.id);
   const heading = useRef<HTMLHeadingElement>(null);
   const [draftOpen, setDraftOpen] = useState(false);
   const { state: creation } = useCreation();
@@ -41,7 +41,8 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
         {status === 'not-found' && <div role="alert" className="catalog-error"><strong>Evento no disponible.</strong>
           <p>No encontramos este evento. Vuelve al catálogo y actualízalo antes de continuar.</p></div>}
         {status === 'error' && <div role="alert" className="catalog-error"><strong>{data ? 'Disponibilidad desactualizada.' : 'No pudimos consultar los cupos.'}</strong>
-          <p>{data ? 'La actualización falló. Los valores mostrados pertenecen a la última lectura correcta.' : 'Revisa la conexión y actualiza la disponibilidad. Todavía no hay datos para mostrar.'}</p></div>}
+          <p>{data ? 'La actualización falló. Los valores mostrados pertenecen a la última lectura correcta.' : 'Revisa la conexión y actualiza la disponibilidad. Todavía no hay datos para mostrar.'}</p>
+          {errorMessage && <p>{errorMessage}</p>}</div>}
         {data && <article className="availability-card">
           <dl>
             <div className="availability-count"><dt>Cupos disponibles</dt><dd>{data.available}</dd></div>

@@ -4,10 +4,11 @@ import { isUuid } from '../api/validation';
 import { useApiClient } from '../api/useApiClient';
 import { useSession } from '../session/SessionContext';
 import { ReservationReceiptView } from './ReservationReceipt';
+import { readFailureMessage } from '../api/messages';
 
 export function ReservationLookup({ events, onBack }: { events: EventSummary[]; onBack: () => void }) {
   const api = useApiClient();
-  const { readCredential, clearCredential } = useSession();
+  const { readCredential, expireCredential } = useSession();
   const [identifier, setIdentifier] = useState('');
   const [reservation, setReservation] = useState<Reservation | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -28,16 +29,14 @@ export function ReservationLookup({ events, onBack }: { events: EventSummary[]; 
       field.current?.focus(); return;
     }
     const credential = readCredential();
-    if (!credential) { clearCredential(); return; }
+    if (!credential) { expireCredential(); return; }
     const controller = new AbortController(); request.current = controller; setBusy(true);
     const result = await api.reservation(identifier, { signal: controller.signal });
     if (!alive.current || controller.signal.aborted || request.current !== controller || readCredential() !== credential) return;
     request.current = null; setBusy(false);
     if (result.ok) { setReservation(result.data); return; }
-    if (result.status === 401 || result.code === 'missing_credential') { clearCredential(); return; }
-    setError(result.status === 404
-      ? 'No encontramos una reserva accesible con ese identificador.'
-      : 'No pudimos consultar la reserva. Revisa la conexión y vuelve a intentarlo.');
+    if (result.status === 401 || result.code === 'missing_credential') { expireCredential(); return; }
+    setError(readFailureMessage(result, 'reservation'));
     field.current?.focus();
   }
   const eventName = reservation ? events.find(event => event.id.toLowerCase() === reservation.event_id.toLowerCase())?.name : undefined;

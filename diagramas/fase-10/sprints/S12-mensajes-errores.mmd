@@ -1,0 +1,14 @@
+flowchart TD
+    A[Resultado HTTP normalizado] --> B{Lectura o creación}
+    B -->|Lectura| C{Estado}
+    C -->|401| D[Limpiar credencial y explicar reingreso]
+    C -->|404 consulta| E[Mensaje genérico ajena o inexistente]
+    C -->|Fallo temporal| F[Marcar lectura previa desactualizada]
+    F --> G[Conservar comprobante confirmado]
+    B -->|Creación| H{Resultado conocido o incierto}
+    H -->|Rechazo conocido| I[Agotamiento conflicto evento o validación]
+    H -->|Incierto| J[Advertir posible creación y conservar pendiente]
+    I --> K[Conservar registro sin reintento automático]
+    J --> K
+    K --> L[Recuperación explícita con clave original]
+    A --> M[Nunca reflejar HTML trazas SQL ni secretos]

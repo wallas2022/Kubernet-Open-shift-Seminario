@@ -1,17 +1,19 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Catalog } from '../api/contracts';
 import { useApiClient } from '../api/useApiClient';
+import { readFailureMessage } from '../api/messages';
 import { useSession } from '../session/SessionContext';
 
 type CatalogState = {
   data: Catalog | null;
   status: 'loading' | 'ready' | 'refreshing' | 'error';
   loadedAt: string | null;
+  errorMessage?: string;
 };
 
 export function useCatalog() {
   const api = useApiClient();
-  const { clearCredential } = useSession();
+  const { expireCredential } = useSession();
   const [state, setState] = useState<CatalogState>({ data: null, status: 'loading', loadedAt: null });
   const alive = useRef(false);
   const request = useRef<AbortController | null>(null);
@@ -26,11 +28,11 @@ export function useCatalog() {
     if (result.ok) {
       setState({ data: result.data, status: 'ready', loadedAt: new Date().toISOString() });
     } else if (result.status === 401 || result.code === 'missing_credential') {
-      clearCredential();
+      expireCredential();
     } else {
-      setState(previous => ({ ...previous, status: 'error' }));
+      setState(previous => ({ ...previous, status: 'error', errorMessage: readFailureMessage(result, 'catalog') }));
     }
-  }, [api, clearCredential]);
+  }, [api, expireCredential]);
   useEffect(() => {
     alive.current = true;
     // StrictMode's preliminary setup is cancelled before making a request.

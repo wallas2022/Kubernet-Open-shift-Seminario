@@ -5,10 +5,10 @@ import { createCreationEngine } from './creationEngine';
 
 const CreationContext = createContext<ReturnType<typeof createCreationEngine> | null>(null);
 export function CreationProvider({ children }: { children: ReactNode }) {
-  const { readCredential } = useSession();
+  const { readCredential, expireCredential } = useSession();
   const [engine] = useState(() => {
     const api = createApiClient({ readCredential });
-    return createCreationEngine({ storage: () => window.sessionStorage, readCredential,
+    return createCreationEngine({ storage: () => window.sessionStorage, readCredential, onUnauthorized: expireCredential,
       post: (intent, signal) => api.createReservation(intent, { signal }) });
   });
   useEffect(() => {

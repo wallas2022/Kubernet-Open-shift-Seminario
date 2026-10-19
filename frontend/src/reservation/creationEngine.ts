@@ -1,5 +1,6 @@
 import type { ApiResult, PendingOperation, Reservation, ReservationIntent } from '../api/contracts.ts';
 import { isRecord, isUuid, parseReservation } from '../api/validation.ts';
+import { creationFailureMessage } from '../api/messages.ts';
 
 export const PENDING_KEY = 'seminario.reserva.pendiente.v1';
 type StoragePort = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
@@ -9,6 +10,7 @@ type Dependencies = {
   post: (intent: ReservationIntent, signal: AbortSignal) => Promise<ApiResult<Reservation>>;
   fingerprint?: (credential: string) => Promise<string>;
   operationKey?: () => string;
+  onUnauthorized?: () => void;
 };
 export type CreationState = Readonly<{
   phase: 'idle' | 'preparing' | 'sending' | 'accepted' | 'rejected' | 'uncertain' | 'blocked';
@@ -169,12 +171,12 @@ export function createCreationEngine(dependencies: Dependencies) {
         }
       } catch { /* Retain the original record; do not unlock or retry. */ }
       recovery = true;
-      publish('uncertain', 'No pudimos confirmar el resultado. La reserva podría haberse creado. Conservamos la operación pendiente y no volveremos a enviarla automáticamente. Puedes recuperar la operación con la misma clave.');
+      publish('uncertain', creationFailureMessage(result));
     } else {
-      publish('rejected', result.code === 'sold_out'
-        ? 'La API rechazó la reserva por falta de cupos. No hay reintento automático. Conservamos el registro de esta operación.'
-        : 'La operación no fue confirmada. No hay reintento automático. Conservamos el registro de esta operación.');
+      recovery = true;
+      publish('rejected', creationFailureMessage(result));
     }
+    if (result.status === 401 || result.code === 'missing_credential') dependencies.onUnauthorized?.();
   }
   return {
     subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; },
