@@ -1,0 +1,40 @@
+﻿{
+    "publication":  "local review only",
+    "secretChecks":  12,
+    "realQuantityChecks":  20,
+    "sprint":  "S07",
+    "availabilityRegressionChecks":  21,
+    "npm":  "10.9.8",
+    "build":  "passed",
+    "tests":  {
+                  "newQuantityTests":  3,
+                  "failed":  0,
+                  "passed":  22
+              },
+    "controlledQuantityChecks":  28,
+    "node":  "22.23.2",
+    "reservationsCreated":  0,
+    "posts":  0,
+    "sourceHashes":  {
+                         "frontend/src/reservation/ReservationDraft.tsx":  "FDD6265D7191AA7F291FE3151E91D9F62013B7BC45CE57A5EE7B64E92274C63C",
+                         "frontend/scripts/verify-quantity.mjs":  "41BF129CD0C30D1D9999D5FAC1D38614AA5638431FE02F491BBF439D82F7B472",
+                         "frontend/src/reservation/quantity.ts":  "5509460A1B43975E2263451B94C3BA43D2B62B32E2C214C2FBEC0B60BD2F151E",
+                         "frontend/tests/quantity.test.mjs":  "46F6BBCF421EF504DFAB1018F774DA27779DBE7D6BECB5F6D1811810F6E4CDDC",
+                         "frontend/src/availability/AvailabilityPage.tsx":  "1EBDD22C3DFF52F70ABA98F0E78C9C3F8912E76E0538BC1E39986A9E62A38954",
+                         "frontend/src/styles.css":  "A6D195E0096F57CA8315A14632ADD646497E5AC747C74B1405F58AD48809EF03"
+                     },
+    "date":  "2026-10-18T19:32:03.8154133-06:00",
+    "commands":  [
+                     "npm test",
+                     "npm run build",
+                     "npm run verify:secrets",
+                     "node scripts/verify-quantity.mjs",
+                     "node scripts/verify-quantity.mjs --real",
+                     "node scripts/verify-availability.mjs with new S06_EVIDENCE_DIR"
+                 ],
+    "previousSprint":  {
+                           "commit":  "da21e75",
+                           "push":  "successful",
+                           "id":  "S06"
+                       }
+}

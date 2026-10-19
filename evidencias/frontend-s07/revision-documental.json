@@ -1,0 +1,12 @@
+﻿{
+    "screenshotsReviewed":  [
+                                "pantalla-revision-real.png",
+                                "pantalla-movil.png",
+                                "pantalla-cantidad-invalida.png"
+                            ],
+    "pages":  5,
+    "sprint":  "S07",
+    "sourceSha256":  "FC34B0C5174C604FC4C8D1072E871885D3E83866CAA4B06B6D827C77CB4AE27B",
+    "wordSha256":  "940E888692BBACF4F8BFC2F5CFEBE161030B3D69A25EAACCB6273C37F6A58E27",
+    "visuallyReviewed":  true
+}

@@ -1,0 +1,126 @@
+{
+  "sprint": "S07",
+  "date": "2026-10-19T01:12:06.609Z",
+  "mode": "intercepted-responses",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 28,
+  "results": [
+    {
+      "name": "positive-stock-precondition",
+      "passed": true
+    },
+    {
+      "name": "quantity-focus",
+      "passed": true
+    },
+    {
+      "name": "reject-format-0",
+      "passed": true
+    },
+    {
+      "name": "reject-format-101",
+      "passed": true
+    },
+    {
+      "name": "reject-format-1.5",
+      "passed": true
+    },
+    {
+      "name": "reject-format-abc",
+      "passed": true
+    },
+    {
+      "name": "reject-format-true",
+      "passed": true
+    },
+    {
+      "name": "reject-format-1e2",
+      "passed": true
+    },
+    {
+      "name": "reject-format-01",
+      "passed": true
+    },
+    {
+      "name": "reject-format-1",
+      "passed": true
+    },
+    {
+      "name": "reject-format-+1",
+      "passed": true
+    },
+    {
+      "name": "accept-one-in-review",
+      "passed": true
+    },
+    {
+      "name": "review-heading-focus",
+      "passed": true
+    },
+    {
+      "name": "review-has-no-network-effect",
+      "passed": true
+    },
+    {
+      "name": "review-matches-selected-event",
+      "passed": true
+    },
+    {
+      "name": "back-to-edit-preserves-quantity",
+      "passed": true
+    },
+    {
+      "name": "valid-boundary-in-review",
+      "passed": true
+    },
+    {
+      "name": "local-confirmation-does-not-send",
+      "passed": true
+    },
+    {
+      "name": "confirmed-amount-editable",
+      "passed": true
+    },
+    {
+      "name": "cancel-removes-draft-without-send",
+      "passed": true
+    },
+    {
+      "name": "new-preparation-starts-fresh",
+      "passed": true
+    },
+    {
+      "name": "refresh-removes-previous-review",
+      "passed": true
+    },
+    {
+      "name": "insufficient-stock-blocks-review",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "zero-stock-blocks-preparation",
+      "passed": true
+    },
+    {
+      "name": "credential-and-runtime-safety",
+      "passed": true
+    },
+    {
+      "name": "reload-removes-draft-and-access",
+      "passed": true
+    }
+  ],
+  "requests": 5,
+  "posts": 0,
+  "reservationsCreated": 0,
+  "credentialsRecorded": false
+}

@@ -1,12 +1,14 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { EventSummary } from '../api/contracts';
 import { useSession } from '../session/SessionContext';
 import { useAvailability } from './useAvailability';
+import { ReservationDraft } from '../reservation/ReservationDraft';
 
 export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBack: () => void }) {
   const { clearCredential } = useSession();
   const { data, loadedAt, status, refresh } = useAvailability(event.id);
   const heading = useRef<HTMLHeadingElement>(null);
+  const [draftOpen, setDraftOpen] = useState(false);
   useEffect(() => { heading.current?.focus(); }, []);
   const busy = status === 'loading' || status === 'refreshing';
   return <div className="page availability-page">
@@ -23,7 +25,7 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
           <h1 ref={heading} tabIndex={-1}>{event.name}</h1>
           <p className="lead">Consulta los cupos antes de preparar tu reserva.</p></div>
         <div className="catalog-actions">
-          <button type="button" onClick={() => { void refresh(); }} disabled={busy}>{busy ? 'Actualizando…' : 'Actualizar disponibilidad'}</button>
+          <button type="button" onClick={() => { setDraftOpen(false); void refresh(); }} disabled={busy}>{busy ? 'Actualizando…' : 'Actualizar disponibilidad'}</button>
           <button type="button" className="secondary" onClick={clearCredential}>Volver al acceso</button>
         </div>
       </div>
@@ -44,15 +46,19 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
             <div className="availability-id"><dt>Identificador del evento</dt><dd>{data.id}</dd></div>
           </dl>
           <div className="reservation-preview">
+            {draftOpen && status === 'ready' && data.available > 0
+              ? <ReservationDraft key={loadedAt} event={event} availability={data} onCancel={() => { setDraftOpen(false); heading.current?.focus(); }} />
+              : <>
             {data.available === 0 && <p className="no-stock" role="status">Sin cupos disponibles en esta lectura.</p>}
-            <button type="button" disabled aria-describedby="reservation-help">Reservar</button>
+            <button type="button" disabled={status !== 'ready' || data.available === 0} onClick={() => setDraftOpen(true)} aria-describedby="reservation-help">Reservar</button>
             <p id="reservation-help">{data.available === 0 ? 'No puedes reservar sin cupos. Puedes actualizar para comprobar si cambian.'
-              : 'La reserva se habilitará próximamente.'}</p>
+              : status !== 'ready' ? 'Actualiza los cupos antes de preparar una cantidad.' : 'Prepara y revisa tu cantidad antes de cualquier envío.'}</p>
+              </>}
           </div>
         </article>}
         <p className="catalog-footnote">Esta lectura es informativa y no garantiza inventario. Los cupos se confirman al procesar una reserva.</p>
       </section>
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Disponibilidad de evento · S06</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Preparación de reserva · S07</span></footer>
   </div>;
 }

@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha: 17 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S05 publicados; S06 autorizado para trabajo local y preparado para revisión. El formulario y el envío de reservas siguen pendientes de los sprints posteriores.
+Fecha de actualización: 18 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S06 publicados; S07 autorizado para trabajo local y preparado para revisión. El envío real de reservas sigue pendiente de S08.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -56,7 +56,11 @@ El usuario autorizó S05 y aprobó publicar su entrega. Commit y push completado
 
 ## Entrega de S06
 
-El usuario autorizó el siguiente sprint después de publicar S05. El [informe Markdown](sprints/S06/fuentes/DOC-S06-01-entrega.md) y su [Word](sprints/S06/word/DOC-S06-01-entrega.docx) documentan selección y disponibilidad de RF03. El [diagrama editable](../../diagramas/fase-10/sprints/S06-disponibilidad-evento.mmd) distingue cero cupos, 404 y dato desactualizado. Se verificó el endpoint real sin crear reservas. S06 requiere aprobación antes de commit y push; S07 no está autorizado.
+El usuario autorizó S06 y aprobó su publicación. Commit y push completados en da21e75. El [informe Markdown](sprints/S06/fuentes/DOC-S06-01-entrega.md) y su [Word](sprints/S06/word/DOC-S06-01-entrega.docx) conservan la entrega revisada. El [diagrama editable](../../diagramas/fase-10/sprints/S06-disponibilidad-evento.mmd) distingue cero cupos, 404 y dato desactualizado. Se verificó el endpoint real sin crear reservas.
+
+## Entrega de S07
+
+El usuario autorizó el siguiente sprint después de publicar S06. El [informe Markdown](sprints/S07/fuentes/DOC-S07-01-entrega.md) y su [Word](sprints/S07/word/DOC-S07-01-entrega.docx) describen RF04, cantidad estricta, revisión y confirmación local. El [diagrama editable](../../diagramas/fase-10/sprints/S07-cantidad-confirmacion.mmd) muestra el recorrido sin POST. La confirmación todavía no crea una reserva. S07 está aprobado; el registro de aceptación está en sprints/S07/README.md. La publicación remota queda a cargo del usuario. S08 no está autorizado.
 
 ## Decisiones principales
 

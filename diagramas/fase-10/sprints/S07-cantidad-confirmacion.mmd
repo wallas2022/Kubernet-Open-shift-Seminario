@@ -1,0 +1,11 @@
+flowchart TD
+  A[Disponibilidad válida con cupos] --> B[Reservar abre preparación local]
+  B --> C[Escribir cantidad como texto decimal]
+  C --> D{Entero de 1 a 100 y dentro de cupos}
+  D -->|No| E[Error asociado al campo. No hay envío]
+  E --> C
+  D -->|Sí| F[Revisar evento UUID y cantidad]
+  F -->|Volver a editar| C
+  F -->|Confirmar cantidad| G[Cantidad revisada localmente. No hay POST]
+  G --> H[Envío de reserva pendiente de S08]
+  F -->|Cancelar o actualizar cupos| I[Descartar revisión anterior]

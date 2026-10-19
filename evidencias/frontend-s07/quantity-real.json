@@ -1,0 +1,94 @@
+{
+  "sprint": "S07",
+  "date": "2026-10-19T01:21:06.006Z",
+  "mode": "real-local-api",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 20,
+  "results": [
+    {
+      "name": "positive-stock-precondition",
+      "passed": true
+    },
+    {
+      "name": "quantity-focus",
+      "passed": true
+    },
+    {
+      "name": "reject-format-0",
+      "passed": true
+    },
+    {
+      "name": "reject-format-101",
+      "passed": true
+    },
+    {
+      "name": "reject-format-1.5",
+      "passed": true
+    },
+    {
+      "name": "reject-format-abc",
+      "passed": true
+    },
+    {
+      "name": "reject-format-true",
+      "passed": true
+    },
+    {
+      "name": "reject-format-1e2",
+      "passed": true
+    },
+    {
+      "name": "reject-format-01",
+      "passed": true
+    },
+    {
+      "name": "reject-format-1",
+      "passed": true
+    },
+    {
+      "name": "reject-format-+1",
+      "passed": true
+    },
+    {
+      "name": "accept-one-in-review",
+      "passed": true
+    },
+    {
+      "name": "review-heading-focus",
+      "passed": true
+    },
+    {
+      "name": "review-has-no-network-effect",
+      "passed": true
+    },
+    {
+      "name": "review-matches-selected-event",
+      "passed": true
+    },
+    {
+      "name": "back-to-edit-preserves-quantity",
+      "passed": true
+    },
+    {
+      "name": "valid-boundary-in-review",
+      "passed": true
+    },
+    {
+      "name": "local-confirmation-does-not-send",
+      "passed": true
+    },
+    {
+      "name": "credential-and-runtime-safety",
+      "passed": true
+    },
+    {
+      "name": "reload-removes-draft-and-access",
+      "passed": true
+    }
+  ],
+  "requests": 3,
+  "posts": 0,
+  "reservationsCreated": 0,
+  "credentialsRecorded": false
+}

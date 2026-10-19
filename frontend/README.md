@@ -1,6 +1,6 @@
 # Frontend de reservas del seminario
 
-S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext para RN04 y S03 el cliente HTTP de RN07. S04 valida el acceso mediante GET /catalogo. S05 muestra el catálogo autenticado con estados y actualización manual. S06 permite seleccionar un evento y consultar su disponibilidad real. El formulario y las reservas siguen pendientes de S07 en adelante.
+S01 implementa la base React y TypeScript y los controles RN03. S02 añade SessionContext para RN04 y S03 el cliente HTTP de RN07. S04 valida el acceso, S05 muestra el catálogo y S06 consulta disponibilidad individual. S07 permite preparar, revisar y confirmar una cantidad localmente. El envío real de reservas sigue pendiente de S08.
 
 ## Arranque local
 
@@ -42,7 +42,7 @@ La revisión automatizada de navegador usa Playwright y necesita Chromium instal
 
 S02 usa un almacén por instancia de SessionProvider, sin almacenamiento persistente. `useSession()` ofrece hasCredential, setCredential, readCredential y clearCredential. S04 añade isAuthenticated y confirmCredential: la presencia temporal de una clave no equivale a acceso validado. El campo enmascarado se vacía después del envío; pagehide o desmontar el proveedor elimina la referencia del almacén. Una recarga crea un almacén vacío. No se garantiza borrado físico de strings por el recolector de memoria, ni se controla un gestor de contraseñas o extensión ajena a la aplicación. El panel temporal de S02 queda como fuente histórica sin mostrarse en la aplicación. No se implementa todavía el registro de reserva pendiente, ni la salida con advertencia de S13.
 
-Las comprobaciones verify-browser.mjs, verify-session.mjs y verify-access.mjs corresponden a las pantallas históricas de S01, S02 y S04. verify-catalog.mjs comprueba el catálogo y verify-availability.mjs la selección de S06. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. S01 a S05 están publicados; S06 requiere aprobación antes de commit y push. Al repetir pruebas históricas, usar una carpeta de evidencia nueva para conservar sus entregas publicadas.
+Las comprobaciones verify-browser.mjs, verify-session.mjs y verify-access.mjs corresponden a las pantallas históricas de S01, S02 y S04. verify-catalog.mjs comprueba el catálogo, verify-availability.mjs la selección y verify-quantity.mjs el formulario de S07. En Docker se comparte la red de seminario-frontend-s01-preview y se usa http://127.0.0.1:5173 para respetar los hosts permitidos. S01 a S06 están publicados; S07 está aprobado. La publicación remota queda a cargo del usuario. Al repetir pruebas anteriores, usar una carpeta de evidencia nueva.
 
 ## Cliente HTTP de S03
 
@@ -72,7 +72,15 @@ Consultar disponibilidad abre una vista por evento y ejecuta GET /api/eventos/{i
 
 La pantalla muestra carga, campos reales, momento de lectura con zona horaria del navegador y Actualizar disponibilidad. Un fallo técnico con datos anteriores conserva sus valores y fecha con aviso de desactualización. Sin datos previos, no inventa números. Un 404 retira la lectura anterior y muestra Evento no disponible; un 401 elimina la sesión. Volver o seleccionar otro evento aborta la espera e impide que una respuesta tardía sobrescriba la nueva selección.
 
-Cero cupos muestra un aviso explícito y bloquea Reservar. El botón permanece deshabilitado también con cupos positivos porque el formulario y la creación se desarrollarán en los siguientes sprints; no se simula una reserva. La lectura no garantiza inventario. Volver al catálogo conserva su lectura anterior con su fecha, sin afirmar que se haya actualizado automáticamente.
+Cero cupos muestra un aviso explícito y bloquea Reservar. Desde S07, Reservar abre la preparación únicamente con lectura válida, actual y positiva. Durante actualización o tras error técnico se bloquea hasta obtener otra lectura válida. No se simula una reserva. La lectura no garantiza inventario. Volver al catálogo conserva su lectura anterior con su fecha.
+
+## Cantidad y revisión de S07
+
+ReservationDraft no tiene acceso al transporte HTTP. El campo de cantidad es texto con teclado numérico para evitar conversiones ambiguas del navegador. validateQuantity acepta únicamente texto decimal canónico de 1 a 100 y comprueba que no supere available de la lectura actual. Rechaza espacios, signos, ceros iniciales, decimales, notación exponencial, texto, booleanos y números recibidos sin formato de campo.
+
+Revisar cantidad muestra nombre, UUID y unidades antes de Confirmar cantidad. Volver a editar mantiene la entrada; Cancelar preparación la descarta. La confirmación es local y dice explícitamente que no se ha enviado ninguna reserva. Enviar reserva permanece deshabilitado hasta S08. Actualizar disponibilidad cierra la preparación y obliga a revisarla de nuevo; no persiste un borrador tras recarga o salida.
+
+`node scripts/verify-quantity.mjs` verifica formatos, límites, revisión, cancelación, actualización y ausencia de POST. `--real` recibe credential por stdin y usa lecturas reales de catálogo y disponibilidad, sin crear reservas. S07_BROWSER_URL y S07_EVIDENCE_DIR configuran URL y evidencia. Las pruebas unitarias también comprueban booleanos y valores no textuales. La confirmación local no equivale a un comprobante ni a una operación pendiente persistida.
 
 `node scripts/verify-availability.mjs` prueba respuestas controladas y `--real` recibe credential por stdin para comprobar el endpoint de un evento de la API local. S06_BROWSER_URL y S06_EVIDENCE_DIR permiten configurar URL y destino. Los ensayos solo usan GET; no crean reservas. Las capturas reales y las de fixtures se identifican en evidencias/frontend-s06.
 
