@@ -1,0 +1,12 @@
+﻿flowchart TD
+    A[Confirmación válida 201 o 200] --> B[Conservar comprobante y UUID]
+    B --> C[GET de disponibilidad]
+    C --> D{Resultado de lectura}
+    D -->|200| E[Mostrar cupos del servidor]
+    D -->|503 o 404| F[Avisar fallo y conservar comprobante]
+    E --> G[Actualizar manualmente solo con GET]
+    F --> G
+    B --> H[Copiar identificador]
+    H --> I{Portapapeles disponible y autorizado}
+    I -->|Sí| J[Copiar UUID exacto y anunciar éxito]
+    I -->|No| K[Seleccionar UUID y explicar copia manual]

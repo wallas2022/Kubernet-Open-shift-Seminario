@@ -12,6 +12,14 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
   const heading = useRef<HTMLHeadingElement>(null);
   const [draftOpen, setDraftOpen] = useState(false);
   const { state: creation } = useCreation();
+  const refreshedReceipt = useRef<string | null>(null);
+  useEffect(() => {
+    const receipt = creation.receipt?.reservation;
+    if (receipt?.event_id === event.id && refreshedReceipt.current !== receipt.id && status !== 'loading' && status !== 'refreshing') {
+      refreshedReceipt.current = receipt.id;
+      void refresh();
+    }
+  }, [creation.receipt, event.id, refresh, status]);
   useEffect(() => { heading.current?.focus(); }, []);
   const busy = status === 'loading' || status === 'refreshing';
   return <div className="page availability-page">
@@ -62,7 +70,7 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
         </article>}
         <p className="catalog-footnote">Esta lectura es informativa y no garantiza inventario. Los cupos se confirman al procesar una reserva.</p>
       </section>
-      <ReservationReceipt />
+      <ReservationReceipt refreshAvailability={false} />
     </main>
     <footer><span>Seminario de plataformas de contenedores</span><span>Reservas de prueba · S09</span></footer>
   </div>;

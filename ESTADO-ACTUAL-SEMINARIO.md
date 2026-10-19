@@ -1,5 +1,9 @@
 # Estado actual del seminario
 
+## Actualización de S14 del 19 de octubre de 2026
+
+S14 RF11 implementado y aprobado por el usuario para commit y push a origin/master: copia exacta del UUID, selección manual si falla el portapapeles y actualización de cupos posterior a 201 y 200, sin otro POST. Pasaron 52 pruebas Node, compilación, 12 controles de secretos y 46 comprobaciones de navegador con fixtures de negocio y portapapeles nativo de Chromium. Se cubren creación, repetición, consulta y recuperación; 503 y 404 conservan el comprobante. No se ejecutó nueva creación real ni auditoría PostgreSQL. Fuente Markdown, Word y Mermaid en las carpetas de S14. Publicación autorizada por el usuario; S15 no iniciado.
+
 ## Actualización de S13 del 19 de octubre de 2026
 
 S11 y S12 publicados hasta 32b8737 en origin/master. S13 RF10 aprobado por el usuario para commit y push a origin/master el 19 de octubre de 2026: Salir, advertencia de pérdida de recuperación, cancelación, limpieza verificable y descarte de respuestas tardías. Pasaron 52 pruebas Node, compilación, 12 controles de secretos, 71 comprobaciones de navegador controladas y 11 con API real mediante lecturas del laboratorio exclusivo S12. La auditoría previa y posterior conserva una reserva y un outbox, sin cambios. Fuente Markdown, Word y Mermaid en las carpetas de S13. S13 aprobado para commit y push el 19 de octubre de 2026; S14 no iniciado. Los apartados siguientes conservan el historial de entregas anteriores.

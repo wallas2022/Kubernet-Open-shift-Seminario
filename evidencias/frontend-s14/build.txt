@@ -1,0 +1,14 @@
+
+> seminario-reservas-frontend@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 39 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.56 kB │ gzip:  0.33 kB
+dist/assets/index-CinWZktq.css   12.05 kB │ gzip:  2.87 kB
+dist/assets/index-BDmWkZJ3.js   267.65 kB │ gzip: 81.06 kB
+
+✓ built in 2.48s
