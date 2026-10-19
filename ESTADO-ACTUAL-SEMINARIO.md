@@ -1,5 +1,9 @@
 # Estado actual del seminario
 
+## Actualización de S10 del 19 de octubre de 2026
+
+S10 RF07 implementado y aprobado para publicación: recuperación tras recarga, misma identidad y reenvío explícito de la intención original. Pasaron 43 pruebas Node, compilación, 12 controles de secretos, 30 comprobaciones controladas, 28 con API real y 58 de regresión S09. La auditoría PostgreSQL exclusiva confirmó una reserva de dos cupos y un outbox tras descartar dos respuestas del servidor y recuperar con el mismo UUID. Informe Markdown, Word de cuatro páginas y Mermaid en documentacion/fase-10/sprints/S10 y diagramas/fase-10/sprints. Aprobado por el usuario para commit y push el 19 de octubre de 2026. S11 no iniciado; salida completa pendiente de S13.
+
 ## Actualización de S09 del 19 de octubre de 2026
 
 S09 RF06 implementado, aprobado y publicado: comprobante para 201 y 200, validación y limpieza conservadora del pendiente. Pasaron 37 pruebas Node, compilación, 12 controles de secretos, 58 comprobaciones de interfaz controladas, 28 con API real y 70 de regresión S08. PostgreSQL exclusivo confirmó dos reservas y dos outbox para cuatro cupos. Word de cuatro páginas y capturas revisados visualmente. Informe en documentacion/fase-10/sprints/S09. Publicado en origin/master mediante el commit 46051bcc40acad16c265dff788b8b79ab82f89a7 el 19 de octubre de 2026; push exitoso. S10 no iniciado.

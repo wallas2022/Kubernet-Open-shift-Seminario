@@ -148,3 +148,77 @@ test('S09 failed cleanup or replaced record cannot hide confirmation or delete a
     if (mode === 'replaced') assert.equal(f.values.get(PENDING_KEY), '{another-record');
   }
 });
+
+test('S10 lost response then reload only recovers by explicit action with original intent', async () => {
+  let calls = 0; const intents = [];
+  const f = fixture({ post: async intent => { intents.push(intent); return ++calls === 1
+    ? { ok: false, outcome: 'uncertain' } : { ...accepted, status: 200 }; } });
+  await f.engine.send(review);
+  const original = parsePending(f.values.get(PENDING_KEY));
+  const reloaded = createCreationEngine(f.dependencies);
+  assert.equal(calls, 1); await reloaded.send({ ...review, quantity: 9 }); assert.equal(calls, 1);
+  assert.equal(reloaded.getSnapshot().recovery, true);
+  await reloaded.recover();
+  assert.equal(calls, 2); assert.deepEqual(intents[1], intents[0]);
+  assert.equal(f.generated(), 1); assert.equal(reloaded.getSnapshot().receipt.reservation.id, accepted.data.id);
+  assert.equal(f.values.has(PENDING_KEY), false); assert.equal(original.quantity, 2);
+});
+
+test('S10 mismatched, missing or changing identity never sends and preserves exact pending', async () => {
+  const f = fixture({ post: async () => ({ ok: false, outcome: 'uncertain' }) });
+  await f.engine.send(review); const raw = f.values.get(PENDING_KEY);
+  for (const readCredential of [() => null, () => 'other']) {
+    const engine = createCreationEngine({ ...f.dependencies, readCredential, fingerprint: async () => 'b'.repeat(64), post: async () => assert.fail('must not post') });
+    await engine.recover(); assert.equal(f.values.get(PENDING_KEY), raw);
+    assert.equal(engine.getSnapshot().phase, 'blocked');
+  }
+  let identity = 'first';
+  const engine = createCreationEngine({ ...f.dependencies, readCredential: () => identity,
+    fingerprint: async () => { identity = 'second'; return fingerprint; }, post: async () => assert.fail('must not post') });
+  await engine.recover(); assert.equal(f.values.get(PENDING_KEY), raw);
+});
+
+test('S10 double recovery click locks before fingerprint and retains pending on another failure', async () => {
+  let calls = 0; const f = fixture({ post: async () => { calls++; return { ok: false, outcome: 'uncertain' }; } });
+  await f.engine.send(review); const raw = f.values.get(PENDING_KEY);
+  let release; const wait = new Promise(resolve => { release = resolve; });
+  const engine = createCreationEngine({ ...f.dependencies, fingerprint: async () => { await wait; return fingerprint; } });
+  const first = engine.recover(); await engine.recover(); assert.equal(calls, 1);
+  release(); await first;
+  assert.equal(calls, 2); assert.equal(f.values.get(PENDING_KEY), raw);
+  assert.equal(engine.getSnapshot().phase, 'uncertain');
+});
+
+test('S10 corrupt or inaccessible storage never authorizes recovery', async () => {
+  for (const raw of ['{broken', '{"version":2}', null]) {
+    const engine = createCreationEngine({ storage: () => ({ getItem: () => raw }),
+      readCredential: () => 'x', post: async () => assert.fail('must not post') });
+    await engine.recover(); assert.equal(engine.getSnapshot().receipt, undefined);
+  }
+  const engine = createCreationEngine({ storage: () => { throw Error('denied'); }, readCredential: () => 'x', post: async () => assert.fail('must not post') });
+  await engine.recover(); assert.equal(engine.getSnapshot().phase, 'blocked');
+});
+
+test('S10 pending changed or storage lost during fingerprint is never overwritten or dispatched', async () => {
+  const f = fixture({ post: async () => ({ ok: false, outcome: 'uncertain' }) }); await f.engine.send(review);
+  for (const mode of ['changed', 'read-denied']) {
+    const original = f.values.get(PENDING_KEY); let denied = false;
+    const engine = createCreationEngine({ ...f.dependencies,
+      storage: () => { if (denied) throw Error('denied'); return f.storage; },
+      fingerprint: async () => { if (mode === 'changed') f.values.set(PENDING_KEY, '{changed'); else denied = true; return fingerprint; },
+      post: async () => assert.fail('must not post') });
+    await engine.recover(); assert.equal(engine.getSnapshot().phase, 'blocked');
+    assert.equal(f.values.get(PENDING_KEY), mode === 'changed' ? '{changed' : original);
+    f.values.set(PENDING_KEY, original);
+  }
+});
+
+test('S10 failed uncertainty write retains sending record and still permits explicit recovery', async () => {
+  let calls = 0;
+  const f = fixture({ post: async () => {
+    if (++calls === 1) { f.storage.setItem = () => { throw Error('quota'); }; return { ok: false, outcome: 'uncertain' }; }
+    return { ...accepted, status: 200 };
+  } });
+  await f.engine.send(review); assert.equal(parsePending(f.values.get(PENDING_KEY)).state, 'sending');
+  await f.engine.recover(); assert.equal(calls, 2); assert.equal(f.engine.getSnapshot().phase, 'accepted');
+});

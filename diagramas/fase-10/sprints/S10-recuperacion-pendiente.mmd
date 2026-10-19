@@ -1,0 +1,14 @@
+flowchart TD
+    A[Recarga o resultado incierto] --> B[Leer registro sin reenviar]
+    B --> C{Registro válido y accesible}
+    C -->|No| D[Bloquear y conservar registro]
+    C -->|Sí| E[Solicitar la misma clave de laboratorio]
+    E --> F[Acceso validado sin POST]
+    F --> G[Acción explícita Recuperar]
+    G --> H[Bloqueo síncrono y comparación de huella]
+    H --> I{Identidad y registro sin cambios}
+    I -->|No| D
+    I -->|Sí| J[Un POST con clave y payload originales]
+    J --> K{Confirmación válida}
+    K -->|No| L[Conservar pendiente y permitir nueva acción explícita]
+    K -->|Sí| M[Comprobante del mismo UUID y limpieza verificada]

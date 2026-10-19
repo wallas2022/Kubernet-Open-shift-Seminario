@@ -13,6 +13,8 @@ type Dependencies = {
 export type CreationState = Readonly<{
   phase: 'idle' | 'preparing' | 'sending' | 'accepted' | 'rejected' | 'uncertain' | 'blocked';
   message: string;
+  pending?: PendingOperation;
+  recovery?: boolean;
   receipt?: Readonly<{ reservation: Readonly<Reservation>; responseStatus: 200 | 201; pendingCleared: boolean }>;
 }>;
 
@@ -42,18 +44,22 @@ export function createCreationEngine(dependencies: Dependencies) {
   let state: CreationState = { phase: 'idle', message: '' };
   const listeners = new Set<() => void>();
   let controller: AbortController | null = null;
+  let candidate: PendingOperation | undefined;
+  let recovery = false;
   const publish = (phase: CreationState['phase'], message: string) => {
-    state = Object.freeze({ phase, message }); listeners.forEach(listener => listener());
+    state = Object.freeze({ phase, message, pending: candidate, recovery }); listeners.forEach(listener => listener());
   };
   const inspect = () => {
     const raw = dependencies.storage().getItem(PENDING_KEY);
     if (raw === null) return false;
-    publish('blocked', parsePending(raw)
-      ? 'Hay una operación pendiente en esta pestaña. No se enviará otra reserva ni se reintentará automáticamente. La recuperación estará disponible en S10.'
+    candidate = parsePending(raw) ?? undefined;
+    recovery = true;
+    publish('blocked', candidate
+      ? 'Hay una operación pendiente en esta pestaña. Introduce la misma clave de laboratorio y recupera la operación solo cuando decidas hacerlo.'
       : 'El registro pendiente no es válido. El envío está bloqueado para evitar una segunda intención.');
     return true;
   };
-  try { inspect(); } catch { publish('blocked', 'No podemos leer el registro de esta pestaña. El envío está bloqueado.'); }
+  try { inspect(); } catch { recovery = true; publish('blocked', 'No podemos leer el registro de esta pestaña. El envío está bloqueado.'); }
 
   async function send(review: Readonly<{ eventId: string; quantity: number }>) {
     if (state.phase !== 'idle') return;
@@ -84,6 +90,41 @@ export function createCreationEngine(dependencies: Dependencies) {
       publish('blocked', 'No se pudo guardar y verificar la intención. No se envió la reserva. El envío queda bloqueado.');
       return;
     }
+    candidate = pending;
+    await dispatch(pending, JSON.stringify(pending));
+  }
+
+  async function recover() {
+    if (!candidate || !['blocked', 'uncertain', 'rejected'].includes(state.phase)) return;
+    recovery = true;
+    publish('preparing', 'Verificando la identidad y el registro original…');
+    let pending: PendingOperation;
+    let raw: string;
+    try {
+      const stored = dependencies.storage().getItem(PENDING_KEY);
+      const parsed = stored === null ? null : parsePending(stored);
+      if (!parsed || JSON.stringify(parsed) !== JSON.stringify(parsePending(JSON.stringify(candidate)))) throw Error('changed pending');
+      raw = stored!;
+      pending = parsed;
+      let credential = dependencies.readCredential();
+      if (!credential) throw Error('missing identity');
+      const fingerprint = await (dependencies.fingerprint ?? credentialFingerprint)(credential);
+      const unchanged = dependencies.readCredential() === credential;
+      credential = null;
+      if (!unchanged || fingerprint !== pending.credentialFingerprint) {
+        publish('blocked', 'La clave no corresponde a la operación pendiente. No se envió ninguna solicitud. Vuelve al acceso e introduce la misma clave utilizada originalmente.');
+        return;
+      }
+      // Recovery never overwrites storage or generates a new key.
+      if (dependencies.storage().getItem(PENDING_KEY) !== raw) throw Error('record changed');
+    } catch {
+      publish('blocked', 'No pudimos verificar el registro y la identidad. No se envió ninguna solicitud. Conservamos el pendiente sin modificarlo.');
+      return;
+    }
+    await dispatch(pending, raw);
+  }
+
+  async function dispatch(pending: PendingOperation, originalRaw: string) {
     controller = new AbortController();
     publish('sending', 'Enviando la reserva. No vuelvas a enviarla.');
     let result: ApiResult<Reservation>;
@@ -101,12 +142,13 @@ export function createCreationEngine(dependencies: Dependencies) {
         try {
           const storage = dependencies.storage();
           // Never delete a record replaced by another actor while the POST was in flight.
-          if (storage.getItem(PENDING_KEY) === JSON.stringify(pending)) {
+          if (storage.getItem(PENDING_KEY) === originalRaw) {
             storage.removeItem(PENDING_KEY);
             pendingCleared = storage.getItem(PENDING_KEY) === null;
           }
         } catch { /* A cleanup failure cannot erase a valid confirmation. */ }
-        state = Object.freeze({ phase: 'accepted', message: result.status === 201
+        candidate = undefined;
+        state = Object.freeze({ phase: 'accepted', recovery, message: result.status === 201
           ? 'Reserva creada y confirmada.' : 'Operación recuperada. Esta reserva ya estaba confirmada.',
           receipt: Object.freeze({ reservation: Object.freeze(reservation), responseStatus: result.status, pendingCleared }) });
         listeners.forEach(listener => listener());
@@ -119,10 +161,15 @@ export function createCreationEngine(dependencies: Dependencies) {
       try {
         const storage = dependencies.storage();
         const current = storage.getItem(PENDING_KEY);
-        if (current && parsePending(current)?.operationKey === pending.operationKey)
-          storage.setItem(PENDING_KEY, JSON.stringify({ ...pending, state: 'uncertain' }));
+        if (current === originalRaw && pending.state !== 'uncertain') {
+          const uncertain = Object.freeze({ ...pending, state: 'uncertain' as const });
+          const encoded = JSON.stringify(uncertain);
+          storage.setItem(PENDING_KEY, encoded);
+          if (storage.getItem(PENDING_KEY) === encoded) candidate = uncertain;
+        }
       } catch { /* Retain the original record; do not unlock or retry. */ }
-      publish('uncertain', 'No pudimos confirmar el resultado. La reserva podría haberse creado. Conservamos la operación pendiente y no volveremos a enviarla automáticamente. La recuperación corresponde a S10.');
+      recovery = true;
+      publish('uncertain', 'No pudimos confirmar el resultado. La reserva podría haberse creado. Conservamos la operación pendiente y no volveremos a enviarla automáticamente. Puedes recuperar la operación con la misma clave.');
     } else {
       publish('rejected', result.code === 'sold_out'
         ? 'La API rechazó la reserva por falta de cupos. No hay reintento automático. Conservamos el registro de esta operación.'
@@ -133,6 +180,7 @@ export function createCreationEngine(dependencies: Dependencies) {
     subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; },
     getSnapshot: () => state,
     send,
+    recover,
     interrupt: () => controller?.abort(),
   };
 }

@@ -2,9 +2,13 @@ import { Step } from '../components/Step';
 import { LaboratoryAccess } from '../session/LaboratoryAccess';
 import { useSession } from '../session/SessionContext';
 import { CatalogPage } from '../catalog/CatalogPage';
+import { useCreation } from '../reservation/CreationContext';
+import { RecoveryPage } from '../reservation/RecoveryPage';
 
 export function WelcomePage() {
   const { isAuthenticated } = useSession();
+  const { state } = useCreation();
+  if (isAuthenticated && state.recovery) return <RecoveryPage />;
   if (isAuthenticated) return <CatalogPage />;
   return <div className="page">
     <a className="skip-link" href="#contenido">Ir al contenido</a>
@@ -25,6 +29,7 @@ export function WelcomePage() {
         </p>
       </section>
       <LaboratoryAccess />
+      {state.recovery && <p className="notice" role="status">Hay una operación pendiente o un registro que requiere revisión. Introduce la misma clave utilizada al enviar. Entrar no reenvía la reserva; la recuperación requiere tu acción explícita.</p>}
       <section className="journey journey-preview" aria-labelledby="recorrido">
         <div className="section-heading"><span className="eyebrow">ASÍ SERÁ EL RECORRIDO</span><h2 id="recorrido">De elegir a confirmar.</h2></div>
         <ol className="steps">

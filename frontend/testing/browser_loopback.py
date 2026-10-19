@@ -5,7 +5,7 @@ from urllib.error import HTTPError
 import sys
 
 port = int(sys.argv[1]) if len(sys.argv) > 1 else 5181
-if port not in (5181, 5182):
+if port not in (5181, 5182, 5183):
     raise ValueError('Only isolated laboratory ports are allowed')
 
 class Bridge(BaseHTTPRequestHandler):

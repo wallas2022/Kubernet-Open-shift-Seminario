@@ -1,0 +1,123 @@
+{
+  "sprint": "S10",
+  "date": "2026-10-19T15:38:23.151Z",
+  "mode": "exclusive-api-postgresql-response-discarded-after-commit",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 28,
+  "results": [
+    {
+      "name": "lost-after-commit-attempt-1-original-identity",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-1-pending-before-dispatch",
+      "passed": true
+    },
+    {
+      "name": "real-attempt-1-status",
+      "passed": true
+    },
+    {
+      "name": "fingerprint-only-in-pending",
+      "passed": true
+    },
+    {
+      "name": "reload-clears-credential",
+      "passed": true
+    },
+    {
+      "name": "reload-never-retries",
+      "passed": true
+    },
+    {
+      "name": "other-valid-identity-no-post-and-pending-unchanged",
+      "passed": true
+    },
+    {
+      "name": "matching-login-never-retries",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-2-original-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-2-original-identity",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-2-pending-before-dispatch",
+      "passed": true
+    },
+    {
+      "name": "real-attempt-2-status",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-2-same-reservation-uuid",
+      "passed": true
+    },
+    {
+      "name": "double-click-single-replay-and-second-loss-retains-pending",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-3-original-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-3-original-identity",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-3-pending-before-dispatch",
+      "passed": true
+    },
+    {
+      "name": "real-attempt-3-status",
+      "passed": true
+    },
+    {
+      "name": "lost-after-commit-attempt-3-same-reservation-uuid",
+      "passed": true
+    },
+    {
+      "name": "explicit-recovery-same-confirmed-uuid",
+      "passed": true
+    },
+    {
+      "name": "recovered-200-label",
+      "passed": true
+    },
+    {
+      "name": "valid-recovery-clears-pending",
+      "passed": true
+    },
+    {
+      "name": "recovered-no-resend-control",
+      "passed": true
+    },
+    {
+      "name": "credentials-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "no-credentials-in-evidence",
+      "passed": true
+    }
+  ],
+  "credentialsRecorded": false
+}
