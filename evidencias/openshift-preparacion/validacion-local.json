@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "scope": "Validación local YAML y resolución de plantillas. Sin oc ni servidor API ni ejecución de contenedores.",
+  "checks": [
+    "Seis objetos resueltos en proyecto explícito",
+    "Sin PostgreSQL embebido ni asignación de SCC o privilegios globales",
+    "Tres cargas con identidad de plataforma, CA y controles restrictivos",
+    "API con dos réplicas, recursos y tres sondas",
+    "Route edge y puerto Service coherentes",
+    "Rechazo de proyecto inválido e imagen sin digest",
+    "Destino existente protegido"
+  ],
+  "files": {
+    "laboratorio\\scripts\\render_openshift.py": "32575ab7e37236b9cec5631e82ad1b12b3263209dab24cc4c436f941396734bd",
+    "aplicacion\\openshift\\00-serviceaccount.yaml": "ab7d7d7ece891c98e8bf22a8ee0d9a83f3be127ac2189cf64ba32136766ec693",
+    "aplicacion\\openshift\\01-init.yaml": "92fccd7f19be04b1b2c9b22ac37b48e14bbb2070ac6f8cfc3deac4b6cf87f249",
+    "aplicacion\\openshift\\02-application.yaml": "7179f07909dfb604bcf160fa137cc5f5b8fd88c4fc1ec3afb61d9e1423b1d8e3",
+    "aplicacion\\openshift\\03-route-optional.yaml": "9e20d0a02a979a05b099fe4b79dcc01a36319ca3299baf5fec12c19882ce6fa1"
+  }
+}

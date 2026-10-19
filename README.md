@@ -59,3 +59,7 @@ DOC-07-01 en `documentacion/fase-07/`: agenda de tres horas, demostración, ejer
 ## Respaldo y restauración
 
 DOC-08-01 en `documentacion/fase-08/`. Pasó un ensayo local PostgreSQL 18.3 con respaldo lógico, restauración de diez reservas, conservación de idempotencia y continuidad de outbox. Programa en `pruebas/resiliencia/recovery.py`; evidencia en `evidencias/recuperacion-local/`. No acredita recuperación Kubernetes ni RTO empresarial. Word pendiente de revisión visual.
+
+## Preparación OpenShift y estado vigente
+
+Consultar `ESTADO-ACTUAL-SEMINARIO.md` para el estado consolidado. DOC-09-01 en `documentacion/fase-09/` prepara la variante `aplicacion/openshift/`, con PostgreSQL externo TLS e identidad de plataforma. Resolutor offline en `laboratorio/scripts/render_openshift.py`. Pasaron siete comprobaciones locales; admisión y ejecución OpenShift pendientes. Word pendiente de revisión visual.

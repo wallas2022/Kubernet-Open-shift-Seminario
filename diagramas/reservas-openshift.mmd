@@ -1,0 +1,7 @@
+flowchart LR
+  C[Cliente HTTPS] --> R[Router OpenShift con TLS edge]
+  R -->|HTTP| S[Service reservas-api]
+  S --> A[API con UID asignado]
+  A -->|TLS verify-full| P[(PostgreSQL externo)]
+  W[Procesador outbox] -->|TLS verify-full| P
+  J[Job de inicializacion] -->|TLS verify-full| P

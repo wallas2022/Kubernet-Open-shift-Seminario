@@ -1,0 +1,61 @@
+# Plantilla offline. Resolver antes de aplicar; no validada en un cluster.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: reservas-init
+  namespace: PROJECT_REQUIRED
+spec:
+  backoffLimit: 6
+  template:
+    spec:
+      restartPolicy: OnFailure
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+      - name: migrate
+        image: IMAGE_BY_DIGEST_REQUIRED
+        imagePullPolicy: IfNotPresent
+        command:
+        - python
+        - -m
+        - reservas.manage
+        - init
+        envFrom:
+        - secretRef:
+            name: reservas-config
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: '1'
+            memory: 256Mi
+        volumeMounts:
+        - name: db-ca
+          mountPath: /etc/reservas-db
+          readOnly: true
+        - name: tmp
+          mountPath: /tmp
+        env:
+        - name: DB_SCHEMA
+          value: public
+        - name: PYTHONDONTWRITEBYTECODE
+          value: '1'
+      serviceAccountName: reservas-run
+      volumes:
+      - name: db-ca
+        secret:
+          secretName: reservas-db-ca
+          defaultMode: 292
+      - name: tmp
+        emptyDir:
+          sizeLimit: 32Mi
