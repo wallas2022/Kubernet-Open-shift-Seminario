@@ -1,0 +1,14 @@
+flowchart TD
+    A[Sesión validada y catálogo] --> B[Consultar una reserva por UUID]
+    B --> C{UUID válido}
+    C -->|No| D[Error local sin solicitud]
+    C -->|Sí| E[GET autorizado con clave en encabezado]
+    E --> F{Respuesta}
+    F -->|200 válido y UUID coincidente| G[Comprobante compartido]
+    F -->|404 ajena o inexistente| H[Mismo mensaje sin comprobante]
+    F -->|401| I[Limpiar credencial y volver al acceso]
+    F -->|Fallo técnico o respuesta incompatible| J[Mensaje técnico sin detalles privados]
+    G --> K{Evento en catálogo leído}
+    K -->|Sí| L[Añadir nombre del catálogo]
+    K -->|No| M[Mostrar solo UUID del evento]
+    B --> N[Volver aborta la espera e ignora resultados tardíos]

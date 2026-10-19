@@ -1,0 +1,180 @@
+{
+  "sprint": "S11",
+  "date": "2026-10-19T16:15:14.174Z",
+  "mode": "controlled",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 42,
+  "results": [
+    {
+      "name": "known-input-focus",
+      "passed": true
+    },
+    {
+      "name": "invalid-1-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-2-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-3-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-4-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-5-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-6-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-7-never-sent",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-1-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "owner-sees-uuid-and-status",
+      "passed": true
+    },
+    {
+      "name": "owner-server-date",
+      "passed": true
+    },
+    {
+      "name": "receipt-focus",
+      "passed": true
+    },
+    {
+      "name": "event-name-from-known-catalog",
+      "passed": true
+    },
+    {
+      "name": "lookup-never-removes-pending",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-2-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "missing-clears-previous-receipt",
+      "passed": true
+    },
+    {
+      "name": "known-input-focus",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-1-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "foreign-and-missing-identical-message",
+      "passed": true
+    },
+    {
+      "name": "foreign-no-receipt",
+      "passed": true
+    },
+    {
+      "name": "empty-input-focus",
+      "passed": true
+    },
+    {
+      "name": "empty-lookup-1-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "empty-catalog-id-only-no-invented-name",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-3-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "technical-details-hidden",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-4-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "mismatched-response-no-receipt",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-5-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "busy-double-click-no-extra-get",
+      "passed": true
+    },
+    {
+      "name": "late-result-after-back-not-rendered",
+      "passed": true
+    },
+    {
+      "name": "known-input-focus",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-1-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "401-clears-access-and-receipt",
+      "passed": true
+    },
+    {
+      "name": "query-ui-never-posts",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "page-37-credentials-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "page-38-credentials-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "page-39-credentials-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "page-40-credentials-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "no-credentials-in-evidence",
+      "passed": true
+    }
+  ],
+  "uiPosts": 0,
+  "credentialsRecorded": false
+}

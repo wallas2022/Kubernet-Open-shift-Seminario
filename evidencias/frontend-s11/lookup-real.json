@@ -1,0 +1,128 @@
+{
+  "sprint": "S11",
+  "date": "2026-10-19T16:17:29.917Z",
+  "mode": "exclusive-api-postgresql-two-identities",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 29,
+  "results": [
+    {
+      "name": "exclusive-idempotent-fixture-confirmed",
+      "passed": true
+    },
+    {
+      "name": "known-input-focus",
+      "passed": true
+    },
+    {
+      "name": "invalid-2-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-3-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-4-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-5-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-6-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-7-never-sent",
+      "passed": true
+    },
+    {
+      "name": "invalid-8-never-sent",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-1-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "owner-sees-uuid-and-status",
+      "passed": true
+    },
+    {
+      "name": "owner-server-date",
+      "passed": true
+    },
+    {
+      "name": "receipt-focus",
+      "passed": true
+    },
+    {
+      "name": "event-name-from-known-catalog",
+      "passed": true
+    },
+    {
+      "name": "lookup-never-removes-pending",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-2-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "missing-clears-previous-receipt",
+      "passed": true
+    },
+    {
+      "name": "known-input-focus",
+      "passed": true
+    },
+    {
+      "name": "known-lookup-1-safe-identity-header",
+      "passed": true
+    },
+    {
+      "name": "foreign-and-missing-identical-message",
+      "passed": true
+    },
+    {
+      "name": "foreign-no-receipt",
+      "passed": true
+    },
+    {
+      "name": "real-foreign-and-missing-same-http-response",
+      "passed": true
+    },
+    {
+      "name": "query-ui-never-posts",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "page-26-credentials-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "page-27-credentials-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "no-credentials-in-evidence",
+      "passed": true
+    }
+  ],
+  "uiPosts": 0,
+  "credentialsRecorded": false
+}

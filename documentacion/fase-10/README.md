@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha de actualización: 19 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S09 publicados; S10 aprobado para commit y push. Salida completa pendiente de S13.
+Fecha de actualización: 19 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S10 publicados; S11 aprobado para commit local; S12 autorizado. Salida completa pendiente de S13.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -84,3 +84,7 @@ S09 RF06 incorpora comprobante para 201 y 200 y retiro del pendiente solo con co
 ## Entrega S10 aprobada
 
 S10 RF07 incorpora recuperación explícita con la misma credencial, clave y payload. [Informe y entregables](sprints/S10/README.md). Pasaron 43 pruebas Node, compilación, 12 controles de secretos, 30 comprobaciones controladas de recuperación, 28 con API real exclusiva y 58 de regresión S09. La auditoría confirmó una reserva de dos cupos y un outbox después de dos respuestas descartadas y recuperación con el mismo UUID. Word de cuatro páginas y capturas revisados visualmente. Aprobado por el usuario para commit y push el 19 de octubre de 2026. S11 no iniciado.
+
+## Entrega S11 aprobada para commit local
+
+S11 RF08 incorpora consulta autorizada por UUID y comprobante compartido. [Informe y entregables](sprints/S11/README.md). Pasaron 43 pruebas Node, compilación, 12 controles de secretos, 42 comprobaciones controladas de consulta, 29 con API real exclusiva y 58 de regresión S09. La API devuelve el mismo 404 para reserva ajena e inexistente. La consulta no genera POST ni modifica inventario u outbox. Word de cuatro páginas y capturas revisados visualmente. Aprobado para commit local; S12 autorizado el 19 de octubre de 2026.

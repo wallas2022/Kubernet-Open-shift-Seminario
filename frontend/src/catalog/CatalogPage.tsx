@@ -3,14 +3,17 @@ import type { EventSummary } from '../api/contracts';
 import { AvailabilityPage } from '../availability/AvailabilityPage';
 import { useSession } from '../session/SessionContext';
 import { useCatalog } from './useCatalog';
+import { ReservationLookup } from '../reservation/ReservationLookup';
 
 export function CatalogPage() {
   const { clearCredential } = useSession();
   const { data, status, loadedAt, refresh } = useCatalog();
   const heading = useRef<HTMLHeadingElement>(null);
   const [selected, setSelected] = useState<EventSummary | null>(null);
-  useEffect(() => { if (!selected) heading.current?.focus(); }, [selected]);
+  const [lookupOpen, setLookupOpen] = useState(false);
+  useEffect(() => { if (!selected && !lookupOpen) heading.current?.focus(); }, [selected, lookupOpen]);
   const busy = status === 'loading' || status === 'refreshing';
+  if (lookupOpen) return <ReservationLookup events={data?.events ?? []} onBack={() => setLookupOpen(false)} />;
   if (selected) return <AvailabilityPage key={selected.id} event={selected} onBack={() => setSelected(null)} />;
   return <div className="page catalog-page">
     <a className="skip-link" href="#contenido">Ir al contenido</a>
@@ -28,6 +31,7 @@ export function CatalogPage() {
           <p className="lead">Consulta el catálogo y los cupos de la última lectura.</p>
         </div>
         <div className="catalog-actions">
+          <button type="button" onClick={() => setLookupOpen(true)}>Consultar una reserva por UUID</button>
           <button type="button" onClick={() => { void refresh(); }} disabled={busy}>
             {busy ? 'Actualizando…' : status === 'error' && !data ? 'Reintentar' : 'Actualizar catálogo'}
           </button>
