@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import type { Availability, EventSummary } from '../api/contracts';
 import { validateQuantity } from './quantity';
+import { useCreation } from './CreationContext';
 
 export function ReservationDraft({ event, availability, onCancel }: {
   event: EventSummary; availability: Availability; onCancel: () => void;
 }) {
   const [quantity, setQuantity] = useState('1');
+  const creation = useCreation();
   const [phase, setPhase] = useState<'editing' | 'review' | 'confirmed'>('editing');
   const [error, setError] = useState<string | null>(null);
   const [review, setReview] = useState<Readonly<{ eventId: string; quantity: number }> | null>(null);
@@ -14,7 +16,8 @@ export function ReservationDraft({ event, availability, onCancel }: {
   useEffect(() => {
     if (phase === 'editing') input.current?.focus();
     else heading.current?.focus();
-  }, [phase]);
+    if (creation.state.phase !== 'idle') heading.current?.focus();
+  }, [phase, creation.state.phase]);
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const result = validateQuantity(quantity, availability.available);
@@ -29,6 +32,11 @@ export function ReservationDraft({ event, availability, onCancel }: {
     setPhase('review');
   }
   function edit() { setReview(null); setPhase('editing'); }
+  if (creation.state.phase !== 'idle') return <section className="reservation-draft" aria-label="Estado de envío" aria-busy={creation.state.phase === 'preparing' || creation.state.phase === 'sending'}>
+    <h2 ref={heading} tabIndex={-1}>Estado de la operación</h2>
+    <p role={creation.state.phase === 'blocked' || creation.state.phase === 'uncertain' || creation.state.phase === 'rejected' ? 'alert' : 'status'}>{creation.state.message}</p>
+    <p>Esta función está en pruebas. No se anuncia envío de correo.</p>
+  </section>;
   return <section className="reservation-draft" aria-label="Preparación de reserva">
     <h2 ref={heading} tabIndex={-1}>{phase === 'editing' ? 'Prepara tu cantidad.' : phase === 'review' ? 'Revisa tu cantidad.' : 'Cantidad revisada.'}</h2>
     {phase === 'editing' ? <form onSubmit={submit} noValidate>
@@ -52,8 +60,8 @@ export function ReservationDraft({ event, availability, onCancel }: {
         <button type="button" className="draft-secondary" onClick={edit}>Volver a editar</button>
       </> : <>
         <p role="status">La cantidad quedó revisada. Aún no se ha enviado ninguna reserva.</p>
-        <button type="button" disabled aria-describedby="send-help">Enviar reserva</button>
-        <p id="send-help">El envío de reservas estará disponible próximamente.</p>
+        <button type="button" onClick={() => { if (review) void creation.send(review); }} aria-describedby="send-help">Enviar reserva</button>
+        <p id="send-help">Al enviar se guardará esta intención y se solicitará la reserva una sola vez. Función en pruebas.</p>
         <button type="button" className="draft-secondary" onClick={edit}>Modificar cantidad</button>
       </>}
       <button type="button" className="draft-secondary" onClick={onCancel}>Cancelar preparación</button>

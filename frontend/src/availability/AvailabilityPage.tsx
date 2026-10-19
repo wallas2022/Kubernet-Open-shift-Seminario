@@ -59,6 +59,6 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
         <p className="catalog-footnote">Esta lectura es informativa y no garantiza inventario. Los cupos se confirman al procesar una reserva.</p>
       </section>
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Preparación de reserva · S07</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Reservas de prueba · S08</span></footer>
   </div>;
 }

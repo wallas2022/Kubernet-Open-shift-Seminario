@@ -89,8 +89,8 @@ while i<len(lines):
     else:doc.add_paragraph(clean(line))
     i+=1
 if args.figure:
-    doc.add_page_break()
-    doc.add_paragraph(args.figure_title,'Heading 1')
+    heading=doc.add_paragraph(args.figure_title,'Heading 1')
+    heading.paragraph_format.page_break_before=True
     figure=Image.from_file(args.figure)
     width=min(6.69,args.figure_max_height*figure.px_width/figure.px_height)
     doc.add_picture(args.figure,width=Inches(width))

@@ -1,0 +1,137 @@
+{
+  "sprint": "S08",
+  "date": "2026-10-19T14:23:48.390Z",
+  "mode": "exclusive-postgresql-api",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 30,
+  "results": [
+    {
+      "name": "success-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "success-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "success-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "success-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "success-record-retained",
+      "passed": true
+    },
+    {
+      "name": "success-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "success-state-focus",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "movil-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "navigation-does-not-reset-lock",
+      "passed": true
+    },
+    {
+      "name": "success-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "success-reload-does-not-resend",
+      "passed": true
+    },
+    {
+      "name": "success-reload-keeps-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "twenty-concurrent-replays-one-reservation-id",
+      "passed": true
+    },
+    {
+      "name": "same-key-different-payload-rejected",
+      "passed": true
+    },
+    {
+      "name": "lost-review-and-confirmation-have-no-post",
+      "passed": true
+    },
+    {
+      "name": "lost-double-click-at-most-one-post",
+      "passed": true
+    },
+    {
+      "name": "lost-verified-pending-before-post-and-safe-headers",
+      "passed": true
+    },
+    {
+      "name": "lost-immutable-reviewed-payload",
+      "passed": true
+    },
+    {
+      "name": "lost-record-retained",
+      "passed": true
+    },
+    {
+      "name": "lost-no-second-intention-control",
+      "passed": true
+    },
+    {
+      "name": "lost-state-focus",
+      "passed": true
+    },
+    {
+      "name": "lost-credential-not-in-storage-or-page",
+      "passed": true
+    },
+    {
+      "name": "lost-reload-does-not-resend",
+      "passed": true
+    },
+    {
+      "name": "lost-reload-keeps-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "response-discarded-after-real-confirmation",
+      "passed": true
+    },
+    {
+      "name": "forty-concurrent-requests-respect-remaining-twenty-one-seats",
+      "passed": true
+    },
+    {
+      "name": "real-inventory-never-negative",
+      "passed": true
+    },
+    {
+      "name": "no-browser-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "no-credential-in-browser-logs-urls-or-report",
+      "passed": true
+    }
+  ],
+  "uiPosts": 2,
+  "credentialsRecorded": false,
+  "serverReplayRequests": 20,
+  "conflictRequests": 1,
+  "stockRaceRequests": 40,
+  "expectedReservations": 23,
+  "expectedReservedQuantity": 25
+}

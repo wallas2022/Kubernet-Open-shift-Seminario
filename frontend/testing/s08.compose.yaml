@@ -1,0 +1,47 @@
+name: seminario-s08
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: seminario
+      POSTGRES_DB: reservas_s08
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Se requieren secretos exclusivos de prueba}
+    tmpfs:
+      - /var/lib/postgresql
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U seminario -d reservas_s08']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  api:
+    image: seminario-reservas-api
+    environment:
+      DATABASE_URL: postgresql://seminario:${POSTGRES_PASSWORD}@db:5432/reservas_s08
+      CLIENT_KEYS_JSON: ${CLIENT_KEYS_JSON:?Se requieren clientes exclusivos de prueba}
+      POOL_MAX: '32'
+    volumes:
+      - ../..:/workspace:ro
+    command: [python, /workspace/frontend/testing/s08_api.py]
+    ports:
+      - 127.0.0.1:8083:8080
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, 'import urllib.request; urllib.request.urlopen("http://127.0.0.1:8080/health/ready",timeout=2)']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  frontend:
+    image: node:22-bookworm-slim
+    working_dir: /workspace/frontend
+    volumes:
+      - ../..:/workspace
+    environment:
+      DEV_API_TARGET: http://api:8080
+    command: [npm, run, dev, --, --host, 0.0.0.0]
+    ports:
+      - 127.0.0.1:5181:5173
+    depends_on:
+      api:
+        condition: service_healthy

@@ -6,7 +6,7 @@ export type Reservation = {
   id: string; event_id: string; quantity: number; status: 'confirmed'; created_at: string;
 };
 export type ReservationIntent = Readonly<{ operationKey: string; eventId: string; quantity: number }>;
-/** Future S08/S10 persistence contract. Never include a credential or full response. */
+/** S08 tab persistence contract; recovery belongs to S10. Never include a credential or full response. */
 export type PendingOperation = ReservationIntent & Readonly<{
   version: 1;
   credentialFingerprint: string;

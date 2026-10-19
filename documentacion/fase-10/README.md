@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha de actualización: 18 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S06 publicados; S07 autorizado para trabajo local y preparado para revisión. El envío real de reservas sigue pendiente de S08.
+Fecha de actualización: 19 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S07 publicados; S08 aprobado para commit y push. El envío idempotente se verificó en un laboratorio exclusivo; recuperación y salida completa siguen pendientes.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -73,3 +73,6 @@ El backend no ofrece listado de reservas, registro de usuarios, pagos ni cancela
 Análisis basado en `aplicacion/reservas/api.py`, `store.py`, `schema.sql`, `config.py`, `worker.py`, `aplicacion/README.md`, `compose.yaml` y los manifiestos existentes. La sesión anterior comprobó el arranque Compose, readiness, documentación HTTP 200 y catálogo con 1000 cupos. No se realizaron nuevas pruebas de negocio durante la redacción. Los ensayos históricos tienen su alcance en `evidencias/`.
 
 No se cambió la aplicación, la base de datos ni los manifiestos. No se realizaron operaciones remotas Git. Construcción, aceptación y despliegue del frontend quedan como trabajo posterior.
+## Entrega S08 aprobada
+
+S08 RF05 incorpora creación idempotente y bloqueo de doble envío. Entrega aprobada para commit y push el 19 de octubre de 2026. [Informe y entregables](sprints/S08/README.md). Pasaron 34 pruebas Node, compilación, 12 controles de secretos, 74 comprobaciones con respuestas controladas y 30 con API y PostgreSQL exclusivos. La auditoría confirmó 23 reservas y 23 outbox para 25 cupos, sin sobreventa. Recuperación y salida completa pendientes de S10 y S13. S09 no iniciado.

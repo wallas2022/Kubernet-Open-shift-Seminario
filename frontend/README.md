@@ -76,11 +76,17 @@ Cero cupos muestra un aviso explícito y bloquea Reservar. Desde S07, Reservar a
 
 ## Cantidad y revisión de S07
 
-ReservationDraft no tiene acceso al transporte HTTP. El campo de cantidad es texto con teclado numérico para evitar conversiones ambiguas del navegador. validateQuantity acepta únicamente texto decimal canónico de 1 a 100 y comprueba que no supere available de la lectura actual. Rechaza espacios, signos, ceros iniciales, decimales, notación exponencial, texto, booleanos y números recibidos sin formato de campo.
+ReservationDraft delega el envío al motor de S08 a través de CreationContext. El campo de cantidad es texto con teclado numérico para evitar conversiones ambiguas del navegador. validateQuantity acepta únicamente texto decimal canónico de 1 a 100 y comprueba que no supere available de la lectura actual. Rechaza espacios, signos, ceros iniciales, decimales, notación exponencial, texto, booleanos y números recibidos sin formato de campo.
 
-Revisar cantidad muestra nombre, UUID y unidades antes de Confirmar cantidad. Volver a editar mantiene la entrada; Cancelar preparación la descarta. La confirmación es local y dice explícitamente que no se ha enviado ninguna reserva. Enviar reserva permanece deshabilitado hasta S08. Actualizar disponibilidad cierra la preparación y obliga a revisarla de nuevo; no persiste un borrador tras recarga o salida.
+Revisar cantidad muestra nombre, UUID y unidades antes de Confirmar cantidad. Volver a editar mantiene la entrada; Cancelar preparación la descarta. La confirmación de cantidad es local; desde S08, Enviar reserva realiza una solicitud explícita mediante el motor de creación. Actualizar disponibilidad cierra la preparación y obliga a revisarla de nuevo; el borrador no persiste, pero una intención enviada conserva su registro pendiente.
 
 `node scripts/verify-quantity.mjs` verifica formatos, límites, revisión, cancelación, actualización y ausencia de POST. `--real` recibe credential por stdin y usa lecturas reales de catálogo y disponibilidad, sin crear reservas. S07_BROWSER_URL y S07_EVIDENCE_DIR configuran URL y evidencia. Las pruebas unitarias también comprueban booleanos y valores no textuales. La confirmación local no equivale a un comprobante ni a una operación pendiente persistida.
+
+## Creación idempotente de S08
+
+CreationProvider conserva un motor por pestaña. Enviar reserva congela el payload revisado, genera una clave aleatoria, calcula la huella SHA256 de la credencial y guarda y verifica el pendiente antes del POST. Un registro existente o corrupto y cualquier fallo de storage bloquean la creación. El motor bloquea el doble clic y conserva el pendiente tras aceptación, rechazo o resultado incierto; S09 incorporará comprobante y S10 recuperación. No hay reintento automático ni coordinación entre pestañas.
+
+El laboratorio exclusivo se inicia con `testing/Start-S08.ps1`, en localhost:5181. `scripts/verify-creation.mjs` usa fixtures y `--real` requiere credential por stdin y una base exclusiva inicialmente vacía. El ensayo real consume los 25 cupos; para repetirlo se debe recrear únicamente el entorno efímero S08. `testing/audit_s08.py` verifica inventario, reservas y outbox sin registrar credenciales. La entrega y sus límites están en `documentacion/fase-10/sprints/S08/`. No habilitar a participantes hasta S10 y S13.
 
 `node scripts/verify-availability.mjs` prueba respuestas controladas y `--real` recibe credential por stdin para comprobar el endpoint de un evento de la API local. S06_BROWSER_URL y S06_EVIDENCE_DIR permiten configurar URL y destino. Los ensayos solo usan GET; no crean reservas. Las capturas reales y las de fixtures se identifican en evidencias/frontend-s06.
 

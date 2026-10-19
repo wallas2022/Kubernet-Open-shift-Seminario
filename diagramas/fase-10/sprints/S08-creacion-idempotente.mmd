@@ -1,0 +1,15 @@
+flowchart TD
+    A[Evento y cantidad revisados] --> B[Bloqueo síncrono por pestaña]
+    B --> C{Existe pendiente o falla lectura}
+    C -->|Sí| D[Bloquear nueva intención]
+    C -->|No| E[Congelar payload y generar clave]
+    E --> F[Calcular huella sin guardar credencial]
+    F --> G{Guardar y verificar pendiente}
+    G -->|Falla| D
+    G -->|Correcto| H[Un POST con clave y payload originales]
+    H --> I{Resultado validado}
+    I -->|201 o 200| J[Confirmación básica S08]
+    I -->|Rechazo conocido| K[Informar rechazo sin reintentar]
+    I -->|Resultado incierto| L[Conservar pendiente para S10]
+    J --> M[Conservar bloqueo hasta S09]
+    K --> M
