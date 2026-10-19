@@ -1,0 +1,11 @@
+flowchart TD
+    A[Usuario pulsa Salir] --> B{Pendiente, envio o storage inaccesible}
+    B -->|No| E[Cerrar motor, abortar espera y borrar registro]
+    B -->|Si| C{Advertir perdida de recuperacion}
+    C -->|Cancelar o Escape| D[Conservar contexto y pendiente]
+    C -->|Salir y borrar| E
+    E --> G[Eliminar credencial y recrear interfaz]
+    G --> H{Borrado verificado}
+    H -->|Si| I[P01 sin pendiente ni comprobante]
+    H -->|No| J[P01 con aviso de limpieza incompleta]
+    E -.-> K[Ignorar respuestas tardias]

@@ -20,5 +20,6 @@ export function CreationProvider({ children }: { children: ReactNode }) {
 export function useCreation() {
   const engine = useContext(CreationContext);
   if (!engine) throw new Error('Se requiere CreationProvider.');
-  return { state: useSyncExternalStore(engine.subscribe, engine.getSnapshot), send: engine.send, recover: engine.recover };
+  return { state: useSyncExternalStore(engine.subscribe, engine.getSnapshot), send: engine.send, recover: engine.recover,
+    needsExitWarning: engine.needsExitWarning, close: engine.close };
 }

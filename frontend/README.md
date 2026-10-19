@@ -74,6 +74,12 @@ La pantalla muestra carga, campos reales, momento de lectura con zona horaria de
 
 Cero cupos muestra un aviso explícito y bloquea Reservar. Desde S07, Reservar abre la preparación únicamente con lectura válida, actual y positiva. Durante actualización o tras error técnico se bloquea hasta obtener otra lectura válida. No se simula una reserva. La lectura no garantiza inventario. Volver al catálogo conserva su lectura anterior con su fecha.
 
+## Salida y limpieza de S13
+
+Salir cierra el contexto de esta pestaña. Si hay preparación, envío, pendiente válido o corrupto, o storage inaccesible, advierte antes de borrar la recuperación local. Cancelar y Escape conservan el registro. Confirmar elimina la credencial en memoria y verifica el borrado del registro propio, incluida su huella. La aplicación recrea proveedores y pantallas, retira comprobantes y descarta respuestas tardías. Si el borrado falla, vuelve al acceso con aviso de limpieza incompleta y conserva el bloqueo del pendiente. Salir no cancela reservas ni revoca la clave del servidor. Cambiar de clave mediante los controles anteriores conserva el pendiente y sigue siendo una acción diferente.
+
+`node scripts/verify-exit.mjs` ejecuta la matriz controlada en el laboratorio existente de localhost:5185. `--real` reutiliza la clave del laboratorio exclusivo S12 desde su archivo ignorado `.runtime/s12/compose.env`, realiza solo lecturas y verifica que salir no revoca la clave. No imprime credenciales. S13_BROWSER_URL y S13_EVIDENCE_DIR configuran URL y evidencia. Las auditorías S12 antes y después conservan inventario, reserva y outbox. Evidencia en evidencias/frontend-s13. Entrega S13 aprobada para commit y push el 19 de octubre de 2026; S14 no iniciado. Las referencias siguientes a S13 pendiente conservan el alcance histórico de incrementos anteriores.
+
 ## Cantidad y revisión de S07
 
 ReservationDraft delega el envío al motor de S08 a través de CreationContext. El campo de cantidad es texto con teclado numérico para evitar conversiones ambiguas del navegador. validateQuantity acepta únicamente texto decimal canónico de 1 a 100 y comprueba que no supere available de la lectura actual. Rechaza espacios, signos, ceros iniciales, decimales, notación exponencial, texto, booleanos y números recibidos sin formato de campo.

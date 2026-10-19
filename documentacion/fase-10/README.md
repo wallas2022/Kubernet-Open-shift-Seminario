@@ -1,6 +1,6 @@
 # Fase 10 Análisis y diseño del frontend de reservas
 
-Fecha de actualización: 19 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S10 publicados; S11 en commit local db16f1d y S12 aprobados para publicación a origin/master. Salida completa pendiente de S13.
+Fecha de actualización: 19 de octubre de 2026. Versión: 1.0. Estado: planificación y S01 a S12 publicados hasta 32b8737; S13 aprobado para commit y push a origin/master. S14 no iniciado. Los apartados de entregas anteriores conservan su estado histórico de aprobación.
 
 Esta fase define una interfaz web para la aplicación de reservas existente. Su propósito es permitir una demostración comprensible del negocio y preparar su futura integración con Docker Compose, Kubernetes y OpenShift.
 
@@ -92,3 +92,7 @@ S11 RF08 incorpora consulta autorizada por UUID y comprobante compartido. [Infor
 ## Entrega S12 aprobada
 
 S12 RF09 completa mensajes de dominio, fallo temporal y resultado incierto, y explica el reingreso por 401 sin borrar pendientes. [Informe y entregables](sprints/S12/README.md). Pasaron 47 pruebas Node, compilación, 12 controles de secretos, 82 comprobaciones de la matriz controlada, diez reales y 72 de regresión S10 y S11. La carrera real por un cupo produjo una confirmación y un rechazo, con una reserva y un outbox. Word de cinco páginas revisado visualmente. S12 aprobado para commit y push el 19 de octubre de 2026; S13 no iniciado.
+
+## Entrega S13 aprobada
+
+S13 RF10 incorpora Salir, advertencia antes de borrar pendientes, cancelación y limpieza verificable del contexto local. [Informe y entregables](sprints/S13/README.md). Pasaron 52 pruebas Node, compilación, 12 controles de secretos, 71 comprobaciones controladas de navegador y 11 con la API real mediante lecturas. Auditoría PostgreSQL antes y después sin cambios: una reserva y un outbox. La salida no cancela reservas ni revoca claves del servidor. S13 aprobado para commit y push el 19 de octubre de 2026; S14 no iniciado.

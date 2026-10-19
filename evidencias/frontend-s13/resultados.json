@@ -1,0 +1,1 @@
+{"sprint":"S13","requirement":"RF10","status":"ready-for-review","nodeTests":{"passed":52,"failed":0},"typescript":"passed","productionBuild":"passed","secretControls":{"passed":12},"browserControlledChecks":71,"browserRealReadOnlyChecks":11,"realReservationPosts":0,"databaseUnchanged":true,"wordPages":4,"commitAuthorized":false,"pushAuthorized":false,"nextSprintStarted":false}

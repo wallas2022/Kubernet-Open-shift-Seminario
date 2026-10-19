@@ -1,5 +1,9 @@
 # Estado actual del seminario
 
+## Actualización de S13 del 19 de octubre de 2026
+
+S11 y S12 publicados hasta 32b8737 en origin/master. S13 RF10 aprobado por el usuario para commit y push a origin/master el 19 de octubre de 2026: Salir, advertencia de pérdida de recuperación, cancelación, limpieza verificable y descarte de respuestas tardías. Pasaron 52 pruebas Node, compilación, 12 controles de secretos, 71 comprobaciones de navegador controladas y 11 con API real mediante lecturas del laboratorio exclusivo S12. La auditoría previa y posterior conserva una reserva y un outbox, sin cambios. Fuente Markdown, Word y Mermaid en las carpetas de S13. S13 aprobado para commit y push el 19 de octubre de 2026; S14 no iniciado. Los apartados siguientes conservan el historial de entregas anteriores.
+
 ## Actualización de S12 del 19 de octubre de 2026
 
 S11 tiene commit local db16f1d y su publicación queda incluida en la aprobación de S12 del 19 de octubre de 2026. S12 RF09 aprobado para commit y push a origin/master: mensajes de errores normalizados, reingreso explicado por 401 y conservación de pendientes. Pasaron 47 pruebas Node, compilación, 12 controles de secretos, 82 comprobaciones de matriz controlada, diez reales y 72 de regresión. La competencia real por un cupo produjo una confirmación y un rechazo, una reserva y un outbox. Fuente Markdown, Word y Mermaid en las carpetas de S12. S12 aprobado para commit y push el 19 de octubre de 2026; S13 no iniciado.

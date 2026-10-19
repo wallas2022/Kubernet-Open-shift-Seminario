@@ -1,0 +1,56 @@
+{
+  "sprint": "S13",
+  "passed": true,
+  "mode": "existing-s12-read-only-api",
+  "date": "2026-10-19T21:03:56.479Z",
+  "browser": "145.0.7632.6",
+  "checks": 11,
+  "reservationPosts": 0,
+  "results": [
+    {
+      "name": "real-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "real-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "real-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "real-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "real-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "real-no-authenticated-request-after-exit",
+      "passed": true
+    },
+    {
+      "name": "real-exit-does-not-revoke-server-key",
+      "passed": true
+    },
+    {
+      "name": "real-no-reservation-post",
+      "passed": true
+    },
+    {
+      "name": "context-8-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-console",
+      "passed": true
+    }
+  ],
+  "credentialsRecorded": false
+}

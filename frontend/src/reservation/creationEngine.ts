@@ -48,6 +48,7 @@ export function createCreationEngine(dependencies: Dependencies) {
   let controller: AbortController | null = null;
   let candidate: PendingOperation | undefined;
   let recovery = false;
+  let closed = false;
   const publish = (phase: CreationState['phase'], message: string) => {
     state = Object.freeze({ phase, message, pending: candidate, recovery }); listeners.forEach(listener => listener());
   };
@@ -64,7 +65,7 @@ export function createCreationEngine(dependencies: Dependencies) {
   try { inspect(); } catch { recovery = true; publish('blocked', 'No podemos leer el registro de esta pestaña. El envío está bloqueado.'); }
 
   async function send(review: Readonly<{ eventId: string; quantity: number }>) {
-    if (state.phase !== 'idle') return;
+    if (closed || state.phase !== 'idle') return;
     // Freeze before any await: two clicks or two mounted forms cannot create two intentions.
     const snapshot = Object.freeze({ eventId: review.eventId, quantity: review.quantity });
     publish('preparing', 'Guardando la intención antes de enviar…');
@@ -76,6 +77,7 @@ export function createCreationEngine(dependencies: Dependencies) {
       let credential = dependencies.readCredential();
       if (!credential) throw new Error('missing credential');
       const fingerprint = await (dependencies.fingerprint ?? credentialFingerprint)(credential);
+      if (closed) return;
       const unchanged = dependencies.readCredential() === credential;
       credential = null;
       if (!unchanged || !/^[a-f0-9]{64}$/.test(fingerprint)) throw new Error('session changed');
@@ -89,6 +91,7 @@ export function createCreationEngine(dependencies: Dependencies) {
       storage.setItem(PENDING_KEY, encoded);
       if (storage.getItem(PENDING_KEY) !== encoded) throw new Error('write not retained');
     } catch {
+      if (closed) return;
       publish('blocked', 'No se pudo guardar y verificar la intención. No se envió la reserva. El envío queda bloqueado.');
       return;
     }
@@ -97,7 +100,7 @@ export function createCreationEngine(dependencies: Dependencies) {
   }
 
   async function recover() {
-    if (!candidate || !['blocked', 'uncertain', 'rejected'].includes(state.phase)) return;
+    if (closed || !candidate || !['blocked', 'uncertain', 'rejected'].includes(state.phase)) return;
     recovery = true;
     publish('preparing', 'Verificando la identidad y el registro original…');
     let pending: PendingOperation;
@@ -111,6 +114,7 @@ export function createCreationEngine(dependencies: Dependencies) {
       let credential = dependencies.readCredential();
       if (!credential) throw Error('missing identity');
       const fingerprint = await (dependencies.fingerprint ?? credentialFingerprint)(credential);
+      if (closed) return;
       const unchanged = dependencies.readCredential() === credential;
       credential = null;
       if (!unchanged || fingerprint !== pending.credentialFingerprint) {
@@ -120,6 +124,7 @@ export function createCreationEngine(dependencies: Dependencies) {
       // Recovery never overwrites storage or generates a new key.
       if (dependencies.storage().getItem(PENDING_KEY) !== raw) throw Error('record changed');
     } catch {
+      if (closed) return;
       publish('blocked', 'No pudimos verificar el registro y la identidad. No se envió ninguna solicitud. Conservamos el pendiente sin modificarlo.');
       return;
     }
@@ -135,6 +140,7 @@ export function createCreationEngine(dependencies: Dependencies) {
       result = await dependencies.post(Object.freeze({ eventId: pending.eventId, quantity: pending.quantity,
         operationKey: pending.operationKey }), controller.signal);
     } catch { result = { ok: false, kind: 'network', outcome: 'uncertain', code: 'network_error' }; }
+    if (closed) return;
     controller = null;
     if (result.ok) {
       const reservation = parseReservation(result.data);
@@ -183,6 +189,23 @@ export function createCreationEngine(dependencies: Dependencies) {
     getSnapshot: () => state,
     send,
     recover,
+    needsExitWarning: () => {
+      try { return state.phase === 'preparing' || state.phase === 'sending' || dependencies.storage().getItem(PENDING_KEY) !== null; }
+      catch { return true; }
+    },
+    close: () => {
+      closed = true;
+      controller?.abort();
+      controller = null;
+      candidate = undefined;
+      recovery = false;
+      publish('idle', '');
+      try {
+        const storage = dependencies.storage();
+        storage.removeItem(PENDING_KEY);
+        return storage.getItem(PENDING_KEY) === null;
+      } catch { return false; }
+    },
     interrupt: () => controller?.abort(),
   };
 }

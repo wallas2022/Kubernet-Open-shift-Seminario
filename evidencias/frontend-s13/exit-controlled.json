@@ -1,0 +1,296 @@
+{
+  "sprint": "S13",
+  "passed": true,
+  "mode": "controlled-browser",
+  "date": "2026-10-19T21:03:37.454Z",
+  "browser": "145.0.7632.6",
+  "checks": 71,
+  "reservationPosts": 2,
+  "results": [
+    {
+      "name": "pending-false-cancel-focused",
+      "passed": true
+    },
+    {
+      "name": "pending-false-cancel-preserves-exact-record",
+      "passed": true
+    },
+    {
+      "name": "pending-false-cancel-preserves-session",
+      "passed": true
+    },
+    {
+      "name": "pending-false-focus-returned",
+      "passed": true
+    },
+    {
+      "name": "pending-false-escape-cancels",
+      "passed": true
+    },
+    {
+      "name": "pending-false-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "pending-false-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "pending-false-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "pending-false-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "pending-false-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "pending-false-no-post",
+      "passed": true
+    },
+    {
+      "name": "pending-true-cancel-focused",
+      "passed": true
+    },
+    {
+      "name": "pending-true-cancel-preserves-exact-record",
+      "passed": true
+    },
+    {
+      "name": "pending-true-cancel-preserves-session",
+      "passed": true
+    },
+    {
+      "name": "pending-true-focus-returned",
+      "passed": true
+    },
+    {
+      "name": "pending-true-escape-cancels",
+      "passed": true
+    },
+    {
+      "name": "pending-true-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "pending-true-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "pending-true-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "pending-true-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "pending-true-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "pending-true-no-post",
+      "passed": true
+    },
+    {
+      "name": "empty-no-unnecessary-warning",
+      "passed": true
+    },
+    {
+      "name": "empty-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "empty-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "empty-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "empty-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "empty-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "empty-exit-never-posts",
+      "passed": true
+    },
+    {
+      "name": "corrupt-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "corrupt-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "corrupt-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "corrupt-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "corrupt-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "corrupt-exit-never-posts",
+      "passed": true
+    },
+    {
+      "name": "accepted-no-unnecessary-warning",
+      "passed": true
+    },
+    {
+      "name": "accepted-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "accepted-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "accepted-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "accepted-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "accepted-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "accepted-exit-never-posts",
+      "passed": true
+    },
+    {
+      "name": "sending-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "sending-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "sending-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "sending-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "sending-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "late-response-empty-access-field",
+      "passed": true
+    },
+    {
+      "name": "late-response-pending-removed",
+      "passed": true
+    },
+    {
+      "name": "late-response-unrelated-retained",
+      "passed": true
+    },
+    {
+      "name": "late-response-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "late-response-catalog-cleared",
+      "passed": true
+    },
+    {
+      "name": "sending-exit-never-posts",
+      "passed": true
+    },
+    {
+      "name": "failed-cleanup-record-retained",
+      "passed": true
+    },
+    {
+      "name": "failed-cleanup-credential-cleared",
+      "passed": true
+    },
+    {
+      "name": "delete-fails-exit-never-posts",
+      "passed": true
+    },
+    {
+      "name": "context-56-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "context-58-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "context-60-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "context-62-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "context-64-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "context-66-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "context-68-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-url",
+      "passed": true
+    },
+    {
+      "name": "credential-not-in-console",
+      "passed": true
+    }
+  ],
+  "credentialsRecorded": false
+}
