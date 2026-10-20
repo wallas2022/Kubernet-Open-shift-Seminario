@@ -1,0 +1,796 @@
+{
+  "sprint": "S15",
+  "mode": "controlled-business-fixtures",
+  "keyboardOnly": true,
+  "passed": true,
+  "checks": 147,
+  "browser": "145.0.7632.6",
+  "results": [
+    {
+      "name": "complete-P01-controls-named",
+      "passed": true
+    },
+    {
+      "name": "complete-P01-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "complete-P01-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "complete-P01-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "skip-link-focuses-main",
+      "passed": true
+    },
+    {
+      "name": "CU01-empty-error-focus",
+      "passed": true
+    },
+    {
+      "name": "CU01-rejected-key-cleared",
+      "passed": true
+    },
+    {
+      "name": "complete-P02-controls-named",
+      "passed": true
+    },
+    {
+      "name": "complete-P02-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "complete-P02-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "complete-P02-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "P02-read-error-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P02-read-error-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P02-read-error-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P02-read-error-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-availability-controls-named",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-availability-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-availability-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-availability-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-quantity-controls-named",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-quantity-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-quantity-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-quantity-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "CU03-invalid-quantity-focus",
+      "passed": true
+    },
+    {
+      "name": "CU03-reverse-tab",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-review-controls-named",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-review-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-review-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-review-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-confirm-controls-named",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-confirm-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-confirm-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "complete-P03-confirm-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "complete-no-post-before-explicit-send",
+      "passed": true
+    },
+    {
+      "name": "complete-P04-controls-named",
+      "passed": true
+    },
+    {
+      "name": "complete-P04-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "complete-P04-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "complete-P04-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "complete-receipt-uuid",
+      "passed": true
+    },
+    {
+      "name": "complete-manual-copy-keyboard",
+      "passed": true
+    },
+    {
+      "name": "P05-lookup-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P05-lookup-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P05-lookup-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P05-lookup-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "P05-confirmed-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P05-confirmed-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P05-confirmed-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P05-confirmed-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "complete-CU06-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "complete-CU06-pending-cleared",
+      "passed": true
+    },
+    {
+      "name": "complete-expected-post-count",
+      "passed": true
+    },
+    {
+      "name": "recovery-P01-controls-named",
+      "passed": true
+    },
+    {
+      "name": "recovery-P01-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "recovery-P01-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "recovery-P01-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "recovery-P02-controls-named",
+      "passed": true
+    },
+    {
+      "name": "recovery-P02-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "recovery-P02-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "recovery-P02-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-availability-controls-named",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-availability-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-availability-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-availability-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-quantity-controls-named",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-quantity-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-quantity-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-quantity-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-review-controls-named",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-review-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-review-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-review-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-confirm-controls-named",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-confirm-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-confirm-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "recovery-P03-confirm-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "recovery-no-post-before-explicit-send",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "CU06-warning-cancel-focus",
+      "passed": true
+    },
+    {
+      "name": "CU06-escape-returns-trigger",
+      "passed": true
+    },
+    {
+      "name": "CU06-cancel-keeps-original-pending",
+      "passed": true
+    },
+    {
+      "name": "recovery-cancel-button-keeps-pending",
+      "passed": true
+    },
+    {
+      "name": "P06-recovery-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P06-recovery-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P06-recovery-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P06-recovery-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "CU04-login-does-not-replay",
+      "passed": true
+    },
+    {
+      "name": "CU04-original-key-and-payload",
+      "passed": true
+    },
+    {
+      "name": "recovery-P04-controls-named",
+      "passed": true
+    },
+    {
+      "name": "recovery-P04-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "recovery-P04-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "recovery-P04-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "recovery-receipt-uuid",
+      "passed": true
+    },
+    {
+      "name": "recovery-manual-copy-keyboard",
+      "passed": true
+    },
+    {
+      "name": "recovery-CU06-receipt-cleared",
+      "passed": true
+    },
+    {
+      "name": "recovery-CU06-pending-cleared",
+      "passed": true
+    },
+    {
+      "name": "recovery-expected-post-count",
+      "passed": true
+    },
+    {
+      "name": "discard-P01-controls-named",
+      "passed": true
+    },
+    {
+      "name": "discard-P01-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "discard-P01-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "discard-P01-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "discard-P02-controls-named",
+      "passed": true
+    },
+    {
+      "name": "discard-P02-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "discard-P02-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "discard-P02-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-availability-controls-named",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-availability-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-availability-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-availability-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-quantity-controls-named",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-quantity-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-quantity-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-quantity-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-review-controls-named",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-review-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-review-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-review-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-confirm-controls-named",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-confirm-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-confirm-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "discard-P03-confirm-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "discard-no-post-before-explicit-send",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P03-uncertain-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P06-exit-warning-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "CU06-warning-cancel-focus",
+      "passed": true
+    },
+    {
+      "name": "CU06-escape-returns-trigger",
+      "passed": true
+    },
+    {
+      "name": "CU06-cancel-keeps-original-pending",
+      "passed": true
+    },
+    {
+      "name": "discard-cancel-button-keeps-pending",
+      "passed": true
+    },
+    {
+      "name": "CU06-keyboard-confirm-clears-pending",
+      "passed": true
+    },
+    {
+      "name": "CU06-keyboard-exit-no-post",
+      "passed": true
+    },
+    {
+      "name": "P01-after-discard-controls-named",
+      "passed": true
+    },
+    {
+      "name": "P01-after-discard-no-positive-tabindex",
+      "passed": true
+    },
+    {
+      "name": "P01-after-discard-spanish-language",
+      "passed": true
+    },
+    {
+      "name": "P01-after-discard-current-spanish-copy",
+      "passed": true
+    },
+    {
+      "name": "no-browser-runtime-errors",
+      "passed": true
+    }
+  ],
+  "traversal": [
+    {
+      "label": "skip-link",
+      "tabs": 1
+    },
+    {
+      "label": "Entrar",
+      "tabs": 2
+    },
+    {
+      "label": "Clave de laboratorio",
+      "tabs": 0
+    },
+    {
+      "label": "Clave de laboratorio",
+      "tabs": 0
+    },
+    {
+      "label": "Actualizar catálogo",
+      "tabs": 2
+    },
+    {
+      "label": "Actualizar catálogo",
+      "tabs": 8
+    },
+    {
+      "label": "event",
+      "tabs": 2
+    },
+    {
+      "label": "Actualizar disponibilidad",
+      "tabs": 1
+    },
+    {
+      "label": "Reservar",
+      "tabs": 2
+    },
+    {
+      "label": "Cancelar preparación",
+      "tabs": 2
+    },
+    {
+      "label": "Reservar",
+      "tabs": 3
+    },
+    {
+      "label": "Cantidad de cupos",
+      "tabs": 0
+    },
+    {
+      "label": "Cantidad de cupos",
+      "tabs": 0
+    },
+    {
+      "label": "Volver a editar",
+      "tabs": 2
+    },
+    {
+      "label": "Cantidad de cupos",
+      "tabs": 0
+    },
+    {
+      "label": "Confirmar cantidad",
+      "tabs": 1
+    },
+    {
+      "label": "Enviar reserva",
+      "tabs": 1
+    },
+    {
+      "label": "manual-copy",
+      "tabs": 1
+    },
+    {
+      "label": "← Volver al catálogo",
+      "tabs": 6
+    },
+    {
+      "label": "Consultar una reserva",
+      "tabs": 1
+    },
+    {
+      "label": "Identificador de reserva",
+      "tabs": 0
+    },
+    {
+      "label": "Identificador de reserva",
+      "tabs": 0
+    },
+    {
+      "label": "Salir",
+      "tabs": 4
+    },
+    {
+      "label": "Clave de laboratorio",
+      "tabs": 3
+    },
+    {
+      "label": "event",
+      "tabs": 4
+    },
+    {
+      "label": "Actualizar disponibilidad",
+      "tabs": 1
+    },
+    {
+      "label": "Reservar",
+      "tabs": 2
+    },
+    {
+      "label": "Cantidad de cupos",
+      "tabs": 0
+    },
+    {
+      "label": "Confirmar cantidad",
+      "tabs": 1
+    },
+    {
+      "label": "Enviar reserva",
+      "tabs": 1
+    },
+    {
+      "label": "Salir",
+      "tabs": 4
+    },
+    {
+      "label": "Salir",
+      "tabs": 0
+    },
+    {
+      "label": "Cancelar salida",
+      "tabs": 0
+    },
+    {
+      "label": "Clave de laboratorio",
+      "tabs": 4
+    },
+    {
+      "label": "Recuperar operación pendiente",
+      "tabs": 1
+    },
+    {
+      "label": "manual-copy",
+      "tabs": 1
+    },
+    {
+      "label": "Salir",
+      "tabs": 4
+    },
+    {
+      "label": "Clave de laboratorio",
+      "tabs": 3
+    },
+    {
+      "label": "event",
+      "tabs": 4
+    },
+    {
+      "label": "Actualizar disponibilidad",
+      "tabs": 1
+    },
+    {
+      "label": "Reservar",
+      "tabs": 2
+    },
+    {
+      "label": "Cantidad de cupos",
+      "tabs": 0
+    },
+    {
+      "label": "Confirmar cantidad",
+      "tabs": 1
+    },
+    {
+      "label": "Enviar reserva",
+      "tabs": 1
+    },
+    {
+      "label": "Salir",
+      "tabs": 4
+    },
+    {
+      "label": "Salir",
+      "tabs": 0
+    },
+    {
+      "label": "Cancelar salida",
+      "tabs": 0
+    },
+    {
+      "label": "Salir",
+      "tabs": 0
+    },
+    {
+      "label": "Salir y borrar datos locales",
+      "tabs": 1
+    }
+  ]
+}

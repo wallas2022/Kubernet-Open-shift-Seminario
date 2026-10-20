@@ -1,0 +1,16 @@
+{
+    "sprint":  "S15",
+    "wordPagesInspected":  4,
+    "visualReview":  "passed",
+    "screenshotsInspected":  3,
+    "format":  "Times New Roman 12, texto negro, encabezados negros con letra blanca e índice actualizable",
+    "keyboardChecks":  147,
+    "keyboardTraversals":  49,
+    "regressionChecks":  170,
+    "unitTests":  52,
+    "secretChecks":  12,
+    "businessResponses":  "controlled-fixtures",
+    "readerValidation":  "pending-S17",
+    "publication":  "approved-for-commit-and-push",
+    "wordSha256":  "3093A166873ADFB2DE8BDB0BFB49D4201F28FCB36748BC55A63FFD4243E32654"
+}

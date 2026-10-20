@@ -78,7 +78,7 @@ async function controlled(mode) {
       await page.getByRole('alert').getByText(/El acceso ya no está autorizado/).waitFor();
       check(await page.getByLabel('Clave de laboratorio').isVisible(), 'post401-returns-to-login');
     } else {
-      const patterns = { sold: /La API rechazó la reserva por falta de cupos/, conflict: /asociada a datos diferentes/, invalid: /rechazó los datos/, deleted: /evento ya no está disponible/, timeout: /Se agotó el tiempo de espera/, unavailable: /servicio no está disponible temporalmente/, retry: /Espera al menos 3 segundos/, malformed: /respuesta no pudo validarse/ };
+      const patterns = { sold: /El servicio rechazó la reserva por falta de cupos/, conflict: /asociada a datos diferentes/, invalid: /rechazó los datos/, deleted: /evento ya no está disponible/, timeout: /Se agotó el tiempo de espera/, unavailable: /servicio no está disponible temporalmente/, retry: /Espera al menos 3 segundos/, malformed: /respuesta no pudo validarse/ };
       await page.getByRole('region', { name: 'Estado de envío' }).getByText(patterns[mode] || /No pudimos confirmar el resultado/).waitFor();
       check(await page.getByRole('region', { name: 'Comprobante de reserva' }).count() === 0, `${mode}-no-false-confirmation`);
     }
@@ -97,7 +97,7 @@ try {
     stage = 'last-seat'; const a = await pageFor(identity.credential, 'real'), b = await pageFor(identity.other, 'real');
     await Promise.all([prepare(a), prepare(b)]);
     await Promise.all([a.page.getByRole('button', { name: 'Enviar reserva', exact: true }).click(), b.page.getByRole('button', { name: 'Enviar reserva', exact: true }).click()]);
-    await Promise.all([a.page.getByText(/Reserva creada y confirmada|La API rechazó la reserva por falta de cupos/).waitFor(), b.page.getByText(/Reserva creada y confirmada|La API rechazó la reserva por falta de cupos/).waitFor()]);
+    await Promise.all([a.page.getByText(/Reserva creada y confirmada|El servicio rechazó la reserva por falta de cupos/).waitFor(), b.page.getByText(/Reserva creada y confirmada|El servicio rechazó la reserva por falta de cupos/).waitFor()]);
     check(a.posts() === 1 && b.posts() === 1, 'two-identities-one-attempt-each');
     check(await a.page.getByRole('region', { name: 'Comprobante de reserva' }).count() + await b.page.getByRole('region', { name: 'Comprobante de reserva' }).count() === 1, 'last-seat-one-confirmation');
     check(Number((await a.page.locator('body').innerText()).includes('falta de cupos')) + Number((await b.page.locator('body').innerText()).includes('falta de cupos')) === 1, 'last-seat-one-sold-out-message');

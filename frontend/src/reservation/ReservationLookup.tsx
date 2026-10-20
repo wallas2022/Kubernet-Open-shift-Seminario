@@ -25,7 +25,7 @@ export function ReservationLookup({ events, onBack }: { events: EventSummary[]; 
     if (request.current) return;
     setReservation(null); setError(null);
     if (!isUuid(identifier)) {
-      setError('Introduce un UUID con formato 8-4-4-4-12, sin espacios ni otros caracteres.');
+      setError('Introduce el identificador completo con formato 8-4-4-4-12, sin espacios. Puedes copiarlo del comprobante.');
       field.current?.focus(); return;
     }
     const credential = readCredential();
@@ -43,7 +43,7 @@ export function ReservationLookup({ events, onBack }: { events: EventSummary[]; 
   return <div className="page">
     <a className="skip-link" href="#contenido">Ir al contenido</a>
     <header className="header"><span className="brand">Reservas del seminario</span><span className="environment">Entorno de pruebas</span></header>
-    <main id="contenido" className="catalog-main">
+    <main id="contenido" tabIndex={-1} className="catalog-main">
       <button type="button" className="back-catalog" onClick={onBack}>← Volver al catálogo</button>
       <h1>Consulta una reserva</h1>
       <p>Introduce el identificador de una reserva creada con tu clave de laboratorio. Esta consulta no muestra un historial de reservas.</p>
@@ -54,7 +54,7 @@ export function ReservationLookup({ events, onBack }: { events: EventSummary[]; 
             value={identifier} disabled={busy} aria-invalid={error !== null}
             aria-describedby={error ? 'lookup-help lookup-error' : 'lookup-help'}
             onChange={event => { setIdentifier(event.target.value); setReservation(null); setError(null); }} />
-          <p id="lookup-help">UUID completo con guiones. Necesitas la misma clave de laboratorio que creó la reserva.</p>
+          <p id="lookup-help">Copia el identificador completo de tu comprobante, incluidos los guiones (formato UUID). Necesitas la misma clave de laboratorio que creó la reserva.</p>
           {error && <p id="lookup-error" role="alert" className="access-error">{error}</p>}
           <button type="submit" disabled={busy}>{busy ? 'Consultando…' : 'Consultar reserva'}</button>
           <p role="status">{busy ? 'Consultando la reserva autorizada.' : ''}</p>
@@ -62,6 +62,6 @@ export function ReservationLookup({ events, onBack }: { events: EventSummary[]; 
       </section>
       {reservation && <ReservationReceiptView reservation={reservation} message="Reserva consultada y confirmada." eventName={eventName} />}
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Consulta de reserva · S11</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Consulta de reserva</span></footer>
   </div>;
 }

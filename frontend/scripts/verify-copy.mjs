@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 import { mkdir, writeFile } from 'node:fs/promises';
-const out = '../evidencias/frontend-s14', base = process.env.S14_BROWSER_URL || 'http://127.0.0.1:5185';
+const out = process.env.S14_EVIDENCE_DIR || '../evidencias/frontend-s14', base = process.env.S14_BROWSER_URL || 'http://127.0.0.1:5185';
 const event = '00000000-0000-0000-0000-000000000001', id = '10000000-0000-4000-8000-000000000014';
 const results = [];
 function check(ok, name) { if (!ok) throw Error(name); results.push({ name, passed: true }); }
@@ -79,7 +79,7 @@ try {
     await page.getByLabel('Clave de laboratorio').fill('s14-synthetic-credential');
     await page.getByRole('button', { name: 'Entrar', exact: true }).click();
     if (mode === 'lookup') {
-      await page.getByRole('button', { name: 'Consultar una reserva por UUID' }).click();
+      await page.getByRole('button', { name: 'Consultar una reserva' }).click();
       await page.getByLabel('Identificador de reserva', { exact: true }).fill(id);
       await page.getByRole('button', { name: 'Consultar reserva', exact: true }).click();
     } else {

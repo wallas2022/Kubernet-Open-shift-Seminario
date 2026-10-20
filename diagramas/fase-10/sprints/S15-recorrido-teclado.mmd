@@ -1,0 +1,12 @@
+flowchart TD
+    A[P01 Acceso] -->|Tab y Enter| B[P02 Catálogo]
+    B -->|Tab y Enter| C[P03 Cantidad y revisión]
+    C -->|Espacio y Enter| D[P04 Comprobante]
+    B -->|Consulta por identificador| E[P05 Consulta]
+    E --> D
+    C -->|Resultado incierto y recarga| F[P06 Recuperación]
+    F -->|Misma clave y Espacio| D
+    F --> G[Advertencia de salida]
+    G -->|Escape o Cancelar| F
+    G -->|Confirmar borrado| A
+    D -->|Salir sin pendiente| A

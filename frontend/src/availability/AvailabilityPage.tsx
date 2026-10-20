@@ -29,7 +29,7 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
         <span>Reservas<span className="brand-subtitle">DEL SEMINARIO</span></span></a>
       <span className="environment"><span aria-hidden="true" /> Entorno de demostración</span>
     </header>
-    <main id="contenido" className="catalog-main">
+    <main id="contenido" tabIndex={-1} className="catalog-main">
       <button className="back-catalog" type="button" onClick={onBack}>← Volver al catálogo</button>
       <div className="catalog-heading">
         <div><span className="eyebrow">DISPONIBILIDAD DEL EVENTO</span>
@@ -72,6 +72,6 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
       </section>
       <ReservationReceipt refreshAvailability={false} />
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Reservas de prueba · S09</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Reservas de prueba</span></footer>
   </div>;
 }

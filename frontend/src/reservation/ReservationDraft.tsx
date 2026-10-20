@@ -61,7 +61,7 @@ export function ReservationDraft({ event, availability, onCancel }: {
       </> : <>
         <p role="status">La cantidad quedó revisada. Aún no se ha enviado ninguna reserva.</p>
         <button type="button" onClick={() => { if (review) void creation.send(review); }} aria-describedby="send-help">Enviar reserva</button>
-        <p id="send-help">Al enviar se guardará esta intención y se solicitará la reserva una sola vez. Función en pruebas.</p>
+        <p id="send-help">Al enviar guardaremos los datos para recuperar el resultado si se pierde la conexión y solicitaremos la reserva una sola vez. Función en pruebas.</p>
         <button type="button" className="draft-secondary" onClick={edit}>Modificar cantidad</button>
       </>}
       <button type="button" className="draft-secondary" onClick={onCancel}>Cancelar preparación</button>

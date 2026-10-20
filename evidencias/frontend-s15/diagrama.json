@@ -1,0 +1,77 @@
+[
+  {
+    "diagram": "S01-base-frontend.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S02-credencial-memoria.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S03-cliente-http.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S04-acceso-laboratorio.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S05-catalogo-eventos.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S06-disponibilidad-evento.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S07-cantidad-confirmacion.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S08-creacion-idempotente.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S09-comprobante-reserva.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S10-recuperacion-pendiente.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S11-consulta-reserva.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S12-mensajes-errores.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S13-salida-limpieza.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S14-copia-cupos.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "S15-recorrido-teclado.mmd",
+    "parse": "pass",
+    "render": "pass"
+  }
+]

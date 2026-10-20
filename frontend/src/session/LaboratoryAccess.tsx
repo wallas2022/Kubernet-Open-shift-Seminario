@@ -29,7 +29,7 @@ export function LaboratoryAccess() {
     <h2 id="acceso-titulo" ref={titleRef} tabIndex={-1}>{isAuthenticated ? 'Ya estás dentro.' : 'Accede al laboratorio.'}</h2>
     {isAuthenticated ? <>
       <p role="status">Tu clave se validó correctamente.</p>
-      <p>El acceso ya está preparado. El catálogo de eventos se habilitará en la próxima entrega.</p>
+      <p>Tu acceso al laboratorio está validado.</p>
       <button type="button" onClick={clearCredential}>Volver al acceso</button>
       <p className="access-footnote">Al volver o recargar se elimina la clave de esta sesión. Esto no revoca la clave del laboratorio.</p>
     </> : <>

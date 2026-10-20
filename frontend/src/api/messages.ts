@@ -26,10 +26,10 @@ export function creationFailureMessage(failure: ApiFailure): string {
   }
   const reason = failure.status === 401 || failure.code === 'missing_credential'
     ? 'La clave no permite esta operación. Vuelve a ingresar con la misma clave habilitada por el instructor.'
-    : failure.code === 'sold_out' ? 'La API rechazó la reserva por falta de cupos.'
-      : failure.code === 'event_not_found' ? 'El evento ya no está disponible. La API rechazó esta operación.'
+    : failure.code === 'sold_out' ? 'El servicio rechazó la reserva por falta de cupos.'
+      : failure.code === 'event_not_found' ? 'El evento ya no está disponible. El servicio rechazó esta operación.'
         : failure.code === 'idempotency_conflict' ? 'La clave de operación ya está asociada a datos diferentes. No cambies la clave ni la cantidad para resolverlo; revisa el caso con el instructor.'
-          : failure.code === 'validation_error' ? 'La API rechazó los datos de la reserva. Revisa el caso con el instructor antes de preparar otra intención.'
+          : failure.code === 'validation_error' ? 'El servicio rechazó los datos de la reserva. Revisa el caso con el instructor antes de preparar otra reserva.'
             : failure.outcome === 'not-sent' ? 'No se envió la solicitud. No pudimos validar el acceso o los datos locales.' : 'La operación no fue confirmada.';
   return `${reason} No hay reintento automático. Conservamos el registro de esta operación.`;
 }

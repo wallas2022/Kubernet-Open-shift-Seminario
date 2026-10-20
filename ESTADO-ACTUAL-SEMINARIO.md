@@ -1,5 +1,9 @@
 # Estado actual del seminario
 
+## Actualización de S15 del 19 de octubre de 2026
+
+S14 publicado en origin/master mediante 33ac2bd tras autorización del usuario. S15 RN01 autorizado e implementado localmente: revisión de español, retiro de avisos de funciones futuras y referencias de sprint en las pantallas, ayuda para identificadores y corrección del destino de Ir al contenido. Pasaron 147 comprobaciones de teclado y 49 desplazamientos hasta controles en CU01 a CU06, más 82 controles de mensajes, 42 de consulta y 46 de copia y actualización. Las respuestas de negocio son fixtures; no se ejecutaron nuevas reservas reales. Fuente Markdown, Word de cuatro páginas revisado visualmente y Mermaid en las carpetas S15. Pasaron también 52 pruebas Node, compilación y 12 controles de secretos. Entrega S15 aprobada por el usuario para commit y push a origin/master; S16 no iniciado. La aceptación de móvil, zoom, lector de pantalla y accesibilidad integral sigue en S16 y S17.
+
 ## Actualización de S14 del 19 de octubre de 2026
 
 S14 RF11 implementado y aprobado por el usuario para commit y push a origin/master: copia exacta del UUID, selección manual si falla el portapapeles y actualización de cupos posterior a 201 y 200, sin otro POST. Pasaron 52 pruebas Node, compilación, 12 controles de secretos y 46 comprobaciones de navegador con fixtures de negocio y portapapeles nativo de Chromium. Se cubren creación, repetición, consulta y recuperación; 503 y 404 conservan el comprobante. No se ejecutó nueva creación real ni auditoría PostgreSQL. Fuente Markdown, Word y Mermaid en las carpetas de S14. Publicación autorizada por el usuario; S15 no iniciado.

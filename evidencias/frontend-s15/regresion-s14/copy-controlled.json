@@ -1,0 +1,193 @@
+{
+  "sprint": "S14",
+  "mode": "controlled",
+  "passed": true,
+  "checks": 46,
+  "browser": "145.0.7632.6",
+  "results": [
+    {
+      "name": "native-one-automatic-refresh",
+      "passed": true
+    },
+    {
+      "name": "native-receipt-preserved",
+      "passed": true
+    },
+    {
+      "name": "native-clipboard-exact",
+      "passed": true
+    },
+    {
+      "name": "native-no-extra-post",
+      "passed": true
+    },
+    {
+      "name": "native-manual-refresh-preserves-receipt",
+      "passed": true
+    },
+    {
+      "name": "created-one-automatic-refresh",
+      "passed": true
+    },
+    {
+      "name": "created-receipt-preserved",
+      "passed": true
+    },
+    {
+      "name": "created-clipboard-exact",
+      "passed": true
+    },
+    {
+      "name": "created-no-extra-post",
+      "passed": true
+    },
+    {
+      "name": "created-manual-refresh-preserves-receipt",
+      "passed": true
+    },
+    {
+      "name": "repeat-one-automatic-refresh",
+      "passed": true
+    },
+    {
+      "name": "repeat-receipt-preserved",
+      "passed": true
+    },
+    {
+      "name": "repeat-clipboard-exact",
+      "passed": true
+    },
+    {
+      "name": "repeat-no-extra-post",
+      "passed": true
+    },
+    {
+      "name": "repeat-manual-refresh-preserves-receipt",
+      "passed": true
+    },
+    {
+      "name": "denied-one-automatic-refresh",
+      "passed": true
+    },
+    {
+      "name": "denied-receipt-preserved",
+      "passed": true
+    },
+    {
+      "name": "denied-manual-selection-exact",
+      "passed": true
+    },
+    {
+      "name": "denied-no-extra-post",
+      "passed": true
+    },
+    {
+      "name": "denied-manual-refresh-preserves-receipt",
+      "passed": true
+    },
+    {
+      "name": "missing-one-automatic-refresh",
+      "passed": true
+    },
+    {
+      "name": "missing-receipt-preserved",
+      "passed": true
+    },
+    {
+      "name": "missing-manual-selection-exact",
+      "passed": true
+    },
+    {
+      "name": "missing-no-extra-post",
+      "passed": true
+    },
+    {
+      "name": "missing-manual-refresh-preserves-receipt",
+      "passed": true
+    },
+    {
+      "name": "refresh-fails-one-automatic-refresh",
+      "passed": true
+    },
+    {
+      "name": "refresh-fails-receipt-preserved",
+      "passed": true
+    },
+    {
+      "name": "refresh-fails-clipboard-exact",
+      "passed": true
+    },
+    {
+      "name": "refresh-fails-no-extra-post",
+      "passed": true
+    },
+    {
+      "name": "refresh-fails-manual-refresh-preserves-receipt",
+      "passed": true
+    },
+    {
+      "name": "not-found-one-automatic-refresh",
+      "passed": true
+    },
+    {
+      "name": "not-found-receipt-preserved",
+      "passed": true
+    },
+    {
+      "name": "not-found-clipboard-exact",
+      "passed": true
+    },
+    {
+      "name": "not-found-no-extra-post",
+      "passed": true
+    },
+    {
+      "name": "not-found-manual-refresh-preserves-receipt",
+      "passed": true
+    },
+    {
+      "name": "recovery-one-refresh",
+      "passed": true
+    },
+    {
+      "name": "recovery-exact-identifier",
+      "passed": true
+    },
+    {
+      "name": "recovery-copy-action",
+      "passed": true
+    },
+    {
+      "name": "recovery-no-additional-post",
+      "passed": true
+    },
+    {
+      "name": "recovery-fails-one-refresh",
+      "passed": true
+    },
+    {
+      "name": "recovery-fails-exact-identifier",
+      "passed": true
+    },
+    {
+      "name": "recovery-fails-copy-action",
+      "passed": true
+    },
+    {
+      "name": "recovery-fails-no-additional-post",
+      "passed": true
+    },
+    {
+      "name": "lookup-exact-identifier",
+      "passed": true
+    },
+    {
+      "name": "lookup-copy-action",
+      "passed": true
+    },
+    {
+      "name": "lookup-no-additional-post",
+      "passed": true
+    }
+  ]
+}

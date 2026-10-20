@@ -24,14 +24,14 @@ export function CatalogPage() {
       </a>
       <span className="environment"><span aria-hidden="true" /> Entorno de demostración</span>
     </header>
-    <main id="contenido" className="catalog-main">
+    <main id="contenido" tabIndex={-1} className="catalog-main">
       <div className="catalog-heading">
         <div><span className="eyebrow">EVENTOS DEL LABORATORIO</span>
           <h1 ref={heading} tabIndex={-1}>Encuentra tu<br /><span>próximo evento.</span></h1>
           <p className="lead">Consulta el catálogo y los cupos de la última lectura.</p>
         </div>
         <div className="catalog-actions">
-          <button type="button" onClick={() => setLookupOpen(true)}>Consultar una reserva por UUID</button>
+          <button type="button" onClick={() => setLookupOpen(true)}>Consultar una reserva</button>
           <button type="button" onClick={() => { void refresh(); }} disabled={busy}>
             {busy ? 'Actualizando…' : status === 'error' && !data ? 'Reintentar' : 'Actualizar catálogo'}
           </button>
@@ -68,9 +68,9 @@ export function CatalogPage() {
               aria-label={`Consultar disponibilidad de ${event.name}`}>Consultar disponibilidad <span aria-hidden="true">↗</span></button>
           </article>)}
         </div>}
-        {data && <p className="catalog-footnote">La disponibilidad puede cambiar. Selecciona un evento para consultar sus cupos. Las reservas se habilitarán próximamente.</p>}
+        {data && <p className="catalog-footnote">La disponibilidad puede cambiar. Selecciona un evento para consultar sus cupos y preparar una reserva de prueba.</p>}
       </section>
     </main>
-    <footer><span>Seminario de plataformas de contenedores</span><span>Catálogo y disponibilidad · S06</span></footer>
+    <footer><span>Seminario de plataformas de contenedores</span><span>Catálogo y disponibilidad</span></footer>
   </div>;
 }

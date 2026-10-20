@@ -36,7 +36,7 @@ async function open(credential, catalogMode = 'known') {
   });
   await page.goto(base); await page.getByLabel('Clave de laboratorio').fill(credential);
   await page.getByRole('button', { name: 'Entrar', exact: true }).click();
-  await page.getByRole('button', { name: 'Consultar una reserva por UUID' }).click();
+  await page.getByRole('button', { name: 'Consultar una reserva' }).click();
   await page.getByRole('heading', { name: 'Consulta una reserva' }).waitFor();
   check(await page.getByLabel('Identificador de reserva', { exact: true }).evaluate(node => document.activeElement === node), `${catalogMode}-input-focus`);
   return { page, context, count: () => lookups, mode: value => { mode = value; },
@@ -55,7 +55,7 @@ try {
   } else record = { id, event_id: event, quantity: 2, status: 'confirmed', created_at: '2026-10-19T15:00:00Z' };
   stage = 'owner'; const owner = await open(identity.credential);
   for (const invalid of ['', 'invalid', '123', ` ${id}`, `${id} `, `${id}?key=x`, id.replaceAll('-', '')]) {
-    await query(owner, invalid); await owner.page.getByRole('alert').getByText(/Introduce un UUID/).waitFor();
+    await query(owner, invalid); await owner.page.getByRole('alert').getByText(/Introduce el identificador completo/).waitFor();
     check(owner.count() === 0, `invalid-${results.length}-never-sent`);
   }
   const pending = '{unrelated-pending-preserved';
@@ -97,7 +97,7 @@ try {
     await owner.page.getByRole('button', { name: 'Consultando…', exact: true }).evaluate(button => { button.click(); button.click(); });
     check(owner.count() === before, 'busy-double-click-no-extra-get');
     await owner.page.getByRole('button', { name: 'Volver al catálogo' }).click(); owner.release();
-    await owner.page.getByRole('button', { name: 'Consultar una reserva por UUID' }).waitFor();
+    await owner.page.getByRole('button', { name: 'Consultar una reserva' }).waitFor();
     check(await owner.page.getByRole('region', { name: 'Comprobante de reserva' }).count() === 0, 'late-result-after-back-not-rendered');
     stage = 'expired'; const expired = await open(identity.credential); expired.mode('unauthorized'); await query(expired, id);
     await expired.page.getByLabel('Clave de laboratorio').waitFor();

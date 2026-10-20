@@ -59,7 +59,7 @@ export function createCreationEngine(dependencies: Dependencies) {
     recovery = true;
     publish('blocked', candidate
       ? 'Hay una operación pendiente en esta pestaña. Introduce la misma clave de laboratorio y recupera la operación solo cuando decidas hacerlo.'
-      : 'El registro pendiente no es válido. El envío está bloqueado para evitar una segunda intención.');
+      : 'El registro pendiente no es válido. El envío está bloqueado para evitar otra reserva.');
     return true;
   };
   try { inspect(); } catch { recovery = true; publish('blocked', 'No podemos leer el registro de esta pestaña. El envío está bloqueado.'); }
@@ -68,7 +68,7 @@ export function createCreationEngine(dependencies: Dependencies) {
     if (closed || state.phase !== 'idle') return;
     // Freeze before any await: two clicks or two mounted forms cannot create two intentions.
     const snapshot = Object.freeze({ eventId: review.eventId, quantity: review.quantity });
-    publish('preparing', 'Guardando la intención antes de enviar…');
+    publish('preparing', 'Guardando los datos antes de enviar…');
     let pending: PendingOperation;
     try {
       if (inspect()) return;
@@ -92,7 +92,7 @@ export function createCreationEngine(dependencies: Dependencies) {
       if (storage.getItem(PENDING_KEY) !== encoded) throw new Error('write not retained');
     } catch {
       if (closed) return;
-      publish('blocked', 'No se pudo guardar y verificar la intención. No se envió la reserva. El envío queda bloqueado.');
+      publish('blocked', 'No se pudieron guardar y verificar los datos de la reserva. No se envió la reserva. El envío queda bloqueado.');
       return;
     }
     candidate = pending;

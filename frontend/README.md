@@ -131,3 +131,9 @@ messages.ts utiliza solo errores normalizados. Distingue falta de cupos, evento 
 - [React y construcción de una aplicación desde cero](https://react.dev/learn/build-a-react-app-from-scratch).
 - [Fetch y lectura de respuestas](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 - [Política de redirecciones de Request](https://developer.mozilla.org/en-US/docs/Web/API/Request/redirect).
+
+## Español y teclado de S15
+
+Las pantallas explican el recorrido disponible, usan Consultar una reserva y mantienen ayuda para copiar el identificador del comprobante. Los mensajes del servicio evitan exigir conocimiento de API. Ir al contenido lleva el foco al destino principal, que queda fuera de la tabulación normal.
+
+`node scripts/verify-keyboard.mjs` recorre CU01 a CU06 mediante Tab, Mayús+Tab, Enter, Espacio y Escape, sin clics ni asignar foco desde el ensayo. Usa respuestas controladas y guarda resultados en evidencias/frontend-s15; S15_BROWSER_URL configura el destino. La revisión RN01 no sustituye las comprobaciones de móvil, zoom, contraste y lector de S16 y S17.
