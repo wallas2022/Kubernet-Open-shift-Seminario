@@ -1,0 +1,11 @@
+{
+    "sprint":  "S17",
+    "narratorExecutableFound":  true,
+    "commonNvdaPathsFound":  false,
+    "windowsControlInitialized":  true,
+    "attempt":  "interrupted-by-physical-Escape",
+    "readerTranscriptObtained":  false,
+    "manualCasesCompleted":  0,
+    "acceptance":  "partial-reader-validation-pending",
+    "fixtureUrl":  "http://localhost:5189"
+}

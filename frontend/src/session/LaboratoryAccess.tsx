@@ -17,6 +17,7 @@ export function LaboratoryAccess() {
   useEffect(() => {
     if (isAuthenticated) titleRef.current?.focus();
     else if (error) fieldRef.current?.focus();
+    else if (state === 'idle') titleRef.current?.focus();
   }, [isAuthenticated, error, state]);
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -26,7 +27,7 @@ export function LaboratoryAccess() {
   }
   return <section className="access-panel" aria-labelledby="acceso-titulo">
     <span className="eyebrow">{isAuthenticated ? 'ACCESO VALIDADO' : 'TU ESPACIO EN EL LABORATORIO'}</span>
-    <h2 id="acceso-titulo" ref={titleRef} tabIndex={-1}>{isAuthenticated ? 'Ya estás dentro.' : 'Accede al laboratorio.'}</h2>
+    <h2 id="acceso-titulo" ref={titleRef} tabIndex={-1} aria-describedby={notice ? 'access-notice' : undefined}>{isAuthenticated ? 'Ya estás dentro.' : 'Accede al laboratorio.'}</h2>
     {isAuthenticated ? <>
       <p role="status">Tu clave se validó correctamente.</p>
       <p>Tu acceso al laboratorio está validado.</p>
@@ -34,20 +35,21 @@ export function LaboratoryAccess() {
       <p className="access-footnote">Al volver o recargar se elimina la clave de esta sesión. Esto no revoca la clave del laboratorio.</p>
     </> : <>
       <p>Introduce la clave que te proporcionó el instructor. La usaremos para comprobar tu acceso.</p>
-      {notice && <p role="alert" className="access-error">{notice}</p>}
+      {notice && <p id="access-notice" role="alert" className="access-error">{notice}</p>}
       <form ref={formRef} onSubmit={submit} autoComplete="off" noValidate aria-busy={state === 'checking'}>
         <label htmlFor="laboratory-key">Clave de laboratorio</label>
         <input ref={fieldRef} id="laboratory-key" name="laboratory-key" type="password" autoComplete="off" spellCheck={false}
           disabled={state === 'checking'} aria-invalid={state === 'invalid' || state === 'validation'}
-          aria-describedby={error ? 'access-help access-error' : 'access-help'} />
+          aria-describedby={['access-help', error && 'access-error', notice && 'access-notice'].filter(Boolean).join(' ')}
+          aria-errormessage={error ? 'access-error' : undefined} />
         <p id="access-help" className="access-footnote">Tu clave permanece solo en memoria y se elimina al recargar.</p>
         {error && <p id="access-error" role="alert" className="access-error">{state === 'invalid'
           ? 'La clave no es válida o ya no está habilitada. Revisa la clave con el instructor.'
           : state === 'validation' ? 'Introduce una clave no vacía y sin caracteres no admitidos.'
             : 'No pudimos comprobar el acceso. Revisa la conexión y vuelve a intentarlo.'}</p>}
         <button type="submit" disabled={state === 'checking'}>{state === 'checking' ? 'Comprobando…' : 'Entrar'}</button>
-        <p role="status" className="access-status">{state === 'checking' ? 'Comprobando tu acceso al laboratorio.' : ''}</p>
       </form>
+      <p role="status" aria-atomic="true" className="access-status">{state === 'checking' ? 'Comprobando tu acceso al laboratorio.' : ''}</p>
     </>}
   </section>;
 }

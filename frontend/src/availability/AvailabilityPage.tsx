@@ -22,6 +22,9 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
   }, [creation.receipt, event.id, refresh, status]);
   useEffect(() => { heading.current?.focus(); }, []);
   const busy = status === 'loading' || status === 'refreshing';
+  useEffect(() => {
+    if (!busy && document.activeElement === document.body) heading.current?.focus();
+  }, [busy]);
   return <div className="page availability-page">
     <a className="skip-link" href="#contenido">Ir al contenido</a>
     <header className="header">
@@ -40,12 +43,12 @@ export function AvailabilityPage({ event, onBack }: { event: EventSummary; onBac
           <button type="button" className="secondary" onClick={clearCredential}>Volver al acceso</button>
         </div>
       </div>
-      <section aria-label="Disponibilidad del evento" aria-busy={busy}>
         <div className="catalog-meta">
-          <p role="status">{busy ? (data ? 'Actualizando disponibilidad. Mostramos la última lectura.' : 'Consultando disponibilidad…')
+          <p role="status" aria-atomic="true">{busy ? (data ? 'Actualizando disponibilidad. Mostramos la última lectura.' : 'Consultando disponibilidad…')
             : status === 'ready' ? 'Disponibilidad consultada.' : ''}</p>
           {loadedAt && <p>Última lectura: <time dateTime={loadedAt}>{new Date(loadedAt).toLocaleString('es-GT', { timeZoneName: 'short' })}</time></p>}
         </div>
+      <section aria-label="Disponibilidad del evento" aria-busy={busy}>
         {status === 'not-found' && <div role="alert" className="catalog-error"><strong>Evento no disponible.</strong>
           <p>No encontramos este evento. Vuelve al catálogo y actualízalo antes de continuar.</p></div>}
         {status === 'error' && <div role="alert" className="catalog-error"><strong>{data ? 'Disponibilidad desactualizada.' : 'No pudimos consultar los cupos.'}</strong>

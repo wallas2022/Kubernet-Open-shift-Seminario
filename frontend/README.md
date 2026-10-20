@@ -143,3 +143,11 @@ Las pantallas explican el recorrido disponible, usan Consultar una reserva y man
 La cabecera, las acciones y las rejillas pueden redistribuirse sin imponer anchos mínimos que desborden ventanas estrechas. Los textos largos admiten saltos y la disponibilidad pasa a una columna por debajo de 320 píxeles útiles. La lectura posterior del comprobante comparte el estilo de sus acciones.
 
 `node scripts/verify-responsive.mjs` verifica 360 y 1280 píxeles con zoom de pestaña al 100 y 200 por ciento. Requiere Chromium completo con soporte de extensiones; testing/s16-zoom solo se carga en el navegador aislado del ensayo. S16_BROWSER_URL configura el frontend y S16_EVIDENCE_DIR el destino. Las capturas usan CDP para conservar toda la escala del zoom nativo. La matriz final y sus límites están en documentacion/fase-10/sprints/S16. S17 conserva la evaluación con lector de pantalla.
+
+## Foco anuncios y contraste de S17
+
+Las esperas quedan fuera de los contenedores marcados como ocupados y los errores se asocian explícitamente a sus campos. El foco vuelve a un destino útil al navegar, validar, caducar el acceso o terminar una actualización que lo hubiera perdido. El comprobante describe su confirmación al recibir foco. Se oscurecen el pie y la numeración del recorrido.
+
+`node scripts/verify-accessibility.mjs` revisa teclado, referencias, contraste y propiedades del árbol de Chromium; `node scripts/verify-announcements.mjs` verifica esperas retenidas, foco y anuncios. S17_BROWSER_URL y S17_EVIDENCE_DIR configuran el destino. Estas pruebas no acreditan lectura oral. La entrega RN06 es parcial hasta completar la guía de documentacion/fase-10/sprints/S17/fuentes/DOC-S17-02-validacion-lector-pendiente.md.
+
+El entorno ficticio de revisión en localhost:5189 usa testing/s17_reader_fixture.py, una clave pública de ensayo S17-LECTOR y memoria volátil; no conecta al backend real. `python testing/verify_s17_reader_fixture.py` ejecuta diez comprobaciones desde el contenedor del simulador y lo deja vacío. La ruta de control /_fixture pertenece solo a ese servidor de ensayo y no al frontend de producción.

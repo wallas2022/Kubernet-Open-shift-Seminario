@@ -1,0 +1,286 @@
+{
+  "screen": "error-consulta",
+  "baseline": false,
+  "semantic": {
+    "references": [],
+    "invalid": [
+      {
+        "label": "Identificador de reserva",
+        "description": "lookup-help lookup-error",
+        "error": "lookup-error"
+      }
+    ],
+    "live": [
+      {
+        "role": "alert",
+        "text": "No pudimos consultar la reserva. El servicio no está disponible temporalmente. Vuelve a consultar por tu cuenta; no hay reintento automático.",
+        "busyAncestor": false,
+        "atomic": null
+      }
+    ],
+    "mainCount": 1
+  },
+  "colors": [
+    {
+      "tag": "BUTTON",
+      "class": "secondary",
+      "text": "Salir",
+      "foreground": "rgb(23, 61, 52)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 11.123,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "",
+      "text": "Salir limpia los datos de esta pestaña. No cancela reservas ni revoca la clave del servidor.",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 14.4,
+      "required": 4.5,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "brand",
+      "text": "Reservas del seminario",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 23,
+      "required": 3,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "environment",
+      "text": "Entorno de pruebas",
+      "foreground": "rgb(78, 101, 92)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 12,
+      "required": 4.5,
+      "ratio": 5.84,
+      "passed": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "back-catalog",
+      "text": "← Volver al catálogo",
+      "foreground": "rgb(56, 91, 74)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 14,
+      "required": 4.5,
+      "ratio": 7.058,
+      "passed": true
+    },
+    {
+      "tag": "H1",
+      "class": "",
+      "text": "Consulta una reserva",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 55.04,
+      "required": 3,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "",
+      "text": "Introduce el identificador de una reserva creada con tu clave de laboratorio. Esta consulta no muest",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "LABEL",
+      "class": "",
+      "text": "Identificador de reserva",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 14,
+      "required": 4.5,
+      "ratio": 14.658,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "",
+      "text": "Copia el identificador completo de tu comprobante, incluidos los guiones (formato UUID). Necesitas l",
+      "foreground": "rgb(84, 99, 90)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 14,
+      "required": 4.5,
+      "ratio": 6.346,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "access-error",
+      "text": "No pudimos consultar la reserva. El servicio no está disponible temporalmente. Vuelve a consultar po",
+      "foreground": "rgb(140, 48, 36)",
+      "background": [
+        255,
+        245,
+        240
+      ],
+      "fontSize": 14,
+      "required": 4.5,
+      "ratio": 7.635,
+      "passed": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "",
+      "text": "Consultar reserva",
+      "foreground": "rgb(255, 255, 255)",
+      "background": [
+        24,
+        62,
+        53
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 11.802,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "",
+      "text": "Seminario de plataformas de contenedores",
+      "foreground": "rgb(84, 102, 79)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 10,
+      "required": 4.5,
+      "ratio": 5.753,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "",
+      "text": "Consulta de reserva",
+      "foreground": "rgb(84, 102, 79)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 10,
+      "required": 4.5,
+      "ratio": 5.753,
+      "passed": true
+    }
+  ],
+  "components": [
+    {
+      "tag": "INPUT",
+      "kind": "focus",
+      "width": 3,
+      "ratio": 4.807,
+      "required": 3,
+      "passed": true
+    }
+  ],
+  "accessible": [
+    {
+      "role": "main",
+      "name": "",
+      "properties": []
+    },
+    {
+      "role": "heading",
+      "name": "Consulta una reserva",
+      "properties": [
+        {
+          "name": "level",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "role": "status",
+      "name": "",
+      "properties": [
+        {
+          "name": "live",
+          "value": "polite"
+        },
+        {
+          "name": "atomic",
+          "value": true
+        }
+      ]
+    },
+    {
+      "role": "textbox",
+      "name": "Identificador de reserva",
+      "description": "Copia el identificador completo de tu comprobante, incluidos los guiones (formato UUID). Necesitas la misma clave de laboratorio que creó la reserva. No pudimos consultar la reserva. El servicio no está disponible temporalmente. Vuelve a consultar por tu cuenta; no hay reintento automático.",
+      "properties": [
+        {
+          "name": "invalid",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "role": "alert",
+      "name": "",
+      "properties": [
+        {
+          "name": "live",
+          "value": "assertive"
+        },
+        {
+          "name": "atomic",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

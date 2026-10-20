@@ -1,0 +1,147 @@
+{
+  "sprint": "S17",
+  "passed": true,
+  "mode": "controlled-business-fixtures",
+  "checks": 25,
+  "browser": "145.0.7632.6",
+  "results": [
+    {
+      "name": "P01-initial-focus",
+      "passed": true
+    },
+    {
+      "name": "P01-wait-outside-busy",
+      "passed": true
+    },
+    {
+      "name": "P01-wait-AX-polite-status",
+      "passed": true
+    },
+    {
+      "name": "P02-navigation-focus",
+      "passed": true
+    },
+    {
+      "name": "P02-wait-outside-busy",
+      "passed": true
+    },
+    {
+      "name": "P02-wait-AX-polite-status",
+      "passed": true
+    },
+    {
+      "name": "P02-refresh-focus-restored",
+      "passed": true
+    },
+    {
+      "name": "P03-navigation-focus",
+      "passed": true
+    },
+    {
+      "name": "P03-validation-focus",
+      "passed": true
+    },
+    {
+      "name": "P03-error-reference",
+      "passed": true
+    },
+    {
+      "name": "P03-review-focus",
+      "passed": true
+    },
+    {
+      "name": "P03-send-wait-outside-busy",
+      "passed": true
+    },
+    {
+      "name": "P03-send-wait-AX-polite-status",
+      "passed": true
+    },
+    {
+      "name": "P04-confirmation-focus",
+      "passed": true
+    },
+    {
+      "name": "P04-confirmation-description",
+      "passed": true
+    },
+    {
+      "name": "P04-next-control",
+      "passed": true
+    },
+    {
+      "name": "P04-visible-keyboard-focus",
+      "passed": true
+    },
+    {
+      "name": "P05-navigation-focus",
+      "passed": true
+    },
+    {
+      "name": "P05-invalid-uuid-not-sent",
+      "passed": true
+    },
+    {
+      "name": "P05-wait-outside-busy",
+      "passed": true
+    },
+    {
+      "name": "P05-wait-AX-polite-status",
+      "passed": true
+    },
+    {
+      "name": "P05-http-error-focus",
+      "passed": true
+    },
+    {
+      "name": "P01-expired-focus",
+      "passed": true
+    },
+    {
+      "name": "P01-expired-field-description",
+      "passed": true
+    },
+    {
+      "name": "no-accessibility-side-effect-post",
+      "passed": true
+    }
+  ],
+  "audits": [
+    {
+      "screen": "espera-acceso",
+      "textColors": 34,
+      "componentColors": 0,
+      "failures": [],
+      "accessibleRoles": 9
+    },
+    {
+      "screen": "error-cantidad",
+      "textColors": 31,
+      "componentColors": 1,
+      "failures": [],
+      "accessibleRoles": 6
+    },
+    {
+      "screen": "espera-envio",
+      "textColors": 27,
+      "componentColors": 0,
+      "failures": [],
+      "accessibleRoles": 5
+    },
+    {
+      "screen": "error-consulta",
+      "textColors": 13,
+      "componentColors": 1,
+      "failures": [],
+      "accessibleRoles": 5
+    },
+    {
+      "screen": "acceso-caducado",
+      "textColors": 33,
+      "componentColors": 1,
+      "failures": [],
+      "accessibleRoles": 10
+    }
+  ],
+  "readerTest": "pending-native-reader-listening"
+}

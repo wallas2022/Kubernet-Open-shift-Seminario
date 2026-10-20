@@ -20,6 +20,7 @@ export function ReservationLookup({ events, onBack }: { events: EventSummary[]; 
     alive.current = true; field.current?.focus();
     return () => { alive.current = false; request.current?.abort(); request.current = null; };
   }, []);
+  useEffect(() => { if (error && !busy) field.current?.focus(); }, [error, busy]);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (request.current) return;
@@ -52,13 +53,13 @@ export function ReservationLookup({ events, onBack }: { events: EventSummary[]; 
           <label htmlFor="reservation-identifier">Identificador de reserva</label>
           <input ref={field} id="reservation-identifier" type="text" autoComplete="off" spellCheck={false}
             value={identifier} disabled={busy} aria-invalid={error !== null}
-            aria-describedby={error ? 'lookup-help lookup-error' : 'lookup-help'}
+            aria-describedby={error ? 'lookup-help lookup-error' : 'lookup-help'} aria-errormessage={error ? 'lookup-error' : undefined}
             onChange={event => { setIdentifier(event.target.value); setReservation(null); setError(null); }} />
           <p id="lookup-help">Copia el identificador completo de tu comprobante, incluidos los guiones (formato UUID). Necesitas la misma clave de laboratorio que creó la reserva.</p>
           {error && <p id="lookup-error" role="alert" className="access-error">{error}</p>}
           <button type="submit" disabled={busy}>{busy ? 'Consultando…' : 'Consultar reserva'}</button>
-          <p role="status">{busy ? 'Consultando la reserva autorizada.' : ''}</p>
         </form>
+        <p role="status" aria-atomic="true">{busy ? 'Consultando la reserva autorizada.' : ''}</p>
       </section>
       {reservation && <ReservationReceiptView reservation={reservation} message="Reserva consultada y confirmada." eventName={eventName} />}
     </main>

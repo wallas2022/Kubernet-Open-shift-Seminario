@@ -14,9 +14,9 @@ export function RecoveryPage() {
     <header className="header"><span className="brand">Reservas del seminario</span><span className="environment">Entorno de pruebas</span></header>
     <main id="contenido" tabIndex={-1} className="catalog-main">
       <h1 ref={heading} tabIndex={-1}>Recupera tu operación</h1>
-      {state.receipt ? <ReservationReceipt /> : <section className="reservation-receipt" aria-label="Estado de envío" aria-busy={busy}>
+      {state.receipt ? <ReservationReceipt /> : <section className="reservation-receipt" aria-label="Estado de envío">
         <h2>Estado de la operación</h2>
-        <p role={busy ? 'status' : 'alert'}>{state.message}</p>
+        <p aria-atomic="true" role={busy ? 'status' : 'alert'}>{state.message}</p>
         {state.pending && <>
           <dl className="draft-summary">
             <div><dt>Identificador del evento</dt><dd>{state.pending.eventId}</dd></div>

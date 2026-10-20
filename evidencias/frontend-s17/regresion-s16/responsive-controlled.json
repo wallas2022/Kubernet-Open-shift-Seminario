@@ -1,0 +1,2607 @@
+{
+  "sprint": "S16",
+  "browser": "145.0.7632.6",
+  "profiles": [
+    {
+      "name": "movil",
+      "width": 360,
+      "zoom": 1
+    },
+    {
+      "name": "escritorio",
+      "width": 1280,
+      "zoom": 1
+    },
+    {
+      "name": "escritorio-200",
+      "width": 1280,
+      "zoom": 2
+    },
+    {
+      "name": "movil-200",
+      "width": 360,
+      "zoom": 2
+    }
+  ],
+  "mode": "controlled-business-fixtures",
+  "zoomMethod": "chrome.tabs.setZoom and getZoom in isolated persistent browser",
+  "passed": true,
+  "checks": 493,
+  "failures": 0,
+  "results": [
+    {
+      "name": "movil-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "movil-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "escritorio-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-capture-width",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "movil-200-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "movil-200-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-200-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-200-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-capture-width",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    }
+  ],
+  "screens": [
+    {
+      "profile": "movil",
+      "screen": "P01",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P01-error",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P02",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P02-vacio",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P02-error",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P03-error",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P03-revision",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P04",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P04-error",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P05-error",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P05",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P06",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "salida",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P06-comprobante",
+      "innerWidth": 360,
+      "height": 1000,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P01",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P01-error",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P02",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P02-vacio",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P02-error",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P03-error",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P03-revision",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P04",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P04-error",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P05-error",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P05",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P06",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "salida",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P06-comprobante",
+      "innerWidth": 1280,
+      "height": 1000,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P01",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P01-error",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P02",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P02-vacio",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P02-error",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P03-error",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P03-revision",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P04",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P04-error",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P05-error",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P05",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P06",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "salida",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P06-comprobante",
+      "innerWidth": 640,
+      "height": 500,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P01",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P01-error",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P02",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P02-vacio",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P02-error",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P03-error",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P03-revision",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P04",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P04-error",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P05-error",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P05",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P06",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "salida",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P06-comprobante",
+      "innerWidth": 180,
+      "height": 500,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    }
+  ]
+}

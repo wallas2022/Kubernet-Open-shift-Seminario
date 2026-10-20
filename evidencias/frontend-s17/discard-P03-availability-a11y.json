@@ -1,0 +1,450 @@
+{
+  "screen": "discard-P03-availability",
+  "baseline": false,
+  "semantic": {
+    "references": [],
+    "invalid": [],
+    "live": [
+      {
+        "role": "status",
+        "text": "Disponibilidad consultada.",
+        "busyAncestor": false,
+        "atomic": "true"
+      }
+    ],
+    "mainCount": 1
+  },
+  "colors": [
+    {
+      "tag": "BUTTON",
+      "class": "secondary",
+      "text": "Salir",
+      "foreground": "rgb(23, 61, 52)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 11.123,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "",
+      "text": "Salir limpia los datos de esta pestaña. No cancela reservas ni revoca la clave del servidor.",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 14.4,
+      "required": 4.5,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "brand-icon",
+      "text": "R",
+      "foreground": "rgb(255, 255, 255)",
+      "background": [
+        24,
+        62,
+        53
+      ],
+      "fontSize": 27,
+      "required": 3,
+      "ratio": 11.802,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "",
+      "text": "ReservasDEL SEMINARIO",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 23,
+      "required": 3,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "brand-subtitle",
+      "text": "DEL SEMINARIO",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 9,
+      "required": 4.5,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "environment",
+      "text": "Entorno de demostración",
+      "foreground": "rgb(78, 101, 92)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 12,
+      "required": 4.5,
+      "ratio": 5.84,
+      "passed": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "back-catalog",
+      "text": "← Volver al catálogo",
+      "foreground": "rgb(56, 91, 74)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 14,
+      "required": 4.5,
+      "ratio": 7.058,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "eyebrow",
+      "text": "DISPONIBILIDAD DEL EVENTO",
+      "foreground": "rgb(73, 102, 79)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 10,
+      "required": 4.5,
+      "ratio": 5.916,
+      "passed": true
+    },
+    {
+      "tag": "H1",
+      "class": "",
+      "text": "Evento de teclado",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 50,
+      "required": 3,
+      "ratio": 13.614,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "lead",
+      "text": "Consulta los cupos antes de preparar tu reserva.",
+      "foreground": "rgb(89, 105, 97)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 5.391,
+      "passed": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "",
+      "text": "Actualizar disponibilidad",
+      "foreground": "rgb(255, 255, 255)",
+      "background": [
+        24,
+        62,
+        53
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 11.802,
+      "passed": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "secondary",
+      "text": "Volver al acceso",
+      "foreground": "rgb(24, 62, 53)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 10.962,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "",
+      "text": "Disponibilidad consultada.",
+      "foreground": "rgb(89, 105, 97)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 12,
+      "required": 4.5,
+      "ratio": 5.391,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "",
+      "text": "Última lectura: 20/10/2026, 4:11:47 a. m. UTC",
+      "foreground": "rgb(89, 105, 97)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 12,
+      "required": 4.5,
+      "ratio": 5.391,
+      "passed": true
+    },
+    {
+      "tag": "TIME",
+      "class": "",
+      "text": "20/10/2026, 4:11:47 a. m. UTC",
+      "foreground": "rgb(89, 105, 97)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 12,
+      "required": 4.5,
+      "ratio": 5.391,
+      "passed": true
+    },
+    {
+      "tag": "DT",
+      "class": "",
+      "text": "Cupos disponibles",
+      "foreground": "rgb(99, 113, 94)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 13,
+      "required": 4.5,
+      "ratio": 5.18,
+      "passed": true
+    },
+    {
+      "tag": "DD",
+      "class": "",
+      "text": "25",
+      "foreground": "rgb(24, 62, 53)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 54,
+      "required": 3,
+      "ratio": 11.802,
+      "passed": true
+    },
+    {
+      "tag": "DT",
+      "class": "",
+      "text": "Capacidad total",
+      "foreground": "rgb(99, 113, 94)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 13,
+      "required": 4.5,
+      "ratio": 5.18,
+      "passed": true
+    },
+    {
+      "tag": "DD",
+      "class": "",
+      "text": "25",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 24,
+      "required": 3,
+      "ratio": 14.658,
+      "passed": true
+    },
+    {
+      "tag": "DT",
+      "class": "",
+      "text": "Identificador del evento",
+      "foreground": "rgb(99, 113, 94)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 13,
+      "required": 4.5,
+      "ratio": 5.18,
+      "passed": true
+    },
+    {
+      "tag": "DD",
+      "class": "",
+      "text": "00000000-0000-0000-0000-000000000001",
+      "foreground": "rgb(20, 44, 48)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 13,
+      "required": 4.5,
+      "ratio": 14.658,
+      "passed": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "",
+      "text": "Reservar",
+      "foreground": "rgb(255, 255, 255)",
+      "background": [
+        24,
+        62,
+        53
+      ],
+      "fontSize": 16,
+      "required": 4.5,
+      "ratio": 11.802,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "",
+      "text": "Prepara y revisa tu cantidad antes de cualquier envío.",
+      "foreground": "rgb(99, 113, 94)",
+      "background": [
+        255,
+        255,
+        255
+      ],
+      "fontSize": 13,
+      "required": 4.5,
+      "ratio": 5.18,
+      "passed": true
+    },
+    {
+      "tag": "P",
+      "class": "catalog-footnote",
+      "text": "Esta lectura es informativa y no garantiza inventario. Los cupos se confirman al procesar una reserv",
+      "foreground": "rgb(99, 113, 94)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 13,
+      "required": 4.5,
+      "ratio": 4.811,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "",
+      "text": "Seminario de plataformas de contenedores",
+      "foreground": "rgb(84, 102, 79)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 10,
+      "required": 4.5,
+      "ratio": 5.753,
+      "passed": true
+    },
+    {
+      "tag": "SPAN",
+      "class": "",
+      "text": "Reservas de prueba",
+      "foreground": "rgb(84, 102, 79)",
+      "background": [
+        246,
+        247,
+        242
+      ],
+      "fontSize": 10,
+      "required": 4.5,
+      "ratio": 5.753,
+      "passed": true
+    }
+  ],
+  "components": [
+    {
+      "tag": "H1",
+      "kind": "focus",
+      "width": 3,
+      "ratio": 4.465,
+      "required": 3,
+      "passed": true
+    }
+  ],
+  "accessible": [
+    {
+      "role": "main",
+      "name": "",
+      "properties": []
+    },
+    {
+      "role": "heading",
+      "name": "Evento de teclado",
+      "properties": [
+        {
+          "name": "level",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "role": "status",
+      "name": "",
+      "properties": [
+        {
+          "name": "live",
+          "value": "polite"
+        },
+        {
+          "name": "atomic",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "sprint": "S12",
+  "date": "2026-10-20T04:00:24.055Z",
+  "mode": "controlled-error-matrix",
+  "browser": "145.0.7632.6",
+  "passed": true,
+  "checks": 82,
+  "results": [
+    {
+      "name": "login401-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "login401-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "login-html-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "login-html-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "catalog401-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "catalog401-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "catalog-stale-keeps-data",
+      "passed": true
+    },
+    {
+      "name": "catalog-stale-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "catalog-stale-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "availability404-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "availability404-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "availability401-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "availability401-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "zero-blocks-reserve",
+      "passed": true
+    },
+    {
+      "name": "zero-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "zero-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "sold-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "sold-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "sold-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "sold-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "sold-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "conflict-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "conflict-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "conflict-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "conflict-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "conflict-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "invalid-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "invalid-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "invalid-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "invalid-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "invalid-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "deleted-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "deleted-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "deleted-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "deleted-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "deleted-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "post401-returns-to-login",
+      "passed": true
+    },
+    {
+      "name": "post401-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "post401-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "post401-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "post401-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "unavailable-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "unavailable-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "unavailable-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "unavailable-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "unavailable-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "retry-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "retry-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "retry-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "retry-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "retry-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "html-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "html-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "html-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "html-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "html-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "empty-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "empty-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "empty-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "empty-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "empty-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "malformed-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "malformed-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "malformed-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "malformed-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "malformed-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "network-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "network-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "network-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "network-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "network-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "timeout-no-false-confirmation",
+      "passed": true
+    },
+    {
+      "name": "timeout-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "timeout-pending-preserved",
+      "passed": true
+    },
+    {
+      "name": "timeout-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "timeout-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "failed-read-retains-confirmation",
+      "passed": true
+    },
+    {
+      "name": "receipt-read-failure-one-post-no-automatic-retry",
+      "passed": true
+    },
+    {
+      "name": "receipt-read-failure-no-private-detail",
+      "passed": true
+    },
+    {
+      "name": "receipt-read-failure-no-persisted-credential",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    },
+    {
+      "name": "no-secret-in-evidence",
+      "passed": true
+    }
+  ],
+  "credentialsRecorded": false
+}

@@ -32,9 +32,9 @@ export function ReservationDraft({ event, availability, onCancel }: {
     setPhase('review');
   }
   function edit() { setReview(null); setPhase('editing'); }
-  if (creation.state.phase !== 'idle') return <section className="reservation-draft" aria-label="Estado de envío" aria-busy={creation.state.phase === 'preparing' || creation.state.phase === 'sending'}>
+  if (creation.state.phase !== 'idle') return <section className="reservation-draft" aria-label="Estado de envío">
     <h2 ref={heading} tabIndex={-1}>Estado de la operación</h2>
-    <p role={creation.state.phase === 'blocked' || creation.state.phase === 'uncertain' || creation.state.phase === 'rejected' ? 'alert' : 'status'}>{creation.state.message}</p>
+    <p aria-atomic="true" role={creation.state.phase === 'blocked' || creation.state.phase === 'uncertain' || creation.state.phase === 'rejected' ? 'alert' : 'status'}>{creation.state.message}</p>
     <p>Esta función está en pruebas. No se anuncia envío de correo.</p>
   </section>;
   return <section className="reservation-draft" aria-label="Preparación de reserva">
@@ -43,7 +43,7 @@ export function ReservationDraft({ event, availability, onCancel }: {
       <label htmlFor="reservation-quantity">Cantidad de cupos</label>
       <input ref={input} id="reservation-quantity" type="text" inputMode="numeric" autoComplete="off" value={quantity}
         onChange={event => { setQuantity(event.target.value); setError(null); }} aria-invalid={error !== null}
-        aria-describedby={error ? 'quantity-help quantity-error' : 'quantity-help'} />
+        aria-describedby={error ? 'quantity-help quantity-error' : 'quantity-help'} aria-errormessage={error ? 'quantity-error' : undefined} />
       <p id="quantity-help">Un entero entre 1 y 100, sin superar los cupos de esta lectura.</p>
       {error && <p id="quantity-error" role="alert" className="quantity-error">{error}</p>}
       <button type="submit">Revisar cantidad</button>

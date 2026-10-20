@@ -1,0 +1,326 @@
+
+> seminario-reservas-frontend@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: GET uses headers and same-origin protections; current credential is read for each call
+ok 1 - GET uses headers and same-origin protections; current credential is read for each call
+  ---
+  duration_ms: 7.742029
+  type: 'test'
+  ...
+# Subtest: invalid paths, payloads, idempotency keys and header values are never sent
+ok 2 - invalid paths, payloads, idempotency keys and header values are never sent
+  ---
+  duration_ms: 1.385235
+  type: 'test'
+  ...
+# Subtest: known errors normalize error and detail without leaking arbitrary text
+ok 3 - known errors normalize error and detail without leaking arbitrary text
+  ---
+  duration_ms: 5.700551
+  type: 'test'
+  ...
+# Subtest: HTML, empty, malformed JSON and unexpected success status remain conservative
+ok 4 - HTML, empty, malformed JSON and unexpected success status remain conservative
+  ---
+  duration_ms: 2.231269
+  type: 'test'
+  ...
+# Subtest: runtime schema checks reject wrong resources, impossible inventory and mismatched confirmation
+ok 5 - runtime schema checks reject wrong resources, impossible inventory and mismatched confirmation
+  ---
+  duration_ms: 3.324587
+  type: 'test'
+  ...
+# Subtest: valid catalog, availability and authorized lookup return only contract fields
+ok 6 - valid catalog, availability and authorized lookup return only contract fields
+  ---
+  duration_ms: 1.271692
+  type: 'test'
+  ...
+# Subtest: 201 and 200 confirmations preserve status and omit unexpected response fields
+ok 7 - 201 and 200 confirmations preserve status and omit unexpected response fields
+  ---
+  duration_ms: 1.333693
+  type: 'test'
+  ...
+# Subtest: timeout includes response body reading and never repeats POST
+ok 8 - timeout includes response body reading and never repeats POST
+  ---
+  duration_ms: 62.189978
+  type: 'test'
+  ...
+# Subtest: abort before sending differs from cancellation after dispatch
+ok 9 - abort before sending differs from cancellation after dispatch
+  ---
+  duration_ms: 0.575894
+  type: 'test'
+  ...
+# Subtest: Retry-After is guidance only and a 503 never proves rejection
+ok 10 - Retry-After is guidance only and a 503 never proves rejection
+  ---
+  duration_ms: 1.284275
+  type: 'test'
+  ...
+# Subtest: network errors are sanitized and an explicit POST makes only one fetch
+ok 11 - network errors are sanitized and an explicit POST makes only one fetch
+  ---
+  duration_ms: 0.279578
+  type: 'test'
+  ...
+# Subtest: local HTTP fixture simulates a lost response after an effect without claiming database validation
+ok 12 - local HTTP fixture simulates a lost response after an effect without claiming database validation
+  ---
+  duration_ms: 26.520605
+  type: 'test'
+  ...
+# Subtest: S08 synchronous latch blocks clicks before hashing and persists frozen payload before POST
+ok 13 - S08 synchronous latch blocks clicks before hashing and persists frozen payload before POST
+  ---
+  duration_ms: 7.517522
+  type: 'test'
+  ...
+# Subtest: S08 inaccessible storage blocks even initial creation
+ok 14 - S08 inaccessible storage blocks even initial creation
+  ---
+  duration_ms: 1.011312
+  type: 'test'
+  ...
+# Subtest: S08 failed or silently lost write blocks POST
+ok 15 - S08 failed or silently lost write blocks POST
+  ---
+  duration_ms: 1.241629
+  type: 'test'
+  ...
+# Subtest: S08 existing or corrupt record is preserved and never overwritten
+ok 16 - S08 existing or corrupt record is preserved and never overwritten
+  ---
+  duration_ms: 1.254741
+  type: 'test'
+  ...
+# Subtest: S08 pending introduced while hashing blocks creation without generating a key
+ok 17 - S08 pending introduced while hashing blocks creation without generating a key
+  ---
+  duration_ms: 0.268011
+  type: 'test'
+  ...
+# Subtest: S08 changed or missing credential blocks before POST
+ok 18 - S08 changed or missing credential blocks before POST
+  ---
+  duration_ms: 0.304154
+  type: 'test'
+  ...
+# Subtest: S08 invalid quantity or event never persists or posts
+ok 19 - S08 invalid quantity or event never persists or posts
+  ---
+  duration_ms: 0.367027
+  type: 'test'
+  ...
+# Subtest: S08 timeout and thrown transport keep identical original intention without automatic retry
+ok 20 - S08 timeout and thrown transport keep identical original intention without automatic retry
+  ---
+  duration_ms: 0.534619
+  type: 'test'
+  ...
+# Subtest: S08 failed uncertain-state update retains original persisted sending record
+ok 21 - S08 failed uncertain-state update retains original persisted sending record
+  ---
+  duration_ms: 0.408473
+  type: 'test'
+  ...
+# Subtest: S08 definitive rejection retains operation and does not resend
+ok 22 - S08 definitive rejection retains operation and does not resend
+  ---
+  duration_ms: 0.453773
+  type: 'test'
+  ...
+# Subtest: S08 interrupt preserves persisted record and lock
+ok 23 - S08 interrupt preserves persisted record and lock
+  ---
+  duration_ms: 0.307676
+  type: 'test'
+  ...
+# Subtest: S08 fingerprint is SHA256 without storing the credential
+ok 24 - S08 fingerprint is SHA256 without storing the credential
+  ---
+  duration_ms: 9.882581
+  type: 'test'
+  ...
+# Subtest: S09 201 and 200 retain the same immutable receipt and remove only validated pending
+ok 25 - S09 201 and 200 retain the same immutable receipt and remove only validated pending
+  ---
+  duration_ms: 1.24319
+  type: 'test'
+  ...
+# Subtest: S09 malformed, mismatched and unexpected successful responses preserve pending without receipt
+ok 26 - S09 malformed, mismatched and unexpected successful responses preserve pending without receipt
+  ---
+  duration_ms: 0.631324
+  type: 'test'
+  ...
+# Subtest: S09 failed cleanup or replaced record cannot hide confirmation or delete another pending
+ok 27 - S09 failed cleanup or replaced record cannot hide confirmation or delete another pending
+  ---
+  duration_ms: 0.331476
+  type: 'test'
+  ...
+# Subtest: S10 lost response then reload only recovers by explicit action with original intent
+ok 28 - S10 lost response then reload only recovers by explicit action with original intent
+  ---
+  duration_ms: 0.368199
+  type: 'test'
+  ...
+# Subtest: S10 mismatched, missing or changing identity never sends and preserves exact pending
+ok 29 - S10 mismatched, missing or changing identity never sends and preserves exact pending
+  ---
+  duration_ms: 0.421302
+  type: 'test'
+  ...
+# Subtest: S10 double recovery click locks before fingerprint and retains pending on another failure
+ok 30 - S10 double recovery click locks before fingerprint and retains pending on another failure
+  ---
+  duration_ms: 0.298884
+  type: 'test'
+  ...
+# Subtest: S10 corrupt or inaccessible storage never authorizes recovery
+ok 31 - S10 corrupt or inaccessible storage never authorizes recovery
+  ---
+  duration_ms: 0.213502
+  type: 'test'
+  ...
+# Subtest: S10 pending changed or storage lost during fingerprint is never overwritten or dispatched
+ok 32 - S10 pending changed or storage lost during fingerprint is never overwritten or dispatched
+  ---
+  duration_ms: 0.283788
+  type: 'test'
+  ...
+# Subtest: S10 failed uncertainty write retains sending record and still permits explicit recovery
+ok 33 - S10 failed uncertainty write retains sending record and still permits explicit recovery
+  ---
+  duration_ms: 0.221433
+  type: 'test'
+  ...
+# Subtest: S13 exit clears pending fingerprint and state and permanently disables old engine
+ok 34 - S13 exit clears pending fingerprint and state and permanently disables old engine
+  ---
+  duration_ms: 4.958513
+  type: 'test'
+  ...
+# Subtest: S13 exit while hashing cannot recreate pending or POST
+ok 35 - S13 exit while hashing cannot recreate pending or POST
+  ---
+  duration_ms: 0.236154
+  type: 'test'
+  ...
+# Subtest: S13 late POST response cannot recreate pending receipt or unauthorized notice
+ok 36 - S13 late POST response cannot recreate pending receipt or unauthorized notice
+  ---
+  duration_ms: 8.166248
+  type: 'test'
+  ...
+# Subtest: S13 corrupt pending warns and clears only the app record
+ok 37 - S13 corrupt pending warns and clears only the app record
+  ---
+  duration_ms: 0.229458
+  type: 'test'
+  ...
+# Subtest: S13 denied or silently failed deletion never reports completed cleanup
+ok 38 - S13 denied or silently failed deletion never reports completed cleanup
+  ---
+  duration_ms: 0.262416
+  type: 'test'
+  ...
+# Subtest: S12 uncertain outcomes never claim rejection and retain explicit recovery guidance
+ok 39 - S12 uncertain outcomes never claim rejection and retain explicit recovery guidance
+  ---
+  duration_ms: 1.501301
+  type: 'test'
+  ...
+# Subtest: S12 domain rejections distinguish stock, identity, conflict, event and invalid data
+ok 40 - S12 domain rejections distinguish stock, identity, conflict, event and invalid data
+  ---
+  duration_ms: 0.247875
+  type: 'test'
+  ...
+# Subtest: S12 read privacy and Retry-After guidance never reflect untrusted detail
+ok 41 - S12 read privacy and Retry-After guidance never reflect untrusted detail
+  ---
+  duration_ms: 0.389363
+  type: 'test'
+  ...
+# Subtest: S12 unauthorized POST preserves intention before notifying session expiration
+ok 42 - S12 unauthorized POST preserves intention before notifying session expiration
+  ---
+  duration_ms: 1.39982
+  type: 'test'
+  ...
+# Subtest: quantity accepts boundaries only when stock permits
+ok 43 - quantity accepts boundaries only when stock permits
+  ---
+  duration_ms: 2.719946
+  type: 'test'
+  ...
+# Subtest: quantity rejects ambiguous formats and non-string values without coercion
+ok 44 - quantity rejects ambiguous formats and non-string values without coercion
+  ---
+  duration_ms: 0.343951
+  type: 'test'
+  ...
+# Subtest: quantity blocks insufficient or unusable availability
+ok 45 - quantity blocks insufficient or unusable availability
+  ---
+  duration_ms: 0.142637
+  type: 'test'
+  ...
+# Subtest: a public env variable is rejected without echoing its value
+ok 46 - a public env variable is rejected without echoing its value
+  ---
+  duration_ms: 1.59661
+  type: 'test'
+  ...
+# Subtest: proxy rejects credentials, query, paths and external destinations without echoing input
+ok 47 - proxy rejects credentials, query, paths and external destinations without echoing input
+  ---
+  duration_ms: 0.386851
+  type: 'test'
+  ...
+# Subtest: API path constructors reject injected query, fragments and path traversal
+ok 48 - API path constructors reject injected query, fragments and path traversal
+  ---
+  duration_ms: 0.384751
+  type: 'test'
+  ...
+# Subtest: API query middleware blocks the request without reflection or forwarding
+ok 49 - API query middleware blocks the request without reflection or forwarding
+  ---
+  duration_ms: 0.325096
+  type: 'test'
+  ...
+# Subtest: environment paths are denied before SPA fallback, including encoded names
+ok 50 - environment paths are denied before SPA fallback, including encoded names
+  ---
+  duration_ms: 0.262246
+  type: 'test'
+  ...
+# Subtest: credential is isolated, replaceable and clearable without persistence
+ok 51 - credential is isolated, replaceable and clearable without persistence
+  ---
+  duration_ms: 0.758506
+  type: 'test'
+  ...
+# Subtest: invalid values do not replace the existing credential
+ok 52 - invalid values do not replace the existing credential
+  ---
+  duration_ms: 0.964503
+  type: 'test'
+  ...
+1..52
+# tests 52
+# suites 0
+# pass 52
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 358.625613

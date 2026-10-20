@@ -1,0 +1,20 @@
+{
+    "sprint":  "S17",
+    "status":  "partial-reader-validation-pending",
+    "wordPagesInspected":  4,
+    "visualReview":  "passed",
+    "screenshotSample":  [
+                             "foco-comprobante.png",
+                             "error-asociado.png"
+                         ],
+    "interactionChecks":  172,
+    "textMeasurements":  847,
+    "componentMeasurements":  37,
+    "regressionChecks":  575,
+    "unitTests":  52,
+    "secretChecks":  12,
+    "fixtureChecks":  10,
+    "manualReaderCasesCompleted":  0,
+    "publication":  "approved-partial-delivery-2026-10-20",
+    "wordSha256":  "BFB784FA42E205F10EF1D63FA413089866BE2F02103E72D5ADE470ECC3218C5F"
+}

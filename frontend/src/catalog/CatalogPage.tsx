@@ -13,6 +13,9 @@ export function CatalogPage() {
   const [lookupOpen, setLookupOpen] = useState(false);
   useEffect(() => { if (!selected && !lookupOpen) heading.current?.focus(); }, [selected, lookupOpen]);
   const busy = status === 'loading' || status === 'refreshing';
+  useEffect(() => {
+    if (!busy && document.activeElement === document.body) heading.current?.focus();
+  }, [busy]);
   if (lookupOpen) return <ReservationLookup events={data?.events ?? []} onBack={() => setLookupOpen(false)} />;
   if (selected) return <AvailabilityPage key={selected.id} event={selected} onBack={() => setSelected(null)} />;
   return <div className="page catalog-page">
@@ -38,12 +41,12 @@ export function CatalogPage() {
           <button type="button" className="secondary" onClick={clearCredential}>Volver al acceso</button>
         </div>
       </div>
-      <section aria-label="Catálogo de eventos" aria-busy={busy}>
         <div className="catalog-meta">
-          <p role="status">{busy ? (data ? 'Actualizando el catálogo. Mostramos la última lectura.' : 'Cargando eventos…')
+          <p role="status" aria-atomic="true">{busy ? (data ? 'Actualizando el catálogo. Mostramos la última lectura.' : 'Cargando eventos…')
             : data ? `${data.events.length} ${data.events.length === 1 ? 'evento en el catálogo' : 'eventos en el catálogo'}` : ''}</p>
           {loadedAt && <p>Última lectura: <time dateTime={loadedAt}>{new Date(loadedAt).toLocaleString('es-GT')}</time></p>}
         </div>
+      <section aria-label="Catálogo de eventos" aria-busy={busy}>
         {status === 'error' && <div role="alert" className="catalog-error">
           <strong>{data ? 'Información desactualizada.' : 'No pudimos cargar el catálogo.'}</strong>
           <p>{data ? 'No pudimos actualizar los cupos. Los datos que ves corresponden a la última lectura correcta.'

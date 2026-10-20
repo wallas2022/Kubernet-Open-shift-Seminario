@@ -1,0 +1,9 @@
+flowchart TD
+    A[Navegar o validar un campo] --> B[Foco en el destino y error asociado]
+    B --> C[Espera y resultado con roles accesibles]
+    C --> D[Contraste y recorrido por teclado]
+    D --> E[Inspección del árbol de Chromium]
+    E --> F[Revisión manual con lector de pantalla]
+    F --> G{Lectura verificada}
+    G -->|Pendiente| H[S17 parcial y requisito RN06 abierto]
+    G -->|Sí y sin bloqueos| I[Registrar resultados para cerrar RN06]

@@ -1,0 +1,19 @@
+{
+    "sprint":  "S17",
+    "mode":  "volatile-local-fixture",
+    "passed":  true,
+    "checks":  10,
+    "results":  [
+                    "fixture-reset",
+                    "invalid-test-key",
+                    "catalog-initial",
+                    "create-fixture-only",
+                    "replay-same-fixture",
+                    "arm-lost-result",
+                    "uncertain-result",
+                    "recover-original-fixture",
+                    "exactly-two-fake-records",
+                    "fixture-left-empty"
+                ],
+    "realBusiness":  false
+}

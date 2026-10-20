@@ -27,6 +27,7 @@ export function ReservationReceiptView({ reservation, message, cleanupWarning = 
   const heading = useRef<HTMLHeadingElement>(null);
   const identifier = useRef<HTMLInputElement>(null);
   const fieldId = useId();
+  const summaryId = useId();
   const [copyState, setCopyState] = useState<'idle' | 'copying' | 'copied' | 'manual'>('idle');
   const generation = useRef(0);
   useEffect(() => { generation.current++; setCopyState('idle'); return () => { generation.current++; }; }, [reservation.id]);
@@ -42,8 +43,8 @@ export function ReservationReceiptView({ reservation, message, cleanupWarning = 
   }
   useEffect(() => { heading.current?.focus(); }, [reservation]);
   return <section className="reservation-receipt" aria-label="Comprobante de reserva">
-    <h2 ref={heading} tabIndex={-1}>Comprobante de reserva</h2>
-    <p role="status">{message}</p>
+    <h2 ref={heading} tabIndex={-1} aria-describedby={summaryId}>Comprobante de reserva</h2>
+    <p id={summaryId} role="status" aria-atomic="true">{message}</p>
     <dl className="draft-summary">
       <div><dt>Identificador de reserva</dt><dd>{reservation.id}</dd></div>
       <div><dt>Identificador del evento</dt><dd>{reservation.event_id}</dd></div>
