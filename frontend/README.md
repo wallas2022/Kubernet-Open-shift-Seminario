@@ -137,3 +137,9 @@ messages.ts utiliza solo errores normalizados. Distingue falta de cupos, evento 
 Las pantallas explican el recorrido disponible, usan Consultar una reserva y mantienen ayuda para copiar el identificador del comprobante. Los mensajes del servicio evitan exigir conocimiento de API. Ir al contenido lleva el foco al destino principal, que queda fuera de la tabulación normal.
 
 `node scripts/verify-keyboard.mjs` recorre CU01 a CU06 mediante Tab, Mayús+Tab, Enter, Espacio y Escape, sin clics ni asignar foco desde el ensayo. Usa respuestas controladas y guarda resultados en evidencias/frontend-s15; S15_BROWSER_URL configura el destino. La revisión RN01 no sustituye las comprobaciones de móvil, zoom, contraste y lector de S16 y S17.
+
+## Adaptación de pantalla de S16
+
+La cabecera, las acciones y las rejillas pueden redistribuirse sin imponer anchos mínimos que desborden ventanas estrechas. Los textos largos admiten saltos y la disponibilidad pasa a una columna por debajo de 320 píxeles útiles. La lectura posterior del comprobante comparte el estilo de sus acciones.
+
+`node scripts/verify-responsive.mjs` verifica 360 y 1280 píxeles con zoom de pestaña al 100 y 200 por ciento. Requiere Chromium completo con soporte de extensiones; testing/s16-zoom solo se carga en el navegador aislado del ensayo. S16_BROWSER_URL configura el frontend y S16_EVIDENCE_DIR el destino. Las capturas usan CDP para conservar toda la escala del zoom nativo. La matriz final y sus límites están en documentacion/fase-10/sprints/S16. S17 conserva la evaluación con lector de pantalla.

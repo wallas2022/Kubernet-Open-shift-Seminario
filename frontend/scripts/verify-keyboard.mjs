@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import { mkdir, writeFile } from 'node:fs/promises';
 const base = process.env.S15_BROWSER_URL || 'http://127.0.0.1:5185';
-const out = '../evidencias/frontend-s15';
+const out = process.env.S15_EVIDENCE_DIR || '../evidencias/frontend-s15';
 const event = '00000000-0000-0000-0000-000000000001', id = '10000000-0000-4000-8000-000000000015';
 const credential = 's15-synthetic-key', key = 'seminario.reserva.pendiente.v1';
 const browser = await chromium.launch({ args: ['--no-sandbox'] });

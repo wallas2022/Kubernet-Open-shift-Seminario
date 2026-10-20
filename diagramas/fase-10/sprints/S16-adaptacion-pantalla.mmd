@@ -1,0 +1,9 @@
+flowchart TD
+    A[360 y 1280 píxeles] --> B[Zoom de pestaña al 100 y 200 por ciento]
+    B --> C[Sesenta combinaciones de pantalla y tamaño]
+    C --> D[Medir ancho y contenido de los elementos]
+    D --> E{Contenido y acciones caben}
+    E -->|No| F[Ajustar rejilla y envoltura de texto]
+    F --> C
+    E -->|Sí| G[Capturas completas y revisión visual]
+    G --> H[Informe y revisión del usuario]

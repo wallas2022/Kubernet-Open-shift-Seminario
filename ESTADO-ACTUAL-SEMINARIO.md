@@ -1,5 +1,9 @@
 # Estado actual del seminario
 
+## Actualización de S16 del 19 de octubre de 2026
+
+S15 publicado en origin/master mediante c5c9523 tras aprobación del usuario. S16 RN02 autorizado e implementado localmente: cabecera, acciones y rejillas adaptables, envoltura de textos e identificadores y disponibilidad en una columna en ventanas muy estrechas. Pasaron 493 comprobaciones en 60 combinaciones de pantalla y tamaño, a 360 y 1280 píxeles, con zoom nativo de pestaña al 100 y 200 por ciento; se generaron 28 capturas comparables. Pasaron también 147 comprobaciones de regresión por teclado, 52 pruebas Node, compilación y 12 controles de secretos. Las respuestas de negocio son fixtures, sin reservas reales nuevas. Word de cuatro páginas revisado visualmente, fuente Markdown y Mermaid en las carpetas S16. Entrega S16 aprobada por el usuario para commit y push a origin/master; S17 no iniciado. No se acredita dispositivo físico, todos los navegadores ni accesibilidad integral.
+
 ## Actualización de S15 del 19 de octubre de 2026
 
 S14 publicado en origin/master mediante 33ac2bd tras autorización del usuario. S15 RN01 autorizado e implementado localmente: revisión de español, retiro de avisos de funciones futuras y referencias de sprint en las pantallas, ayuda para identificadores y corrección del destino de Ir al contenido. Pasaron 147 comprobaciones de teclado y 49 desplazamientos hasta controles en CU01 a CU06, más 82 controles de mensajes, 42 de consulta y 46 de copia y actualización. Las respuestas de negocio son fixtures; no se ejecutaron nuevas reservas reales. Fuente Markdown, Word de cuatro páginas revisado visualmente y Mermaid en las carpetas S15. Pasaron también 52 pruebas Node, compilación y 12 controles de secretos. Entrega S15 aprobada por el usuario para commit y push a origin/master; S16 no iniciado. La aceptación de móvil, zoom, lector de pantalla y accesibilidad integral sigue en S16 y S17.

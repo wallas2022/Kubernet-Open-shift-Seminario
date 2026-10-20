@@ -13,7 +13,7 @@ export function ReservationReceipt({ refreshAvailability = true }: { refreshAvai
 
 function ConfirmedAvailability({ eventId }: { eventId: string }) {
   const { data, status, refresh } = useAvailability(eventId);
-  return <section aria-label="Cupos después de confirmar">
+  return <section className="receipt-availability" aria-label="Cupos después de confirmar">
     <p role="status">{status === 'ready' ? `Cupos disponibles después de confirmar: ${data?.available}. Esta lectura no garantiza inventario.`
       : status === 'loading' || status === 'refreshing' ? 'Actualizando cupos después de confirmar…' : ''}</p>
     {(status === 'error' || status === 'not-found') && <p role="alert">No pudimos actualizar los cupos. Tu reserva sigue confirmada; conserva el comprobante.</p>}

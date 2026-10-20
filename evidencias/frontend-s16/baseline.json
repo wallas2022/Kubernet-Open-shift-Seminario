@@ -1,0 +1,3422 @@
+{
+  "sprint": "S16",
+  "browser": "Chromium bundled with Playwright 1.58.2",
+  "mode": "controlled-business-fixtures",
+  "zoomMethod": "chrome.tabs.setZoom and getZoom in isolated persistent browser",
+  "passed": false,
+  "checks": 465,
+  "failures": 50,
+  "results": [
+    {
+      "name": "movil-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "movil-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "escritorio-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-content-fits",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "escritorio-200-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "movil-200-native-tab-zoom",
+      "passed": true
+    },
+    {
+      "name": "movil-200-no-css-zoom-substitute",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P01-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P01-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P01-error-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P01-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-control-password",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P01-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-vacio-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-vacio-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-error-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-error-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P02-error-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-disponibilidad-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-error-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-revision-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P03-revision-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-full-uuid-retained",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-error-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-A",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P04-error-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P04-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-error-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-content-fits",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-text",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-submit",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P05-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-no-layout-replay",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P06-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P06-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P06-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-salida-no-horizontal-scroll",
+      "passed": false
+    },
+    {
+      "name": "movil-200-salida-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-salida-control-button",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P06-comprobante-no-horizontal-scroll",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-content-fits",
+      "passed": false
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-INPUT",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-P06-comprobante-control-button",
+      "passed": true
+    },
+    {
+      "name": "movil-200-only-explicit-posts",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "passed": true
+    }
+  ],
+  "screens": [
+    {
+      "profile": "movil",
+      "screen": "P01",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P01-error",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P02",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P02-vacio",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P02-error",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P03-error",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P03-revision",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P04",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P04-error",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P05-error",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P05",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P06",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "salida",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "movil",
+      "screen": "P06-comprobante",
+      "innerWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P01",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P01-error",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P02",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P02-vacio",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P02-error",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P03-error",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P03-revision",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P04",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P04-error",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P05-error",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P05",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P06",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "salida",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio",
+      "screen": "P06-comprobante",
+      "innerWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "dpr": 1,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P01",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P01-error",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P02",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P02-vacio",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P02-error",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P03-error",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P03-revision",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P04",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P04-error",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P05-error",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P05",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P06",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "salida",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "escritorio-200",
+      "screen": "P06-comprobante",
+      "innerWidth": 640,
+      "width": 640,
+      "scroll": 640,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P01",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "DIV",
+          "class": "page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "",
+          "width": 155,
+          "scroll": 201
+        },
+        {
+          "tag": "SECTION",
+          "class": "intro",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "width": 0,
+          "scroll": 0
+        },
+        {
+          "tag": "P",
+          "class": "lead",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "P",
+          "class": "notice",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "width": 171,
+          "scroll": 171
+        },
+        {
+          "tag": "STRONG",
+          "class": "",
+          "width": 0,
+          "scroll": 0
+        },
+        {
+          "tag": "BR",
+          "class": "",
+          "width": 0,
+          "scroll": 0
+        },
+        {
+          "tag": "SECTION",
+          "class": "access-panel",
+          "width": 199,
+          "scroll": 199
+        },
+        {
+          "tag": "H2",
+          "class": "",
+          "width": 153,
+          "scroll": 153
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P01-error",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "DIV",
+          "class": "page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "",
+          "width": 155,
+          "scroll": 201
+        },
+        {
+          "tag": "SECTION",
+          "class": "intro",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "P",
+          "class": "lead",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "P",
+          "class": "notice",
+          "width": 201,
+          "scroll": 201
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "width": 171,
+          "scroll": 171
+        },
+        {
+          "tag": "SECTION",
+          "class": "access-panel",
+          "width": 199,
+          "scroll": 199
+        },
+        {
+          "tag": "SECTION",
+          "class": "journey journey-preview",
+          "width": 199,
+          "scroll": 199
+        },
+        {
+          "tag": "DIV",
+          "class": "journey-note",
+          "width": 199,
+          "scroll": 199
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P02",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page catalog-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 155,
+          "scroll": 163
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 155,
+          "scroll": 163
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P02-vacio",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page catalog-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 155,
+          "scroll": 163
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 155,
+          "scroll": 163
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "H2",
+          "class": "",
+          "width": 109,
+          "scroll": 127
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P02-error",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page catalog-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 155,
+          "scroll": 163
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 155,
+          "scroll": 163
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "H2",
+          "class": "",
+          "width": 109,
+          "scroll": 127
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P03-disponibilidad",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page availability-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "SECTION",
+          "class": "",
+          "width": 155,
+          "scroll": 169
+        },
+        {
+          "tag": "ARTICLE",
+          "class": "availability-card",
+          "width": 153,
+          "scroll": 168
+        },
+        {
+          "tag": "DL",
+          "class": "",
+          "width": 103,
+          "scroll": 143
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P03-error",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page availability-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "SECTION",
+          "class": "",
+          "width": 155,
+          "scroll": 169
+        },
+        {
+          "tag": "ARTICLE",
+          "class": "availability-card",
+          "width": 153,
+          "scroll": 168
+        },
+        {
+          "tag": "DL",
+          "class": "",
+          "width": 103,
+          "scroll": 143
+        },
+        {
+          "tag": "DIV",
+          "class": "reservation-preview",
+          "width": 103,
+          "scroll": 106
+        },
+        {
+          "tag": "SECTION",
+          "class": "reservation-draft",
+          "width": 103,
+          "scroll": 106
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P03-revision",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page availability-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "SECTION",
+          "class": "",
+          "width": 155,
+          "scroll": 169
+        },
+        {
+          "tag": "ARTICLE",
+          "class": "availability-card",
+          "width": 153,
+          "scroll": 168
+        },
+        {
+          "tag": "DL",
+          "class": "",
+          "width": 103,
+          "scroll": 143
+        },
+        {
+          "tag": "DIV",
+          "class": "reservation-preview",
+          "width": 103,
+          "scroll": 106
+        },
+        {
+          "tag": "SECTION",
+          "class": "reservation-draft",
+          "width": 103,
+          "scroll": 106
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P04",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "DIV",
+          "class": "page availability-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "SECTION",
+          "class": "",
+          "width": 155,
+          "scroll": 169
+        },
+        {
+          "tag": "ARTICLE",
+          "class": "availability-card",
+          "width": 153,
+          "scroll": 168
+        },
+        {
+          "tag": "DL",
+          "class": "",
+          "width": 103,
+          "scroll": 143
+        },
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 62,
+          "scroll": 62
+        },
+        {
+          "tag": "DT",
+          "class": "",
+          "width": 62,
+          "scroll": 62
+        },
+        {
+          "tag": "DD",
+          "class": "",
+          "width": 62,
+          "scroll": 62
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P04-error",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 228,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page availability-page",
+          "width": 180,
+          "scroll": 228
+        },
+        {
+          "tag": "HEADER",
+          "class": "header",
+          "width": 155,
+          "scroll": 215
+        },
+        {
+          "tag": "SPAN",
+          "class": "environment",
+          "width": 76,
+          "scroll": 76
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-heading",
+          "width": 155,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "SECTION",
+          "class": "",
+          "width": 155,
+          "scroll": 169
+        },
+        {
+          "tag": "ARTICLE",
+          "class": "availability-card",
+          "width": 153,
+          "scroll": 168
+        },
+        {
+          "tag": "DL",
+          "class": "",
+          "width": 103,
+          "scroll": 143
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P05-error",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P05",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": []
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P06",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 225,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 226
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 180
+        },
+        {
+          "tag": "DIV",
+          "class": "page",
+          "width": 180,
+          "scroll": 226
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 213
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 155,
+          "scroll": 159
+        },
+        {
+          "tag": "SECTION",
+          "class": "reservation-receipt",
+          "width": 153,
+          "scroll": 212
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "salida",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 225,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "class": "",
+          "width": 180,
+          "scroll": 226
+        },
+        {
+          "tag": "ASIDE",
+          "class": "exit-session",
+          "width": 180,
+          "scroll": 214
+        },
+        {
+          "tag": "DIV",
+          "class": "exit-confirmation",
+          "width": 132,
+          "scroll": 190
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "DIV",
+          "class": "page",
+          "width": 180,
+          "scroll": 226
+        },
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 213
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 155,
+          "scroll": 159
+        },
+        {
+          "tag": "SECTION",
+          "class": "reservation-receipt",
+          "width": 153,
+          "scroll": 212
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "",
+          "width": 188,
+          "scroll": 188
+        },
+        {
+          "tag": "DIV",
+          "class": "catalog-actions",
+          "width": 190,
+          "scroll": 190
+        },
+        {
+          "tag": "BUTTON",
+          "class": "secondary",
+          "width": 188,
+          "scroll": 188
+        }
+      ]
+    },
+    {
+      "profile": "movil-200",
+      "screen": "P06-comprobante",
+      "innerWidth": 180,
+      "width": 180,
+      "scroll": 180,
+      "dpr": 2,
+      "offenders": [
+        {
+          "tag": "MAIN",
+          "class": "catalog-main",
+          "width": 155,
+          "scroll": 159
+        },
+        {
+          "tag": "H1",
+          "class": "",
+          "width": 155,
+          "scroll": 159
+        }
+      ]
+    }
+  ]
+}

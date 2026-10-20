@@ -1,0 +1,30 @@
+{
+    "sprint":  "S16",
+    "wordPagesInspected":  4,
+    "visualReview":  "passed",
+    "screenshotWidthsVerified":  28,
+    "visualSample":  [
+                         "movil-P01",
+                         "movil-P02",
+                         "escritorio-P03-revision",
+                         "movil-P04",
+                         "escritorio-200-P05",
+                         "escritorio-200-P06",
+                         "movil-200-P01",
+                         "movil-200-salida"
+                     ],
+    "responsiveChecks":  493,
+    "screenStates":  60,
+    "profiles":  4,
+    "nativeTabZoom":  [
+                          1,
+                          2
+                      ],
+    "keyboardRegressionChecks":  147,
+    "unitTests":  52,
+    "secretChecks":  12,
+    "businessResponses":  "controlled-fixtures",
+    "readerValidation":  "pending-S17",
+    "publication":  "approved-for-commit-and-push",
+    "wordSha256":  "8AA1E7E265D829D21CBF04B922A4B8F19093F4D6399E98C3DEEEB256656CE039"
+}
