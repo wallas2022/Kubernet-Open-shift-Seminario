@@ -1,0 +1,3 @@
+# Linux entrypoints must remain executable by their shebang on Windows checkouts.
+frontend/container/*.sh text eol=lf
+documentacion/fase-10/herramientas/generar-s18.sh text eol=lf

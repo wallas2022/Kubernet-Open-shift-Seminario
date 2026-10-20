@@ -39,7 +39,7 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    // Preview checks static assets only; production proxy belongs to S18.
+    // Preview checks static assets only; the container owns the production proxy.
     preview: { host: '127.0.0.1', port: 4173, strictPort: true, headers },
   };
 });

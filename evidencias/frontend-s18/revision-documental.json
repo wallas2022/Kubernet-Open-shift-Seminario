@@ -1,0 +1,28 @@
+{
+  "sprint": "S18",
+  "status": "partial-cluster-admission-and-https-pending",
+  "documents": [
+    {
+      "file": "DOC-S18-01-entrega.docx",
+      "sha256": "4db8dd2f3abd289f915e6ab559b50dba1e10dfdc670fb8216f7bb5ba44133b10",
+      "pagesVisuallyInspected": 5,
+      "visualReview": "passed",
+      "formatChecks": "passed"
+    },
+    {
+      "file": "DOC-S18-02-manual-laboratorio.docx",
+      "sha256": "26438c1037bedf6a35744f732830c3651140010c04b4c7e7b2d839451e14f81e",
+      "pagesVisuallyInspected": 4,
+      "visualReview": "passed",
+      "formatChecks": "passed"
+    }
+  ],
+  "deploymentChecks": 28,
+  "runtimeChecks": 16,
+  "externalComposeReadChecks": 2,
+  "unitTests": 52,
+  "secretChecks": 12,
+  "clusterAdmission": "not-executed-no-context",
+  "publication": "local-commit-approved-push-not-authorized",
+  "s19": "authorized"
+}

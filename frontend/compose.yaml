@@ -1,0 +1,20 @@
+name: seminario-s18
+services:
+  frontend:
+    image: seminario-reservas-frontend:s18
+    build: .
+    user: ${FRONTEND_UID:-10001}:0
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=32m,mode=1777
+    environment:
+      API_UPSTREAM: api:8080
+    ports:
+      - 127.0.0.1:${FRONTEND_PORT:-8083}:8080
+    networks: [laboratorio]
+networks:
+  laboratorio:
+    external: true
+    name: ${API_NETWORK:?Indicar la red Compose de la API existente}

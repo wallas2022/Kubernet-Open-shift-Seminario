@@ -1,0 +1,74 @@
+﻿{
+    "passed":  16,
+    "imageId":  "sha256:98a2d350ac70c0f400fb1738d9d817b4e243ca55512e248d96da4a3995491ab3",
+    "checks":  [
+                   {
+                       "name":  "arbitrary-uid-configured",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "read-only-root-filesystem",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "all-capabilities-dropped",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "no-privilege-escalation",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "docker-healthcheck-healthy",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "temporary-volume-noexec-nosuid",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "actual-process-arbitrary-uid",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "temporary-pid-and-immutable-configuration-assets",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "runtime-without-node-source-dependencies",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "image-default-nonroot-user-starts",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "invalid-proxy-configuration-rejected",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "exclusive-api-stopped-for-outage-test",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "frontend-probe-independent-from-api",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "outage-generic-502-not-spa",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "proxy-recovers-after-api-restart",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "frontend-logs-without-test-credential",
+                       "passed":  true
+                   }
+               ],
+    "clusterAdmission":  "pending-no-context",
+    "sprint":  "S18",
+    "https":  "prepared-not-tested",
+    "uid":  "1000710000"
+}

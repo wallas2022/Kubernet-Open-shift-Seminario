@@ -1,0 +1,9 @@
+﻿{
+    "port":  18084,
+    "externalNetwork":  "seminario-s18_default",
+    "databaseWrites":  0,
+    "frontendReady":  true,
+    "sprint":  "S18",
+    "checksPassed":  2,
+    "unauthenticatedProxyStatus":  401
+}

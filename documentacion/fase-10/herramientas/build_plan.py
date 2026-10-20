@@ -16,6 +16,7 @@ parser.add_argument('--figure-max-height',type=float,default=8.5)
 parser.add_argument('--figure-title',default='Frontera de integración de S01')
 parser.add_argument('--figure-caption',default='Fuente editable: diagramas/fase-10/sprints/S01-base-frontend.mmd. La pantalla inicial no solicita credenciales ni realiza operaciones de negocio.')
 parser.add_argument('--footer-label')
+parser.add_argument('--include-code', action='store_true', help='Include command blocks in reproducible manuals')
 args=parser.parse_args()
 
 base=Path('/work/documentacion/fase-10')
@@ -77,7 +78,9 @@ while i<len(lines):
     if not line:i+=1;continue
     if line.startswith('```'):
         i+=1
-        while i<len(lines) and not lines[i].strip().startswith('```'):i+=1
+        while i<len(lines) and not lines[i].strip().startswith('```'):
+            if args.include_code:doc.add_paragraph(lines[i])
+            i+=1
         i+=1
         continue
     if line.startswith('|'):

@@ -1,0 +1,12 @@
+*
+!package.json
+!package-lock.json
+!index.html
+!tsconfig.json
+!vite.config.ts
+!config/
+!config/**
+!src/
+!src/**
+!container/
+!container/**

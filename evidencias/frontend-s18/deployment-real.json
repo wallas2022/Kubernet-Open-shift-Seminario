@@ -1,0 +1,123 @@
+{
+  "sprint": "S18",
+  "topology": "Compose exclusive S18 PostgreSQL + API + compiled Nginx frontend",
+  "browser": "145.0.7632.6",
+  "mocks": false,
+  "checks": [
+    {
+      "name": "compiled-spa-served",
+      "passed": true
+    },
+    {
+      "name": "security-header-x-frame-options",
+      "passed": true
+    },
+    {
+      "name": "security-header-x-content-type-options",
+      "passed": true
+    },
+    {
+      "name": "security-header-referrer-policy",
+      "passed": true
+    },
+    {
+      "name": "security-header-cache-control",
+      "passed": true
+    },
+    {
+      "name": "spa-reload-/recorrido/consulta",
+      "passed": true
+    },
+    {
+      "name": "spa-reload-/recorrido/consulta/",
+      "passed": true
+    },
+    {
+      "name": "no-static-leak-/assets/missing.js",
+      "passed": true
+    },
+    {
+      "name": "no-static-leak-/.env",
+      "passed": true
+    },
+    {
+      "name": "no-static-leak-/.env.local",
+      "passed": true
+    },
+    {
+      "name": "no-static-leak-/.git/config",
+      "passed": true
+    },
+    {
+      "name": "probe-/health/live",
+      "passed": true
+    },
+    {
+      "name": "probe-/health/ready",
+      "passed": true
+    },
+    {
+      "name": "compiled-bundle-no-credential",
+      "passed": true
+    },
+    {
+      "name": "unauthenticated-api-remains-401",
+      "passed": true
+    },
+    {
+      "name": "real-exclusive-s18-catalog-proxy",
+      "passed": true
+    },
+    {
+      "name": "unknown-api-not-spa-/api",
+      "passed": true
+    },
+    {
+      "name": "unknown-api-not-spa-/api/unknown",
+      "passed": true
+    },
+    {
+      "name": "unknown-api-not-spa-/api/catalogo/unknown",
+      "passed": true
+    },
+    {
+      "name": "api-query-rejected",
+      "passed": true
+    },
+    {
+      "name": "real-post-through-proxy-201",
+      "passed": true
+    },
+    {
+      "name": "idempotency-header-and-payload-preserved",
+      "passed": true
+    },
+    {
+      "name": "real-lookup-through-proxy",
+      "passed": true
+    },
+    {
+      "name": "browser-real-confirmation-one-post",
+      "passed": true
+    },
+    {
+      "name": "browser-credential-never-in-url",
+      "passed": true
+    },
+    {
+      "name": "browser-credential-not-persisted",
+      "passed": true
+    },
+    {
+      "name": "spa-reload-clears-credential",
+      "passed": true
+    },
+    {
+      "name": "compiled-browser-no-page-errors",
+      "passed": true
+    }
+  ],
+  "passed": 28,
+  "clusterAdmission": "not-executed-no-context",
+  "https": "prepared-not-executed"
+}

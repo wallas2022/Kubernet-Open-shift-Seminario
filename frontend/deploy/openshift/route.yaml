@@ -1,0 +1,11 @@
+# The router assigns a hostname. Certificate trust must be validated on the cluster.
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: reservas-frontend
+spec:
+  to: {kind: Service, name: reservas-frontend}
+  port: {targetPort: http}
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

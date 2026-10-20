@@ -1,0 +1,9 @@
+flowchart TD
+    A["Navegador local HTTP 18083"] --> B["Frontend Nginx 8080<br/>UID arbitrario y raíz de solo lectura"]
+    B --> C["Assets compilados y recarga SPA"]
+    B -->|"/api sin prefijo"| D["API S18 8080"]
+    D --> E["PostgreSQL S18 exclusivo<br/>sin puerto publicado"]
+    B --> F["tmpfs /tmp<br/>configuración PID y temporales"]
+    G["Preparación de clúster<br/>sin admisión ejecutada"] --> H["Ingress TLS kind<br/>o Route edge OpenShift"]
+    H --> I["Service frontend 80<br/>Deployment 8080"]
+    I --> J["Service reservas-api 80"]

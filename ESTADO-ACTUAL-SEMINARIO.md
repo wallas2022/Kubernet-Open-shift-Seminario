@@ -1,5 +1,11 @@
 # Estado actual del seminario
 
+## Actualización de S18 del 20 de octubre de 2026
+
+El usuario aprobó el commit local de la entrega parcial S18 y autorizó continuar con S19. Esta aprobación no incluye push. Los párrafos siguientes conservan el estado técnico de la entrega antes de esta aprobación.
+
+S17 publicado mediante b12c395. El usuario informó que completó la prueba con Narrador y autorizó continuar con S18; se registra como confirmación del usuario, sin atribuir al agente resultados manuales no observados. S18 RN05 implementado localmente: imagen Nginx 1.30.6 en 8080, proxy, raíz de solo lectura, UID arbitrario, Compose y overlays kind/OpenShift. Pasaron 28 controles HTTP y de navegador con API real y base exclusiva, 16 de ejecución, dos lecturas de Compose integrado, 52 pruebas Node, compilación y 12 controles de secretos en contenedor aislado. Auditoría de solo lectura: dos reservas, dos outbox, cuatro cupos consumidos y 21 disponibles. El frontend exclusivo está en localhost:18083 porque 8083 está ocupado por S08. No hay contextos de clúster configurados; admisión y HTTPS permanecen pendientes y S18 se entrega parcial por esa dependencia. Sin commit ni push de S18; S19 no iniciado. Fuentes, manual, Word y Mermaid en las carpetas S18.
+
 ## Actualización de S17 del 19 de octubre de 2026
 
 S16 publicado en origin/master mediante 193659a tras aprobación del usuario. S17 RN06 autorizado e implementado localmente con entrega parcial: correcciones de foco, errores asociados, anuncios fuera de zonas ocupadas y contraste. Pasaron 147 comprobaciones de teclado, 25 específicas de foco y anuncios, 847 mediciones de texto y 37 de campo o foco; también 493 comprobaciones de adaptación, 82 de mensajes, 52 pruebas Node, compilación y 12 controles de secretos. Las respuestas son controladas. El entorno ficticio localhost:5189 pasó diez controles y quedó vacío, sin reservas ni base reales. El intento de control del Narrador se interrumpió con Escape; la validación manual con lector NO se completó y RN06 sigue abierto. Se entrega informe Markdown, Word y Mermaid, más guía de revisión pendiente. Entrega parcial S17 aprobada por el usuario el 20 de octubre de 2026 para commit y push a origin/master. La aprobación no cierra RN06 ni sustituye la prueba manual pendiente; S18 no iniciado.
