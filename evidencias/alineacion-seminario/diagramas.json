@@ -1,0 +1,17 @@
+[
+  {
+    "diagram": "01-arquitectura-actual.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "02-ampliacion-propuesta.mmd",
+    "parse": "pass",
+    "render": "pass"
+  },
+  {
+    "diagram": "03-integracion-grupos.mmd",
+    "parse": "pass",
+    "render": "pass"
+  }
+]

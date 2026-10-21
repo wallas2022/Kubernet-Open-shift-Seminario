@@ -1,0 +1,7 @@
+flowchart LR
+    A[Reserva confirmada en PostgreSQL] --> B[Outbox]
+    B --> C[Publicador propuesto]
+    C --> D[Kafka o AMQ Streams propuesto]
+    D --> E[Consumidores idempotentes propuestos]
+    F[KEDA por rezago propuesto] -.-> E
+    G[HPA de API propuesto] -.-> A

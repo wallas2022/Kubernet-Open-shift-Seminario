@@ -1,0 +1,11 @@
+﻿{
+    "slides":  30,
+    "nativeTables":  [
+                         3,
+                         27
+                     ],
+    "nativeChart":  19,
+    "notes":  30,
+    "finalized":  true,
+    "runtime":  "26.1015.12040"
+}

@@ -1,6 +1,12 @@
 # Seminario Kubernetes OKD y Red Hat OpenShift
 
-## Análisis y diseño del frontend
+## Seminario alineado a los seis grupos
+
+Nuestro caso de éxito es el sistema de reservas construido. La investigación y la exposición principales se encuentran en [Fase 01](documentacion/fase-01/README.md), [presentación de treinta diapositivas](presentacion/fase-06/README.md) y [guía de demostración conjunta](documentacion/fase-07/README.md). Incluyen el aporte de cada grupo, evidencias locales y el experimento OpenShift propuesto. Entrega del 20 de octubre de 2026 en revisión, sin commit ni push.
+
+El [estado actual](ESTADO-ACTUAL-SEMINARIO.md) registra la implementación y las mediciones. Las descripciones iniciales siguientes conservan el contexto de planificación anterior.
+
+## Análisis y diseño inicial del frontend
 
 La [Fase 10](documentacion/fase-10/README.md) reúne requisitos, seis casos de uso, experiencia de usuario, arquitectura y plan de validación para la interfaz de reservas. Incluye fuentes Markdown por etapa, Word consolidado y diez diagramas Mermaid editables. Es un diseño propuesto; el frontend todavía no está implementado. Consultar el registro de revisión de esa fase para las comprobaciones efectivamente ejecutadas.
 

@@ -1,0 +1,7 @@
+flowchart LR
+    A[Participante] --> B[Frontend y proxy]
+    B --> C[API de reservas]
+    C --> D[PostgreSQL]
+    D --> E[Inventario reserva y outbox en una transaccion]
+    F[Worker de outbox disponible en la aplicacion] -.-> D
+    G[S19 midio frontend API y base sin worker ni broker] -.-> C

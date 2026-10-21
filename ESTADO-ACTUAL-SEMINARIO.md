@@ -1,5 +1,15 @@
 # Estado actual del seminario
 
+## Alineación documental del 20 de octubre de 2026
+
+El usuario autorizó el commit local de esta adaptación documental. Se prepara su registro sin push; la autorización no incluye el commit de la implementación S19, que continúa en revisión.
+
+Se incorporaron los documentos de caso de éxito y organización entregados por el usuario como fuentes rectoras, conservando sus originales. El sistema de reservas construido es el caso propio común a los seis grupos y 22 alumnos. DOC-01-02 organiza la investigación aplicada; DOC-06-02 contiene treinta diapositivas con notas y fuentes y su guion; DOC-07-02 prepara la exposición y demostración conjunta. Se mantienen Markdown, Word y tres diagramas Mermaid editables. DOC-01-01 y DOC-06-01 quedan como apoyo previo. Se distinguen resultados Compose de hipótesis de millones de operaciones, disponibilidad, Kafka y autoescalado en OpenShift. Esta adaptación no ejecuta esos experimentos ni cierra los pendientes de clúster de S18. Entrega documental local para revisión, sin commit ni push; S19 continúa en revisión. Navegación actual en los README de Fases 01, 06 y 07.
+
+## Actualización de S19 del 20 de octubre de 2026
+
+S18 tiene commit local d7fea11 autorizado por el usuario, sin push. S19 RN08 autorizado e implementado localmente con PV16 sobre Compose exclusivo: tres repeticiones de cuatro usuarios, 3240 solicitudes medidas y 180 de calentamiento, sin errores. El recálculo desde JSONL pasó 76 controles y se verificaron tres propuestas de recursos. Se separaron CPU, memoria y contadores cgroup v2 de frontend, API, PostgreSQL y generador. Sin OOM en los intervalos; se registraron períodos de limitación de CPU en API y generador. Auditoría de solo lectura: 380 reservas y claves únicas, 380 outbox sin huérfanos, 380 cupos consumidos y 9620 disponibles. Se entregan Markdown, Word, Mermaid, scripts y parches de recursos propuestos sin aplicar. Frontend exclusivo en localhost:18085. No se afirma capacidad máxima, HPA, clúster ni HTTPS; los pendientes de S18 continúan. S19 en revisión, sin commit ni push propios.
+
 ## Actualización de S18 del 20 de octubre de 2026
 
 El usuario aprobó el commit local de la entrega parcial S18 y autorizó continuar con S19. Esta aprobación no incluye push. Los párrafos siguientes conservan el estado técnico de la entrega antes de esta aprobación.

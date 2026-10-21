@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-20",
+  "slides": 30,
+  "notes_and_sources": 30,
+  "groups": 6,
+  "students": 22,
+  "local_source_paths_valid": true,
+  "word_documents": 3,
+  "word_pages_visually_reviewed": [
+    11,
+    8,
+    6
+  ],
+  "slide_previews_visually_reviewed": 30,
+  "diagrams_parsed_rendered_and_reviewed": 3,
+  "final_import_comparison": [
+    {
+      "slide": 1,
+      "identical_pixels": true
+    },
+    {
+      "slide": 2,
+      "identical_pixels": true
+    },
+    {
+      "slide": 3,
+      "identical_pixels": true
+    },
+    {
+      "slide": 4,
+      "identical_pixels": true
+    },
+    {
+      "slide": 5,
+      "identical_pixels": true
+    },
+    {
+      "slide": 6,
+      "identical_pixels": true
+    },
+    {
+      "slide": 7,
+      "identical_pixels": true
+    },
+    {
+      "slide": 8,
+      "identical_pixels": true
+    },
+    {
+      "slide": 9,
+      "identical_pixels": true
+    },
+    {
+      "slide": 10,
+      "identical_pixels": true
+    },
+    {
+      "slide": 11,
+      "identical_pixels": true
+    },
+    {
+      "slide": 12,
+      "identical_pixels": true
+    },
+    {
+      "slide": 13,
+      "identical_pixels": true
+    },
+    {
+      "slide": 14,
+      "identical_pixels": true
+    },
+    {
+      "slide": 15,
+      "identical_pixels": true
+    },
+    {
+      "slide": 16,
+      "identical_pixels": true
+    },
+    {
+      "slide": 17,
+      "identical_pixels": true
+    },
+    {
+      "slide": 18,
+      "identical_pixels": true
+    },
+    {
+      "slide": 19,
+      "identical_pixels": true
+    },
+    {
+      "slide": 20,
+      "identical_pixels": true
+    },
+    {
+      "slide": 21,
+      "identical_pixels": true
+    },
+    {
+      "slide": 22,
+      "identical_pixels": true
+    },
+    {
+      "slide": 23,
+      "identical_pixels": true
+    },
+    {
+      "slide": 24,
+      "identical_pixels": true
+    },
+    {
+      "slide": 25,
+      "identical_pixels": true
+    },
+    {
+      "slide": 26,
+      "identical_pixels": true
+    },
+    {
+      "slide": 27,
+      "identical_pixels": true
+    },
+    {
+      "slide": 28,
+      "identical_pixels": true
+    },
+    {
+      "slide": 29,
+      "identical_pixels": true
+    },
+    {
+      "slide": 30,
+      "identical_pixels": true
+    }
+  ],
+  "hashes": {
+    "documentacion\\fase-01\\word\\DOC-01-02-investigacion-seis-grupos.docx": "7618f18268b1d5a18ed1c9d7bcd55a2e99b6ce8bb7e8c6baea7d24ae88aae664",
+    "presentacion\\fase-06\\DOC-06-02-guion-seis-grupos.docx": "dcf57da1c7552a4bf1bec9dd742ae58d27ba72cec3e6286356b20951b779fced",
+    "documentacion\\fase-07\\word\\DOC-07-02-guia-seis-grupos.docx": "b3677a81d7c808834e5a6f00f5c5efa95542d4495920bf8dad8868245da7c72f",
+    "presentacion\\fase-06\\DOC-06-02-seminario-seis-grupos.pptx": "b58cfcf2068b19c8a5f839669704cc3a212d6b4fd1af9db5c82d543b4d54268f"
+  },
+  "scope": "Validación documental local. No acredita PowerPoint nativo, experimento OpenShift ni una nueva demostración funcional. No commit ni push."
+}
