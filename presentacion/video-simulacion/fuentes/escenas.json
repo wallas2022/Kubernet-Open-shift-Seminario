@@ -1,0 +1,9 @@
+[
+ {"title":"Una reserva recorre la arquitectura","voice":"Imagina nuestro sistema de reservas. Cada solicitud atraviesa la entrada, llega a la aplicación y confirma sus cupos en PostgreSQL."},
+ {"title":"Aumenta la demanda","voice":"Cuando llegan más participantes, crece la demanda. Nuestro objetivo experimental será evaluar hasta cincuenta mil usuarios virtuales, sin duplicar reservas ni sobreasignar cupos."},
+ {"title":"Kubernetes agrega réplicas","voice":"Kubernetes puede distribuir solicitudes entre réplicas. El autoescalado agrega instancias cuando las métricas lo indican, siempre que exista capacidad disponible en los nodos."},
+ {"title":"Falla un Pod y otros atienden","voice":"Si falla una instancia de la aplicación, las réplicas sanas siguen atendiendo. Kubernetes repone el Pod y lo incorpora al tráfico cuando está preparado."},
+ {"title":"Falla un nodo y se redistribuye el trabajo","voice":"Si se pierde un nodo, las instancias de otros nodos sostienen el servicio. La recuperación requiere capacidad de reserva y componentes distribuidos."},
+ {"title":"Los datos también necesitan recuperación","voice":"La base de datos también necesita alta disponibilidad. Una réplica preparada puede asumir la escritura mediante una conmutación controlada, que debemos configurar y medir."},
+ {"title":"Seis grupos convierten la idea en evidencia","voice":"Los seis grupos investigarán arquitectura, escalado, resiliencia, datos, métricas y experimentos. Esta animación es conceptual: capacidad, tiempos y continuidad deben comprobarse en el laboratorio."}
+]

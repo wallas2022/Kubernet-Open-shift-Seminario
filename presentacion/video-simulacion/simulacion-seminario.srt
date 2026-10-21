@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:02,954
+Imagina nuestro sistema de reservas. Cada solicitud atraviesa
+
+2
+00:00:02,954 --> 00:00:05,908
+la entrada, llega a la aplicación y confirma
+
+3
+00:00:05,908 --> 00:00:07,385
+sus cupos en PostgreSQL.
+
+4
+00:00:07,385 --> 00:00:10,597
+Cuando llegan más participantes, crece la demanda. Nuestro
+
+5
+00:00:10,597 --> 00:00:13,809
+objetivo experimental será evaluar hasta cincuenta mil usuarios
+
+6
+00:00:13,809 --> 00:00:16,620
+virtuales, sin duplicar reservas ni sobreasignar cupos.
+
+7
+00:00:16,620 --> 00:00:19,649
+Kubernetes puede distribuir solicitudes entre réplicas. El autoescalado
+
+8
+00:00:19,649 --> 00:00:22,677
+agrega instancias cuando las métricas lo indican, siempre
+
+9
+00:00:22,677 --> 00:00:25,327
+que exista capacidad disponible en los nodos.
+
+10
+00:00:25,327 --> 00:00:27,820
+Si falla una instancia de la aplicación, las
+
+11
+00:00:27,820 --> 00:00:30,313
+réplicas sanas siguen atendiendo. Kubernetes repone el Pod
+
+12
+00:00:30,313 --> 00:00:32,806
+y lo incorpora al tráfico cuando está preparado.
+
+13
+00:00:32,806 --> 00:00:35,536
+Si se pierde un nodo, las instancias de
+
+14
+00:00:35,536 --> 00:00:38,267
+otros nodos sostienen el servicio. La recuperación requiere
+
+15
+00:00:38,267 --> 00:00:40,315
+capacidad de reserva y componentes distribuidos.
+
+16
+00:00:40,315 --> 00:00:43,082
+La base de datos también necesita alta disponibilidad.
+
+17
+00:00:43,082 --> 00:00:45,849
+Una réplica preparada puede asumir la escritura mediante
+
+18
+00:00:45,849 --> 00:00:48,615
+una conmutación controlada, que debemos configurar y medir.
+
+19
+00:00:48,615 --> 00:00:52,410
+Los seis grupos investigarán arquitectura, escalado, resiliencia, datos,
+
+20
+00:00:52,410 --> 00:00:56,205
+métricas y experimentos. Esta animación es conceptual: capacidad,
+
+21
+00:00:56,205 --> 00:01:00,000
+tiempos y continuidad deben comprobarse en el laboratorio.

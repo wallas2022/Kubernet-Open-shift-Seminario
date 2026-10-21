@@ -1,0 +1,92 @@
+{
+  "duration_seconds": 60,
+  "fps": 24,
+  "frames": 1440,
+  "scenes": [
+    {
+      "title": "Una reserva recorre la arquitectura",
+      "start": 0,
+      "duration": 7.384586428784499
+    },
+    {
+      "title": "Aumenta la demanda",
+      "start": 7.384586428784499,
+      "duration": 9.235607039872724
+    },
+    {
+      "title": "Kubernetes agrega réplicas",
+      "start": 16.620193468657224,
+      "duration": 8.7070483955738
+    },
+    {
+      "title": "Falla un Pod y otros atienden",
+      "start": 25.327241864231024,
+      "duration": 7.478337760479551
+    },
+    {
+      "title": "Falla un nodo y se redistribuye el trabajo",
+      "start": 32.805579624710575,
+      "duration": 7.5098012755863
+    },
+    {
+      "title": "Los datos también necesitan recuperación",
+      "start": 40.31538090029687,
+      "duration": 8.299904828193581
+    },
+    {
+      "title": "Seis grupos convierten la idea en evidencia",
+      "start": 48.615285728490456,
+      "duration": 11.384714271509537
+    }
+  ],
+  "captures": [
+    {
+      "image": "verificacion-01-a.png",
+      "time": 3.6922932143922496
+    },
+    {
+      "image": "verificacion-02-a.png",
+      "time": 12.002389948720861
+    },
+    {
+      "image": "verificacion-03-a.png",
+      "time": 18.796955567550675
+    },
+    {
+      "image": "verificacion-03-b.png",
+      "time": 22.88926831347036
+    },
+    {
+      "image": "verificacion-04-a.png",
+      "time": 27.19682630435091
+    },
+    {
+      "image": "verificacion-04-b.png",
+      "time": 30.7116450517763
+    },
+    {
+      "image": "verificacion-05-a.png",
+      "time": 34.68302994360715
+    },
+    {
+      "image": "verificacion-05-b.png",
+      "time": 38.21263654313271
+    },
+    {
+      "image": "verificacion-06-a.png",
+      "time": 42.39035710734527
+    },
+    {
+      "image": "verificacion-06-b.png",
+      "time": 46.29131237659625
+    },
+    {
+      "image": "verificacion-07-a.png",
+      "time": 54.307642864245224
+    }
+  ],
+  "speed_adjustment": 1.2770793650793653,
+  "sha256": "7aff22ac1213286f79a921bf4560a445570141a7a20390f406628f5f7db4fbd2",
+  "conceptual_simulation": true,
+  "full_decode_passed": true
+}

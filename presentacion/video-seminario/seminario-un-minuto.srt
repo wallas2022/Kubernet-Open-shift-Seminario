@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:03,091
+Nuestro seminario investiga cómo Kubernetes y Red Hat OpenShift
+
+2
+00:00:03,091 --> 00:00:06,182
+ayudan a construir servicios de reservas disponibles y escalables.
+
+3
+00:00:06,182 --> 00:00:09,074
+La pregunta es cómo responder cuando miles de personas
+
+4
+00:00:09,074 --> 00:00:11,966
+quieren reservar, sin perder confirmaciones ni asignar más cupos
+
+5
+00:00:11,966 --> 00:00:12,930
+de los existentes.
+
+6
+00:00:12,930 --> 00:00:18,024
+Seis grupos estudian arquitectura, autoescalado, resiliencia y seguridad, persistencia
+
+7
+00:00:18,024 --> 00:00:21,420
+y mensajería, observabilidad, y diseño experimental.
+
+8
+00:00:21,420 --> 00:00:25,142
+El caso de éxito es nuestro sistema de reservas:
+
+9
+00:00:25,142 --> 00:00:28,864
+ingresar, consultar disponibilidad, reservar y recuperar el comprobante, sin
+
+10
+00:00:28,864 --> 00:00:29,691
+duplicar operaciones.
+
+11
+00:00:29,691 --> 00:00:32,970
+El laboratorio propuesto distribuirá la aplicación entre nodos, con
+
+12
+00:00:32,970 --> 00:00:36,250
+réplicas, balanceo y una base de datos preparada para
+
+13
+00:00:36,250 --> 00:00:36,614
+recuperación.
+
+14
+00:00:36,614 --> 00:00:40,246
+Subiremos la carga progresivamente hacia cincuenta mil usuarios virtuales.
+
+15
+00:00:40,246 --> 00:00:43,877
+También provocaremos fallos controlados para observar la continuidad y
+
+16
+00:00:43,877 --> 00:00:44,684
+la recuperación.
+
+17
+00:00:44,684 --> 00:00:49,121
+Mediremos latencias, errores, recursos e integridad de las reservas.
+
+18
+00:00:49,121 --> 00:00:52,572
+Compararemos una instancia, varias réplicas y autoescalado.
+
+19
+00:00:52,572 --> 00:00:55,479
+Ya tenemos la aplicación y evidencia local. El laboratorio
+
+20
+00:00:55,479 --> 00:00:58,385
+de alta disponibilidad y la meta de cincuenta mil
+
+21
+00:00:58,385 --> 00:01:00,000
+usuarios están pendientes de validación.

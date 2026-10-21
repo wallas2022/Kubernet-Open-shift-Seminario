@@ -1,0 +1,54 @@
+{
+  "duration": 60,
+  "speed_adjustment": 1.2279130763416477,
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0,
+      "duration": 6.181754834785959,
+      "voice": "Nuestro seminario investiga cómo Kubernetes y Red Hat OpenShift ayudan a construir servicios de reservas disponibles y escalables."
+    },
+    {
+      "scene": 2,
+      "start": 6.181754834785959,
+      "duration": 6.747875845860555,
+      "voice": "La pregunta es cómo responder cuando miles de personas quieren reservar, sin perder confirmaciones ni asignar más cupos de los existentes."
+    },
+    {
+      "scene": 3,
+      "start": 12.929630680646515,
+      "duration": 8.490744086439824,
+      "voice": "Seis grupos estudian arquitectura, autoescalado, resiliencia y seguridad, persistencia y mensajería, observabilidad, y diseño experimental."
+    },
+    {
+      "scene": 4,
+      "start": 21.420374767086336,
+      "duration": 8.27058181171281,
+      "voice": "El caso de éxito es nuestro sistema de reservas: ingresar, consultar disponibilidad, reservar y recuperar el comprobante, sin duplicar operaciones."
+    },
+    {
+      "scene": 5,
+      "start": 29.690956578799145,
+      "duration": 6.923015840283553,
+      "voice": "El laboratorio propuesto distribuirá la aplicación entre nodos, con réplicas, balanceo y una base de datos preparada para recuperación."
+    },
+    {
+      "scene": 6,
+      "start": 36.6139724190827,
+      "duration": 8.070326845504143,
+      "voice": "Subiremos la carga progresivamente hacia cincuenta mil usuarios virtuales. También provocaremos fallos controlados para observar la continuidad y la recuperación."
+    },
+    {
+      "scene": 7,
+      "start": 44.68429926458684,
+      "duration": 7.8881324987119354,
+      "voice": "Mediremos latencias, errores, recursos e integridad de las reservas. Compararemos una instancia, varias réplicas y autoescalado."
+    },
+    {
+      "scene": 8,
+      "start": 52.57243176329877,
+      "duration": 7.427568236701223,
+      "voice": "Ya tenemos la aplicación y evidencia local. El laboratorio de alta disponibilidad y la meta de cincuenta mil usuarios están pendientes de validación."
+    }
+  ]
+}
