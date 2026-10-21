@@ -5,6 +5,7 @@ El caso de éxito propio es el sistema de reservas construido. El recorrido prin
 - Investigación aplicada DOC-01-02: [Word](word/DOC-01-02-investigacion-seis-grupos.docx) y [Markdown](fuentes/DOC-01-02-investigacion-seis-grupos.md).
 - [Presentación y guion](../../presentacion/fase-06/README.md).
 - [Guía de exposición y demostración](../fase-07/README.md).
+- [Guía de montaje del laboratorio y prompts de construcción](../fase-02/README.md).
 - [Diagramas Mermaid editables](../../diagramas/seminario-seis-grupos).
 
 DOC-01-01 se conserva como biblioteca técnica general complementaria. La edición anterior está preservada en `historico/v1-2026-10-13`. Los originales `fuentes/organizacion_grupos_seminario.docx` y `fuentes/caso_exito_kubernetes_openshift.docx` se mantienen sin modificación.

@@ -2,6 +2,8 @@
 
 ## Seminario alineado a los seis grupos
 
+La [guía de construcción del laboratorio y sus prompts](documentacion/fase-02/README.md) define el trabajo para otro agente: plataforma Kubernetes, reservas, datos con alta disponibilidad, observación, escalado y pruebas de hasta 50 000 usuarios virtuales. Es un plan de implementación pendiente de despliegue y medición.
+
 Nuestro caso de éxito es el sistema de reservas construido. La investigación y la exposición principales se encuentran en [Fase 01](documentacion/fase-01/README.md), [presentación de treinta diapositivas](presentacion/fase-06/README.md) y [guía de demostración conjunta](documentacion/fase-07/README.md). Incluyen el aporte de cada grupo, evidencias locales y el experimento OpenShift propuesto. Entrega del 20 de octubre de 2026 en revisión, sin commit ni push.
 
 El [estado actual](ESTADO-ACTUAL-SEMINARIO.md) registra la implementación y las mediciones. Las descripciones iniciales siguientes conservan el contexto de planificación anterior.

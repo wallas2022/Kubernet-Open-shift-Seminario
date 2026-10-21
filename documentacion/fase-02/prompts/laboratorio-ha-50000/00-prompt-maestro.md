@@ -1,0 +1,19 @@
+# Prompt maestro para construir el laboratorio
+
+Actúa como agente implementador del laboratorio de nuestro seminario. Construye por etapas un entorno Kubernetes u OpenShift para evaluar concurrencia y alta disponibilidad de nuestro sistema de reservas existente. Trabaja en la raíz C:\Users\walte\OneDrive\Documentos\Desarrollo\Kubernets\Redhat openshift y respeta su AGENTS.md. No construyas otra aplicación ni cambies el contrato de confirmación de reservas.
+
+Lee 01-contrato-comun.md de esta carpeta, documentacion/fase-02/fuentes/DOC-02-02-guia-laboratorio-ha-50000.md, ESTADO-ACTUAL-SEMINARIO.md y documentacion/fase-01/fuentes/DOC-01-02-investigacion-seis-grupos.md. Inspecciona los originales de organización y caso de éxito de Fase 01 y los scripts, manifiestos y fuentes existentes antes de editar. No supongas que el clúster ya existe ni que S19 está publicado. El commit 56927b4 contiene la adaptación documental anterior; los resultados Compose no acreditan carga Kubernetes.
+
+Empieza con L00: inventario de solo lectura, herramientas y versiones, contextos, recursos disponibles y compartidos, dominios de fallo, acceso a máquinas y permisos. Entrega laboratorio/ha-50000/inventario.md, decisiones.md y versions.lock.yaml con hechos, supuestos y pendientes separados. Decide una ruta local reproducible y una ruta distribuida para medir HA. Para cada componente fija versiones compatibles y fuentes oficiales. No inventes proveedor, IP, credenciales, IOPS, presupuesto o resultados.
+
+Prepara un plan de implementación con L01 plataforma, L02 aplicación, L03 PostgreSQL HA, L04 observación y HPA, L05 carga, L06 fallos y L07 análisis. Aplica los prompts de grupo de esta carpeta en ese orden de dependencias; son contratos de trabajo, no permiso para lanzar múltiples agentes. Las unidades pueden implementarse secuencialmente por un mismo agente. Solicita delegación solo si el usuario la autoriza.
+
+Antes de contratar recursos o tocar infraestructura compartida, presenta máquinas, costos estimados y alcance exacto para autorización. Antes de ejecutar un fallo, entrega el guion concreto con recurso, restauración y aborto y verifica autorización para ese laboratorio. Si falta información dependiente, formula una pregunta concreta y continúa trabajo local independiente. No detener toda la preparación por no disponer todavía de nube.
+
+Construye archivos, scripts con vista previa y manuales ejecutables que permitan a un tercero repetir cada etapa desde cero. No basta una lista de tecnologías. Usa contexto y namespace explícitos; valida manifiestos, admisión real, balanceo y recuperación. El generador y el observador deben estar fuera de los dominios de fallo de la aplicación. Conserva la base medida S19 y servicios de otros sprints.
+
+La meta incluye dos perfiles separados: 50 000 VU activos con pausas y tasa observadas y 50 000 intenciones en una ventana fijada. Escala desde piloto, mide carga realmente enviada y recursos del generador. No declares éxito por haber configurado target=50000. Evalúa reservas confirmadas, rechazos correctos, latencias, errores, continuidad, recuperación y auditoría de integridad. Un resultado adverso es una conclusión válida si tiene evidencia.
+
+Al cerrar cada etapa, entrega resumen de lo construido, archivos, comandos exactos, pruebas ejecutadas con resultados, pendientes y siguiente dependencia. Mantén Markdown, Word con formato del proyecto y Mermaid editable. Actualiza estado y registro de decisiones. Espera aprobación de cada entrega antes de commit o push; una aprobación del plan no publica ni implementa automáticamente etapas futuras. No hagas pull ni force push.
+
+Primera respuesta esperada: inventario comprobado o limitaciones verificadas, propuesta concreta de ruta y archivos locales preparados. No afirmar que terminaste la infraestructura sin despliegue y evidencias.

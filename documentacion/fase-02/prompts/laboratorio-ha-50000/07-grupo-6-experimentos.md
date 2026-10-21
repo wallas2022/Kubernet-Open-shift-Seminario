@@ -1,0 +1,15 @@
+# Prompt del Grupo 6 para carga e integración experimental
+
+Lee 01-contrato-comun.md, DOC-02-02 y los entregables de los otros cinco grupos. Construye L05 y L07 y coordina el protocolo de L06. No ejecutes la prueba máxima hasta completar piloto, observación, datos y restauración.
+
+Entrega protocolo previo y scripts k6 bajo pruebas/ha-50000 con escenarios P, V, U, R e I de la guía. V significa 50 000 intenciones acumuladas; U significa hasta 50 000 VU activos con pausas y duración definidas; R representa una ráfaga en ventana fijada. No intercambiar esas unidades. Usa llegada abierta para V/R y VU controlados para U. Mide tasa realizada y dropped_iterations. HTTP simulado no representa 50 000 navegadores renderizando la interfaz.
+
+Calibra generadores externos y dimensiona CPU, RAM, red, sockets, datos y resultados. Distribuye carga con shards, identificadores únicos y coordinación horaria; no duplicar target al repartirlo entre nodos. Fija catálogo, disponibilidad, creación, consulta y pausas por iteración. Cada intención tiene clave propia; el retry conserva clave y payload, con límite y espera definidos. Timeout no significa reserva fallida: resuelve inciertas y evita contarlas como nueva creación. No volcar claves privadas al JSONL.
+
+El mapa actual de X-Api-Key y su recorrido no equivale a un servicio de identidad de 50 000 usuarios. Usa propietarios sintéticos acotados y declara esa limitación, o propone una etapa específica para 50 000 identidades con otra referencia y pruebas de aislamiento. Verifica inventario: repetir creación por VU durante cinco minutos consume más de 50 000 cupos. No ocultar sold_out dentro de errores técnicos ni usar agotamiento para aparentar throughput de confirmaciones.
+
+Congela condiciones A una API, B tres y C HPA, datos iniciales, presupuesto por Pod, topología, versiones, pausas, tasas, ventanas, fallos y criterios. Ejecuta al menos tres repeticiones exploratorias por condición y nivel alcanzable con orden bloqueado o aleatorio. El fallo de Pod, nodo, base e ingreso van en corridas separadas con G3. Exporta latencia, resultados, recursos, volumen real, auditoría G4 y eventos G5 por run_id. No imputes resultados faltantes como exitosos.
+
+Aceptación: recálculo independiente desde datos crudos de conteos, percentiles, tasas y tiempos; auditoría de todas las confirmadas; tabla de aprobado, fallido, incompleto o pendiente; explicación del primer límite observado. Reporta diferencias por corrida y límites de incertidumbre con unidad de análisis apropiada; no promediar p95 y llamar a eso p95 global. No concluir sobre 50 000 si el generador no los sostuvo.
+
+Entrega informe Markdown y Word, CSV y scripts de análisis, Mermaid y guion de 25 minutos para mostrar aplicación, réplicas y métricas con un fallo seguro ya ensayado. Usa para el vivo una base distinta y nivel comprobado. Conserva evidencia previa de la prueba máxima con fecha aunque en vivo uses menor carga. Actualiza la presentación solo con resultados respaldados y conserva las hipótesis de millones como horizonte distinto.

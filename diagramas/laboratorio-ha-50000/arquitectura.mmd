@@ -1,0 +1,17 @@
+flowchart TB
+  load[Generadores externos con VU y tasas medidos] --> entry[DNS y entrada HTTPS redundante]
+  entry --> fe[Frontend y proxy replicados]
+  fe --> api[API replicada con HPA y capacidad de reserva]
+  api --> write[Endpoint PostgreSQL de escritura]
+  write --> primary[Primario PostgreSQL]
+  primary --> replicas[Replicas con politica de sincronizacion definida]
+  operator[Operador con promocion y prevencion de doble primario] -.-> primary
+  operator -.-> replicas
+  nodes[Tres trabajadores en dominios de fallo identificados] -.-> fe
+  nodes -.-> api
+  nodes -.-> primary
+  control[Plano de control HA y endpoint redundante] -.-> nodes
+  observe[Observador externo y Prometheus Grafana] -.-> entry
+  observe -.-> api
+  observe -.-> primary
+  note[Arquitectura propuesta no desplegada ni medida] -.-> control

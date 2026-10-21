@@ -1,5 +1,9 @@
 # Estado actual del seminario
 
+## Guía de construcción del laboratorio del 20 de octubre de 2026
+
+DOC-02-02 preparado en Markdown y Word con plan L00 a L07, diagrama Mermaid y prompts para agente coordinador y seis grupos. Define perfiles local y distribuido, PostgreSQL HA, entrada redundante, instrumentación, tratamientos de réplicas y HPA, escenarios separados de 50 000 VU activos y 50 000 intenciones, y pruebas controladas de fallos. Se revisaron ocho páginas Word y el diagrama. Esta entrega no construye el clúster ni ejecuta carga o fallos. Inventario real, proveedor, recursos y versiones finales son el primer trabajo del agente implementador. Sin commit ni push de esta entrega. La adaptación documental anterior está registrada en el commit local 56927b4, sin push; S19 continúa en revisión.
+
 ## Alineación documental del 20 de octubre de 2026
 
 El usuario autorizó el commit local de esta adaptación documental. Se prepara su registro sin push; la autorización no incluye el commit de la implementación S19, que continúa en revisión.
