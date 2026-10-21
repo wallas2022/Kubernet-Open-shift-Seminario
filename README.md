@@ -4,7 +4,7 @@
 
 La [Fase 10](documentacion/fase-10/README.md) reúne requisitos, seis casos de uso, experiencia de usuario, arquitectura y plan de validación para la interfaz de reservas. Incluye fuentes Markdown por etapa, Word consolidado y diez diagramas Mermaid editables. Es un diseño propuesto; el frontend todavía no está implementado. Consultar el registro de revisión de esa fase para las comprobaciones efectivamente ejecutadas.
 
-Raíz definitiva solicitada: `C:\Users\walte\OneDrive\Documentos\Desarrollo\Kubernets\Redhat openshift`.
+
 
 Esta estructura está guardada en la raíz local indicada por el usuario. La Fase 00 fue aprobada por el usuario; sus archivos no se recuperaron y su carpeta se mantiene reservada. La investigación de Fase 01 se encuentra en `documentacion/fase-01`.
 
